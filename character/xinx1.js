@@ -239,6 +239,7 @@ export let info = {
                     player.addSkill('xinxqianjun_card');
                     // await game.cardsGotoPile(cards,'insert');
                 };
+                player.addTempSkill("xinxqianjun_eff");
 
 
             },
@@ -10388,30 +10389,17 @@ export let info = {
                         // }).forResult();
                         // if (result.bool) {await player.gain(result.links, 'gain2');}
 
-
-
                         const cards = player.getCards("xs").filter(card => !card._cardid);
-
-
                         // const buttons = cards.map(card => ({
                         //     name: get.translation(card),
                         //     link: card,
                         //     image: card.name,
                         // }));
-
                         let num = player.maxHp;
                         const result = await player.chooseButton(['踞兖：选择获得至多' + get.cnNumber(num) + '张牌', cards], [1, num], true).set('ai', button => {
                             return get.value(button.link, get.event('player'));
                         }).forResult();
                         if (result.bool) { await player.gain(result.links, 'gain2'); }
-
-
-
-
-
-
-
-
 
                         //     if(cards.length)player.gain(cards,'draw');
                         //   await player.gain(player.getCards("xs", card => !card._cardid),"draw");
@@ -10437,6 +10425,18 @@ export let info = {
                 player.removeGaintag(skill);
                 const cards = player.getExpansions(skill);
                 if (cards.length) player.loseToDiscardpile(cards);
+            },
+        },
+        xinxqianjun_eff:{
+            charlotte: true,
+            mark: true,
+            intro: {
+                content: "不能使用伤害牌",
+            },
+            mod: {
+                cardEnabled(card) {
+                    if (get.tag(card, 'damage') >= 0.5) return false;
+                },
             },
         },
 
