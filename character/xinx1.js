@@ -75,6 +75,7 @@ export let info = {
         xinx_yuanshao: ["male", "qun", 4, [], ['epic']],
         xinx_chengong: ["male", "qun", 3, [], ['epic']],
         xinx_caoshuang: ["male", "wei", 4, [], ['epic']],
+        xinx_moqiongshu: ["female", "wei", 3, [], ['epic']],
 
 
     },
@@ -12867,6 +12868,9 @@ export let info = {
         xinx_chengong_prefix: '杏',
         xinx_caoshuang: '杏曹爽',
         xinx_caoshuang_prefix: '杏',
+        xinx_moqiongshu: '杏莫琼树',
+        xinx_moqiongshu_prefix: '杏',
+
 
 
 
