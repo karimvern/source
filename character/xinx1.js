@@ -19,7 +19,7 @@ export let info = {
     },
     //武将 'rare', 'epic', 'legend',['legend']
     character: {
-        xxyuexi: ["female", "xing", 4, ["dz_xing_yinxi", "dz_xing_jiangchun"], ['rare']],
+        xxyuexi: ["female", "xing", 3, ["dz_xing_yinxi", "dz_xing_jiangchun"], ['rare']],
         xxin_luxun: ["male", "wu", 4, ['xinxlianyin', 'xinxfenkui'], ["border:xing", 'rare']],
         xinx_zhaoxiang: ["female", "shu", 3, ["xing_xingyu", "xing_ningshuang", 'xing_hanming'], ['legend']],
         xinx_zhangliao: ["male", "xing", 5, ["xxxhuanren", "xxxzhenxi"], ['legend']],
@@ -27,7 +27,7 @@ export let info = {
         xinx_caoxian: ["female", "wei", 3, ['xing_sizhu', 'xing_mengran'], ['legend']],
         xinx_zhenfu: ["female", "wei", 3, ["xinxsongqu", "xinxfushen", "xinxguizi"], ['epic']],
         xinx_zhaoyun: ["male", "shu", 4, ["xinxchiyu", "xinxshuangmang"], ['rare']],
-        xinx_xushao: ["male", "qun", 4, ["xinxshiren", "xinxqianqiu"], ['legend']],
+        xinx_xushao: ["male", "qun", 3, ["xinxshiren", "xinxqianqiu"], ['legend']],
         //xinx_zhouyu: ["male", "wu", 3, ["xinxcangyan", 'xinxzhuoshao'], ["border:xing", 'rare']],
         xinx_jiangwei: ["male", "shu", '3/4', ["xinxpanzhi", "xinxlinyou", "xinxfuhan"], ['epic']],
         xinshu_jiangwei: ["male", "shu", 4, ['xinxbeifa', 'xinxlianbing', 'xinxbugui'], ['rare']],
@@ -59,7 +59,7 @@ export let info = {
         xinx_lvbu: ["male", "qun", 4, ['xinxxuanxiao', 'xinxshiji'], ['epic']],
         xinx_dongxie: ["female", "qun", 3, ['xinxjiaojue', 'xinxfengyao'], ['legend']],
         xinx_zhangchunhua: ["female", "wei", '2/4', ['xinxzhenying', 'xinxzhebian'], ['hiddenSkill', 'epic']],
-        xinx_qinxi: ["female", "xing", 4, ['xinxceshi1', 'xinxceshi2'], ['legend']],
+        xinx_qinxi: ["female", "xing", 3, ['xinxceshi1', 'xinxceshi2'], ['legend']],
         xinx_qinlian: ["female", "xing", 3, ['xinxzhiyi', 'xinxshenai'], ['legend']],
         xinxzhu_zhangliao: ["male", "qun", 4, ['xinxyingqi', 'xinxyanhui'], ['legend']],
         xinx_simazhao: ["male", "wei", 3, ['xinxqueyi', 'xinxshexin', 'xinxjinmian'], ['legend']],
@@ -10430,6 +10430,8 @@ export let info = {
         xinxqianjun_eff:{
             charlotte: true,
             mark: true,
+            marktext: "千军",
+            markimage: "image/card/sha.png",
             intro: {
                 content: "不能使用伤害牌",
             },
@@ -12610,8 +12612,7 @@ export let info = {
                                     const name = info[2];
                                     if (!get.tag({ name }, 'damage') > 0.5) return false;
                                     return ['basic', 'trick'].includes(get.type(name));
-                                }).filter(info => player.hasUseTarget(new lib.element.VCard({ name: info[2], nature: info[3] }), false));
-
+                                }).filter(info => player.hasUseTarget(new lib.element.VCard({ name: info[2], nature: info[3] })));
                                 if (!list.length) {
                                     event.result = { bool: false };
                                     return;
@@ -12884,7 +12885,7 @@ export let info = {
         jinhuanren: '金焕刃',
         jinhuanren_info: "①每轮开始时，你视为使用一张无距离限制的【杀】。②当此牌离开你的装备区时，销毁之。",
         qianjungongjin: '千军共进',
-        qianjungongjin_info: "出牌阶段，对一名其他角色使用。你亮出牌堆顶的五张牌，依次对其使用其中的牌，然后将剩余的牌置于武将牌上，称为“军”。",
+        qianjungongjin_info: "出牌阶段，对一名其他角色使用。你亮出牌堆顶的五张牌，依次对其使用其中的牌，然后将剩余的牌置于武将牌上，称为“军”。此牌结算后，你本回合无法使用伤害牌。",
         dz_xing_yinxi: "吟兮",
         dz_xing_yinxi_info: "锁定技。准备阶段，你可以令一名其他角色获得一枚“吟”标记。有“吟”的角色使用牌时，你可令此牌无效或无法被响应，然后你获得此牌对应的实体牌，其移去一枚“吟”。",
         '#ext:杏雅三国/audio/dz_xing_yinxi1': '知我者谓我心忧，所忧者君尔。',
@@ -13491,6 +13492,7 @@ export let info = {
         '#ext:杏雅三国/audio/xinxjuyan1': '虎踞青兖，欲补薄暮苍天。',
         '#ext:杏雅三国/audio/xinxjuyan2': '欲止戈，必先执戈！',
         xinxqianjun_card: '千军',
+        xinxqianjun_eff:'千军',
         xinxqiansi_tag: 'invisible',
         xinxqiansi: '潜嗣',
         xinxqiansi_info: "每轮开始时，你可以观看一名其他角色的手牌，将其中一张牌标记为“嗣”，其他角色使用“嗣”指定唯一目标时，你可以将此牌目标转移给一名角色，并清除此牌对应的“嗣”记录。一名角色的回合结束后，你获得位于弃牌堆中的“嗣”并清除此牌记录。",
