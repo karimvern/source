@@ -36,8 +36,8 @@ export let info = {
         xinx_qiong_shadow3: ["male", "qun", 4, ['xinxzhupo', 'xinxyanqiang'], ["unseen", "sex:male_castrated"]],
         xinx_mimi: ["female", "qun", 3, ['xinxhuoban'], ["unseen", "sex:male_castrated"]],
         xinx_yinglang: ["female", "qun", 3, ['xinxpojie', 'xinxhairu'], ['epic']],
-        xinx_xiadie: ["female", "qun", 3, ['xinxsusheng'], ['legend']],
-        xinx_Pollux: ["female", "qun", 3, [], ['legend'], ["unseen"]],
+        xinx_xiadie: ["female", "qun", 3, ['xinxsusheng','xinxyuejian'], ['legend']],
+        xinx_Pollux: ["female", "qun", 3, [], ["unseen", "sex:male_castrated"]],
         xinx_luocha: ["male", "qun", 4, [], ['epic']],
         xinx_ruanmei: ["female", "qun", 3, [], ['epic']],
         xinx_xier: ["female", "qun", 4, [], ['epic']],
@@ -610,7 +610,8 @@ export let info = {
                         .set("dialog", dialog)
                         .set("list", list)
                         .set("map", map)
-                        .set("ai", function () {
+                        .set("ai", () => {
+                            const player = get.event("player");
                             let max = 0,
                                 res = "cancel2";
                             for (let s of _status.event.list) {
@@ -630,7 +631,8 @@ export let info = {
                                 }
                             }
                             return res;
-                        }).forResult();
+                        })
+                       .forResult();
 
                     if (result.control != "cancel2") {
                         event.cards2 = allCardss.filter(function (i) {
@@ -1960,7 +1962,8 @@ export let info = {
                                 // await game.cardsGotoPile(cards, 'insert');
                                 await player.lose(cards, ui.cardPile, 'insert');
                                 player.$throw(cards.length, 1000);
-                                game.log(player, "将" + cards.length + "张牌置于了牌堆顶");
+                                const num = cards.length;
+                                game.log(player, "将" + get.cnNumber(num) + "张牌置于了牌堆顶");
                             }
                         }
                     },
@@ -1978,7 +1981,7 @@ export let info = {
                     intro: {
                         content(event, player) {
                             let num = player.countMark('xinxpojie_bing');
-                            if (num > 0) return '你于自己的回合内至多使用等同体力上限张牌。';
+                            if (num > 0) return '你于自己的回合内至多使用'+get.cnNumber(num)+'张牌。';
                             return '暂无效果';
                         }
                     },
@@ -2388,14 +2391,13 @@ export let info = {
             filter(event, player) {
                 return event.name != "phase" || game.phaseNumber == 0;
             },
-            group: ["xinxsusheng_swap", "xinxsusheng_right", 'xinxsusheng_add','xinxsusheng_damage'],
             async cost(event, trigger, player) {
                 const result = await player
-                    .chooseTarget([1,2], lib.filter.notMe, get.prompt2("xinxsusheng"))
+                    .chooseTarget(1, lib.filter.notMe, `苏生：选择一名角色`,'你与其体力值变化1点后可获得1枚新蕊，你与其进入濒死状态时，你可消耗玻吕刻斯一半体力，将体力回复至1点。',true)
                     .set("ai", target => {
                         const player = get.player();
                         let val = target.getHp();
-                        if (get.attitude(player, target) <= 0) val *= 2;
+                        if (get.attitude(player, target) > 0) val *= 2;
                         return val;
                     })
                     .forResult();
@@ -2406,8 +2408,6 @@ export let info = {
                 };
             },
             async content(event, trigger, player) {
-                // const num = player.getHp(),
-                //     num1 = player.maxHp;
                 const target = event.targets;
               //player.logSkill("xinxsusheng", null, null, null, [get.rand(5, 6)]);
                 player.line(target);
@@ -2421,9 +2421,9 @@ export let info = {
                 player.storage.xinxsusheng.hp = num;
                 player.storage.xinxsusheng_dist = player.addSubPlayer({
                     name: "xinx_Pollux",
-                    skills: ["xinxsusheng_in","xinxsusheng_swap"],
-                    hp: num,
-                    maxHp: num,
+                    skills: ["xinxsusheng_swap",'xinxhuiyi'],
+                    hp: 4,
+                    maxHp: 4,
                     sex: "female",
                     image: "ext:永夜之境/image/xinx_Pollux.png",
                     hs: get.cards(4),
@@ -2444,11 +2444,73 @@ export let info = {
                 mark(dialog, storage, player) {
                     if (storage) dialog.addSmall([storage.map(key => key.name), "character"]);
                     let num = player.countMark("xinxsusheng_add");
-                    if (num != 0) dialog.addText(`已拥有新蕊${num > 0 ? ":" : ""}${num}`);
+                    let num2 = player.storage.xinxsusheng.hp;
+                    if (num != 0) dialog.addText(`已拥有新蕊${num > 0 ? ":" : ""}${num/num2}`);
                 },
             },
+            group: ["xinxsusheng_swap", "xinxsusheng_right",'xinxsusheng_die','xinxsusheng_lose'],
             subSkill: {
+                lose:{
+                    trigger: {
+                        global: "dyingAfter",
+                    },
+                    priority: 12,
+                    forced: true,
+                    popup: false,
+                    charlotte: true,
+                    filter(event, player) {
+                        return !player.storage.xinxsusheng_dist&&player.hasMark('xinxsusheng_lose');
+                    },
+                    async content(event, trigger, player) {
+                    player.draw();
+                    player.clearMark('xinxsusheng_lose',false);
+                    }
+                },
+                die:{
+                    trigger: {
+                    player: "subPlayerDie",
+                    },
+                    forced: true,
+                    popup: false,
+                    charlotte: true,
+                    async content(event, trigger, player) {
+                       player.draw();
+                    }
+                },
                 damage:{
+                    trigger: {
+                        global: "dying",
+                    },
+                    filter: function (event, player) {
+                        const targets = game
+                            .filterPlayer(target => {
+                                return player.getStorage("xinxsusheng").includes(target);
+                            }).sortBySeat();
+                        return targets.includes(event.player)&&player.storage.xinxsusheng_dist;
+                    },
+                    prompt(event, player) {
+                        const target = player.storage.xinxsusheng_dist;
+                        const num = Math.ceil(player.storage[target].maxHp / 2);
+                        return "是否消耗玻吕刻斯" + num + "点体力，令" +get.translation(event.player) +"回复体力至1点";
+                    },
+                    check(event, player) {
+                        return get.attitude(player, event.player) > 0;
+                    },
+                    async content(event, trigger, player) {
+                        const target = player.storage.xinxsusheng_dist;
+                        const num = Math.ceil(player.storage[target].maxHp / 2);
+                        if (player.storage[target].hp > num) {
+                            player.storage[target].hp -= num;
+                            await trigger.player.recoverTo(1);
+                            game.log('#b' + target, '失去了', num + '点体力');
+                        }
+                        else {
+                            player.xinx_removeSubPlayer(target);
+                            player.addMark('xinxsusheng_lose', 1, false);
+                            await trigger.player.recoverTo(1);
+                        }
+    
+                    },
 
                 },
                 add: {
@@ -2474,18 +2536,17 @@ export let info = {
                         player.addMark('xinxsusheng_add', 1);
                         player.markSkill("xinxsusheng");
                         const num =player.storage.xinxsusheng.hp;
-                        //const target = game.findPlayer(current => current.hasSkill("xinxsusheng_in"));
                         const target =player.storage.xinxsusheng_dist;
                         if (player.countMark('xinxsusheng_add') >= num) {
                             if (target) {
-                            player.storage[target].hp += num;
+                            player.storage[target].hp += (player.storage[target].maxHp-player.storage[target].hp);
                             game.log('#b' + target, '将体力回复至体力上限');
                             }else {
                                 player.storage.xinxsusheng_dist = player.addSubPlayer({
                                     name: "xinx_Pollux",
-                                    skills: ["xinxsusheng_in","xinxsusheng_swap"],
-                                    hp: num,
-                                    maxHp: num,
+                                    skills: ["xinxsusheng_swap"],
+                                    hp: 4,
+                                    maxHp: 4,
                                     sex: "female",
                                     image: "ext:永夜之境/image/xinx_Pollux.png",
                                     hs: get.cards(4),
@@ -2500,11 +2561,6 @@ export let info = {
                             await player.clearMark('xinxsusheng_add',false);
                         }
                     },
-                },
-                in:{
-                    sub: true,
-                    sourceSkill: "xinxsusheng",
-                    "_priority": 0,
                 },
                 chosen: {
                     sub: true,
@@ -2528,7 +2584,6 @@ export let info = {
                         player.markSkill("xinxsusheng");
                     },
                 },
-
                 right: {
                     trigger: {
                         player: ["phaseAfter", "phaseCancelled"],
@@ -2550,6 +2605,104 @@ export let info = {
                     },
                 },
             }
+        },
+        xinxyuejian:{
+            trigger: {
+                global: "changeHp",
+            },
+            line: {
+                color: [235, 96, 138],
+            },
+            getIndex: event => Math.abs(event.num),
+            priority: 1,
+            forced: true,
+            popup: false,
+            filter: function (event, player) {
+                const targets = game
+                    .filterPlayer(target => {
+                        return player.getStorage("xinxsusheng").includes(target);
+                    }).sortBySeat();
+                return targets.includes(event.player);
+            },
+            async content(event, trigger, player) {
+                player.addMark('xinxsusheng_add', 1);
+                player.markSkill("xinxsusheng");
+                const num =player.storage.xinxsusheng.hp;
+                const target =player.storage.xinxsusheng_dist;
+                if (player.countMark('xinxsusheng_add') >= num) {
+                    if (target) {
+                    player.storage[target].hp += (player.storage[target].maxHp-player.storage[target].hp);
+                    game.log('#b' + target, '将体力回复至体力上限');
+                    }else {
+                        player.storage.xinxsusheng_dist = player.addSubPlayer({
+                            name: "xinx_Pollux",
+                            skills: ["xinxsusheng_swap"],
+                            hp: 4,
+                            maxHp: 4,
+                            sex: "female",
+                            image: "ext:永夜之境/image/xinx_Pollux.png",
+                            hs: get.cards(4),
+                            skill: "xinxsusheng",
+                            intro: "你的本体回合结束后，切换至此随从并进行一个额外的回合。",
+                            intro2: "当前回合结束后切换回本体",
+                            onremove(player) {
+                                delete player.storage.xinxsusheng_dist;
+                            },
+                        });
+                    }
+                    await player.clearMark('xinxsusheng_add',false);
+                }
+            },
+            group: ["xinxyuejian_damage"],
+            subSkill:{
+                damage:{
+                    trigger: {
+                        global: "dying",
+                    },
+                    filter: function (event, player) {
+                        const targets = game
+                            .filterPlayer(target => {
+                                return player.getStorage("xinxsusheng").includes(target);
+                            }).sortBySeat();
+                        return targets.includes(event.player)&&player.storage.xinxsusheng_dist;
+                    },
+                    prompt(event, player) {
+                        const target = player.storage.xinxsusheng_dist;
+                        const num = Math.ceil(player.storage[target].maxHp / 2);
+                        return "是否消耗玻吕刻斯" + num + "点体力，令" +get.translation(event.player) +"回复体力至1点";
+                    },
+                    check(event, player) {
+                        return get.attitude(player, event.player) > 0;
+                    },
+                    async content(event, trigger, player) {
+                        const target = player.storage.xinxsusheng_dist;
+                        const num = Math.ceil(player.storage[target].maxHp / 2);
+                        if (player.storage[target].hp > num) {
+                            player.storage[target].hp -= num;
+                            player.changeSkin({ characterName: "xinx_xiadie" }, "xinx_xiadie_shadow");
+                            await trigger.player.recoverTo(1);
+                            game.log('#b' + target, '失去了', num + '点体力');
+                        }
+                        else {
+                            player.xinx_removeSubPlayer(target);
+                            player.addMark('xinxsusheng_lose', 1, false);
+                            player.changeSkin({ characterName: "xinx_xiadie" }, "xinx_xiadie_shadow");
+                            await trigger.player.recoverTo(1);
+                        }
+                        player.when({ global: "phaseAfter" }).then(() => {
+                            player.changeSkin({ characterName: "xinx_xiadie" }, "xinx_xiadie");
+                        });
+                    },
+
+                },
+
+            }
+
+        },
+        xinxhuiyi:{
+           
+
+
         },
 
 

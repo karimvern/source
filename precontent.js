@@ -41,7 +41,22 @@ export async function precontent(config,pack){
             },
         };
     
-       
+        lib.element.player.xinx_removeSubPlayer=function(name){
+            if(this.hasSkill('subplayer')&&this.name==name){
+                this.exitSubPlayer(true);
+            }
+            else{
+                if(this.storage[name].onremove){
+                    this.storage[name].onremove(this);
+                }
+                this.removeSkill(name);
+                delete this.storage[name];
+                game.log(this,'牺牲了随从','#g'+name);
+                _status.event.trigger('removeSubPlayer');
+            }
+        };
+
+
 
        //样式参考扩展《圣杯战争》
         const css = '.lmyyy {  -webkit-transition: all 0.1s; animation: lrotate 3s linear infinite; }';

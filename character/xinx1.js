@@ -59,7 +59,7 @@ export let info = {
         xinx_lvbu: ["male", "qun", 4, ['xinxxuanxiao', 'xinxshiji'], ['epic']],
         xinx_dongxie: ["female", "qun", 3, ['xinxjiaojue', 'xinxfengyao'], ['legend']],
         xinx_zhangchunhua: ["female", "wei", '2/4', ['xinxzhenying', 'xinxzhebian'], ['hiddenSkill', 'epic']],
-        xinx_qinxi: ["female", "xing", 3, ['xinxceshi1', 'xinxceshi2'], ['legend']],
+        xinx_qinlian: ["female", "xing", 3, ['xinxzhiyi', 'xinxshenai'], ['legend']],
         xinxzhu_zhangliao: ["male", "qun", 4, ['xinxyingqi', 'xinxyanhui'], ['legend']],
         xinx_simazhao: ["male", "wei", 3, ['xinxqueyi', 'xinxshexin', 'xinxjinmian'], ['legend']],
         xinxzhu_caocao: ["male", "qun", 4, ['xinxxishuo', 'xinxhaopo'], ['legend']],
@@ -70,13 +70,13 @@ export let info = {
         xinx_wangyun: ["male", "qun", 3, ['xinxjinjie', 'xinxyunjue'], ['epic']],
         xinx_xurong: ["male", "qun", 4, ['xinxjieshuo', 'xinxhuolu'], ['legend']],
         xinx_zhugedan: ["male", "wei", 4, ['xinxkejing', 'xinxjuyi'], ['epic']],
-        xinx_qinlian: ["female", "xing", 3, ['xinxzhiyi', 'xinxshenai'], ['legend']],
-        xinx_moqiongshu: ["female", "wei", 3, ['xinxchanyi', 'xinxzejuan'], ['epic']],
-        xinx_zoushi: ["female", "qun", 3, [], ['epic'],["forbidai"]],
-        xinx_yuanshao: ["male", "qun", 4, [], ['epic'],["forbidai"]],
-        xinx_chengong: ["male", "qun", 3, [], ['epic'],["forbidai"]],
-        xinx_caoshuang: ["male", "wei", 4, [], ['epic'],["forbidai"]],
-        xinx_bailingyun: ["female", "wei", 3, [], ['epic'],["forbidai"]],
+        xinx_moqiongshu: ["female", "wei", 3, ['xinxchanyi'], ['epic']],
+        //xinx_qinxi: ["female", "xing", 3, ['xinxceshi1', 'xinxceshi2'], ['legend']],
+        // xinx_zoushi: ["female", "qun", 3, [], ['epic'],["forbidai"]],
+        // xinx_yuanshao: ["male", "qun", 4, [], ['epic'],["forbidai"]],
+        // xinx_chengong: ["male", "qun", 3, [], ['epic'],["forbidai"]],
+        // xinx_caoshuang: ["male", "wei", 4, [], ['epic'],["forbidai"]],
+        // xinx_bailingyun: ["female", "wei", 3, [], ['epic'],["forbidai"]],
 
 
     },
@@ -823,8 +823,11 @@ export let info = {
             limited: true,
             skillAnimation: true,
             animationColor: 'fire',
+            prompt(event, player) {
+                return get.prompt2("xing_hanming");
+            },
             check(event, player) {
-                if (!player.countCards('h', { name: 'tao' }) && !player.countCards('h', { name: 'jiu' })) return 2;
+                if (player.countCards("h", "tao")===0 ||player.countCards("h", "jiu")===0) return 2;
                 if (player.hasSkill('xing_zhupo')) return 1;
                 return 0;
             },
@@ -7636,7 +7639,7 @@ export let info = {
 
                         }
                         await player.changeCharacter(newPair);
-                        await player.draw(2);
+                        await player.draw();
                         player.removeSkill("xinxfeiyan_back");
                     },
                     sub: true,
