@@ -8,7 +8,7 @@ export let info = {
     characterSort: {
         xinx1: {
             // 分包: ["武将ID","武将ID"],
-            'xinxwanxi': ["xinx_zhenfu", "xinx_caoxian", "xinx_lingju", "xinx_diaochan", 'xinx_liutan', 'xinx_huangwudie', 'xinx_lvlingqi', 'xinx_yanghuiyu', 'xinx_sunshangxiang', 'xinx_zhangchunhua'],
+            'xinxwanxi': ["xinx_zhenfu", "xinx_caoxian", "xinx_lingju", "xinx_diaochan", 'xinx_liutan', 'xinx_huangwudie', 'xinx_lvlingqi', 'xinx_yanghuiyu', 'xinx_sunshangxiang', 'xinx_zhangchunhua', 'xinx_moqiongshu', 'xinx_bailingyun'],
             'xinxyuhui': ["xinx_jiangwei", "xinshu_jiangwei", "xinx_zhaoxiang", "xinx_caoying", "xinx_simashi", 'xinx_zhonghui', 'xinxyin_simashi', 'xinxying_jiangwei', 'xinx_dengai', 'xinxying_zhonghui', 'xinx_simazhao', 'xinx_zhugedan', 'xinx_caoshuang'],
             'qiangu': ["xinx_zhangliao", "xinx_zhaoyun", "xinx_zhouyu", "xinwei_zhangliao", "xxin_luxun", "xinx_caocao", 'xinx_guanyu', 'xinx_zhugeliang', 'xinxshu_zhugeliang', 'xinx_simayi', 'xinx_lvmeng', 'xinxzhu_zhouyu', 'xinxying_simayi'],
             'qunxiong': ["xinx_xushao", "xinxqun_jiaxu", "xinx_guojia", 'xinx_jiaxu', 'xinx_lvbu', 'xinx_dongxie', 'xinxzhu_zhangliao', 'xinxzhu_caocao', 'xinxzhu_zhaoyun', 'xinx_dongzhuo', 'xinx_wangyun', 'xinx_xurong', 'xinx_zoushi', 'xinx_yuanshao', 'xinx_chengong'],
@@ -22,7 +22,7 @@ export let info = {
         xxyuexi: ["female", "xing", 3, ["dz_xing_yinxi", "dz_xing_jiangchun"], ['rare']],
         xxin_luxun: ["male", "wu", 4, ['xinxlianyin', 'xinxfenkui'], ["border:xing", 'rare']],
         xinx_zhaoxiang: ["female", "shu", 3, ["xing_xingyu", "xing_ningshuang", 'xing_hanming'], ['legend']],
-        xinx_zhangliao: ["male", "xing", 5, ["xxxhuanren", "xxxzhenxi"], ['legend']],
+        xinx_zhangliao: ["male", "xing", 4, ["xxxhuanren", "xxxzhenxi"], ['legend']],
         xinx_lingju: ["female", "qun", 3, ['xinxcangren', 'xinxfenglu'], ['epic']],
         xinx_caoxian: ["female", "wei", 3, ['xing_sizhu', 'xing_mengran'], ['legend']],
         xinx_zhenfu: ["female", "wei", 3, ["xinxsongqu", "xinxfushen", "xinxguizi"], ['epic']],
@@ -53,14 +53,13 @@ export let info = {
         xinx_zengao: ["male", "xing", 4, ['xinxjishi', 'xinxxinlue'], ['epic']],
         xinxying_jiangwei: ["male", "shu", 4, ['xinxhemou', 'xinxweixi'], ["border:wei", 'legend']],
         xinx_yanghuiyu: ["female", "jin", 3, ['xinxshanjiao', 'xinxhuiyan'], ['epic']],
-        xinx_sunshangxiang: ["female", "wu", 4, ['xinxqiansi', 'xinxxiaoling'], ["border:xing", 'legend']],
+        xinx_sunshangxiang: ["female", "wu", 3, ['xinxqiansi', 'xinxxiaoling'], ["border:xing", 'legend']],
         xinx_dengai: ["male", "wei", 4, ['xinxduanwan', 'xinxjingong'], ['epic']],
         xinxying_zhonghui: ["male", "wei", 4, ['xinxquanpao', 'xinxqingqiang'], ["border:qun", 'legend']],
         xinx_lvbu: ["male", "qun", 4, ['xinxxuanxiao', 'xinxshiji'], ['epic']],
         xinx_dongxie: ["female", "qun", 3, ['xinxjiaojue', 'xinxfengyao'], ['legend']],
         xinx_zhangchunhua: ["female", "wei", '2/4', ['xinxzhenying', 'xinxzhebian'], ['hiddenSkill', 'epic']],
         xinx_qinxi: ["female", "xing", 3, ['xinxceshi1', 'xinxceshi2'], ['legend']],
-        xinx_qinlian: ["female", "xing", 3, ['xinxzhiyi', 'xinxshenai'], ['legend']],
         xinxzhu_zhangliao: ["male", "qun", 4, ['xinxyingqi', 'xinxyanhui'], ['legend']],
         xinx_simazhao: ["male", "wei", 3, ['xinxqueyi', 'xinxshexin', 'xinxjinmian'], ['legend']],
         xinxzhu_caocao: ["male", "qun", 4, ['xinxxishuo', 'xinxhaopo'], ['legend']],
@@ -70,12 +69,14 @@ export let info = {
         xinx_dongzhuo: ["male", "qun", 5, ['xinxlujing', 'xinxzisui'], ['epic']],
         xinx_wangyun: ["male", "qun", 3, ['xinxjinjie', 'xinxyunjue'], ['epic']],
         xinx_xurong: ["male", "qun", 4, ['xinxjieshuo', 'xinxhuolu'], ['legend']],
-        xinx_zoushi: ["female", "qun", 3, [], ['epic']],
         xinx_zhugedan: ["male", "wei", 4, ['xinxkejing', 'xinxjuyi'], ['epic']],
-        xinx_yuanshao: ["male", "qun", 4, [], ['epic']],
-        xinx_chengong: ["male", "qun", 3, [], ['epic']],
-        xinx_caoshuang: ["male", "wei", 4, [], ['epic']],
-        xinx_moqiongshu: ["female", "wei", 3, [], ['epic']],
+        xinx_qinlian: ["female", "xing", 3, ['xinxzhiyi', 'xinxshenai'], ['legend']],
+        xinx_moqiongshu: ["female", "wei", 3, ['xinxchanyi', 'xinxzejuan'], ['epic']],
+        xinx_zoushi: ["female", "qun", 3, [], ['epic'],["forbidai"]],
+        xinx_yuanshao: ["male", "qun", 4, [], ['epic'],["forbidai"]],
+        xinx_chengong: ["male", "qun", 3, [], ['epic'],["forbidai"]],
+        xinx_caoshuang: ["male", "wei", 4, [], ['epic'],["forbidai"]],
+        xinx_bailingyun: ["female", "wei", 3, [], ['epic'],["forbidai"]],
 
 
     },
@@ -97,32 +98,34 @@ export let info = {
     },
     characterSubstitute: {//皮肤切换
         xinx_zhaoxiang: [
-            ['xinx_zhaoxiang_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinx_zhaoxiang_shadow.png']],
-            // "die:ext:杏雅三国/audio/die/xinx_zhaoxiang_shadow.mp3"
+            ['xinx_zhaoxiang_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_zhaoxiang_shadow.png']],
         ],
         xinx_diaochan: [
-            ['xinx_diaochan_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinx_diaochan_shadow.png']],
+            ['xinx_diaochan_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_diaochan_shadow.png']],
         ],
         xinx_zhonghui: [
-            ['xinx_zhonghui_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinx_zhonghui_shadow.png']],
+            ['xinx_zhonghui_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_zhonghui_shadow.png']],
         ],
         xinx_jiangwei: [
-            ['xinx_jiangwei_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinx_jiangwei_shadow.png']],
+            ['xinx_jiangwei_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_jiangwei_shadow.png']],
         ],
         xinx_simayi: [
-            ['xinx_simayi_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinx_simayi_shadow.png']],
+            ['xinx_simayi_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_simayi_shadow.png']],
         ],
         xinx_lvlingqi: [
-            ['xinx_lvlingqi_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinx_lvlingqi_shadow.png']],
+            ['xinx_lvlingqi_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_lvlingqi_shadow.png']],
         ],
         xinx_simazhao: [
-            ['xinx_simazhao_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinx_simazhao_shadow.png']],
+            ['xinx_simazhao_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_simazhao_shadow.png']],
         ],
         xinxzhu_caocao: [
-            ['xinxzhu_caocao_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinxzhu_caocao_shadow.png']],
+            ['xinxzhu_caocao_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinxzhu_caocao_shadow.png']],
         ],
         xinx_caoxian: [
-            ['xinx_caoxian_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '杏雅三国/image/xinx_caoxian_shadow.png']],
+            ['xinx_caoxian_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_caoxian_shadow.png']],
+        ],
+        xinx_moqiongshu: [
+            ['xinx_moqiongshu_shadow', [((lib.device || lib.node) ? 'ext:' : 'db:extension-') + '永夜之境/image/xinx_moqiongshu_shadow.png']],
         ],
     },
     //武将姓名
@@ -148,7 +151,7 @@ export let info = {
             subtype: "equip1",
             skills: ["jinhuanren"],
 
-            image: 'ext:杏雅三国/image/jinhuanren.png',
+            image: 'ext:永夜之境/image/jinhuanren.png',
             cardcolor: "heart",
             destroy: true,
             distance: {
@@ -207,7 +210,7 @@ export let info = {
             derivation: "xinxzhu_caocao",
             audio: true,
             fullskin: true,
-            image: 'ext:杏雅三国/image/qianjungongjin.png',
+            image: 'ext:永夜之境/image/qianjungongjin.png',
             filterTarget: function (card, player, target) {
                 return player != target;
             },
@@ -288,7 +291,7 @@ export let info = {
 
         },
         xinxzengren: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "phaseBefore",
                 player: "enterGame",
@@ -332,7 +335,7 @@ export let info = {
             group: ['xinxzengren_lose', 'xinxzengren_give'],
             subSkill: {
                 lose: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
 
                         player: ["loseAfter"],
@@ -362,7 +365,7 @@ export let info = {
                 },
                 give: {
 
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
 
                     trigger: {
                         global: "roundStart",
@@ -393,7 +396,7 @@ export let info = {
 
         //曹宪
         xing_sizhu: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             audioname: ["xinx_caoxian_shadow"],
             trigger: { player: ['useCardAfter', 'respondAfter'] },
             locked: true,
@@ -442,7 +445,7 @@ export let info = {
             },
         },
         xing_mengran: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             audioname: ["xinx_caoxian_shadow"],
             locked: true,
             enable: ["chooseToUse", "chooseToRespond"],
@@ -466,6 +469,7 @@ export let info = {
                                 if (event.filterCard(get.autoViewAs({ name, nature }, "unsure"), player, event)) list.push(["基本", "", "sha", nature]);
                             }
                         } else if (get.type(name) == "basic" && event.filterCard(get.autoViewAs({ name }, "unsure"), player, event)) list.push(["基本", "", name]);
+                        //else if (get.type(name) == "trick" && event.filterCard(get.autoViewAs({ name }, "unsure"), player, event)) list.push(["锦囊", "", name]);
                     }
                     var dialog = ui.create.dialog("梦染", [list, "vcard"]);
                     dialog.direct = true;
@@ -546,8 +550,8 @@ export let info = {
             trigger: {
                 player: "phaseZhunbeiBegin",
             },
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/dz_xing_yinxi" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/dz_xing_yinxi" + index + ".mp3" : 2),
             direct: true,
             locked: true,
             priority: 10,
@@ -572,7 +576,7 @@ export let info = {
             subSkill: {
                 card: {
                     audio: "dz_xing_yinxi",
-                    logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/dz_xing_yinxi" + index + ".mp3" : 2),
+                    logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/dz_xing_yinxi" + index + ".mp3" : 2),
                     trigger: {
                         global: "useCard",
                     },
@@ -618,7 +622,7 @@ export let info = {
             },
         },
         dz_xing_jiangchun: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "damageEnd",
             },
@@ -695,7 +699,7 @@ export let info = {
                 if (event.player == player) return false;
                 return event.player.hp > event.player.countCards("h");
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             logTarget: "player",
             direct: true,
             content: function () {
@@ -764,7 +768,7 @@ export let info = {
             },
         },
         xing_dengbei: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 // player: "useCardToPlayered",
                 target: "useCardToTargeted",
@@ -807,7 +811,7 @@ export let info = {
         },
         //赵襄
         xing_hanming: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             //enable: 'phaseUse',
             trigger: {
                 player: "dying",
@@ -840,7 +844,7 @@ export let info = {
         },
 
         xing_xingyu: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "phaseZhunbeiBegin",
             },
@@ -955,7 +959,7 @@ export let info = {
                     return "令额外摸牌数+1，并获得【铸魄】直到再次发动此技能";
                 },
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
 
             trigger: {
                 global: "phaseEnd",
@@ -1041,7 +1045,7 @@ export let info = {
                     charlotte: true,
                     onremove: true,
                     silent: true,
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     filter: function (event, player) {
 
                         if (event.getg(player).length == 0) return false;
@@ -1060,7 +1064,7 @@ export let info = {
         'xing_ewaimopai': {},
         xing_zhupo: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             usable: 1,
 
             // usable(skill, player) {
@@ -1161,7 +1165,7 @@ export let info = {
 
         },
         xxxhuanren: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "useCardToPlayered",
             },
@@ -1210,8 +1214,8 @@ export let info = {
             },
         },
         xxxzhenxi: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xxxzhenxi1.mp3", "ext:杏雅三国/audio/xxxzhenxi2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xxxzhenxi1.mp3", "ext:永夜之境/audio/xxxzhenxi2.mp3"],
             trigger: {
                 //source: "damageSource",
                 source: "damageBegin1",
@@ -1223,8 +1227,7 @@ export let info = {
                 // get.skillInfoTranslation(skill)
             },
             async cost(event, trigger, player) {
-                const skills = trigger.player.getStockSkills(true, true);//定义技能
-
+                const skills = trigger.player.getStockSkills(false, true);//定义技能
                 const result = await player.chooseControl(trigger.player.getStockSkills(false, true), 'cancel2')
                     .set('prompt', get.prompt2('xxxzhenxi', trigger.player))
                     .set('choiceList', skills.map(i => {
@@ -1264,7 +1267,7 @@ export let info = {
             subSkill: {
                 re: {
                     audio: "xxxzhenxi",
-                    logAudio: () => ["ext:杏雅三国/audio/xxxzhenxi3.mp3", "ext:杏雅三国/audio/xxxzhenxi4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xxxzhenxi3.mp3", "ext:永夜之境/audio/xxxzhenxi4.mp3"],
                     trigger: {
                         player: "damageEnd",
                     },
@@ -1333,7 +1336,7 @@ export let info = {
                 if (player.getStorage('skillDisabledBy') === game.me.name) {
                     const disabledSkills = player.storage.xxxzhenxi || [];
                     for (const s of disabledSkills) {
-                        player.addSkill(s); // 使用 addSkill 方法恢复技能
+                        player.addSkill(s); 
                     }
                 }
             },
@@ -1358,7 +1361,7 @@ export let info = {
                 player: "useCardToPlayered",
                 target: "useCardToTargeted",
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             filter: function (event, player, name) {
                 if (event.targets.length > 1) return false;
                 if (event.target == player) return event.player != player;
@@ -1435,7 +1438,7 @@ export let info = {
             trigger: {
                 source: "dieAfter",
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             forced: true,
             content: function () {
                 if (typeof player.storage.dz_K_wuqian != "number") player.storage.dz_K_wuqian = 0;
@@ -1449,8 +1452,8 @@ export let info = {
         },
 
         xinxsongqu: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxsongqu1.mp3", "ext:杏雅三国/audio/xinxsongqu2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxsongqu1.mp3", "ext:永夜之境/audio/xinxsongqu2.mp3"],
             enable: "phaseUse",
             usable: 1,
             chooseButton: {
@@ -1470,7 +1473,7 @@ export let info = {
                     if (links[0].includes("牌堆")) links.reverse();
                     return {
                         audio: "xinxsongqu",
-                        logAudio: () => ["ext:杏雅三国/audio/xinxsongqu1.mp3", "ext:杏雅三国/audio/xinxsongqu2.mp3"],
+                        logAudio: () => ["ext:永夜之境/audio/xinxsongqu1.mp3", "ext:永夜之境/audio/xinxsongqu2.mp3"],
                         type: links[0],
                         color: links[1],
                         filterCard: () => false,
@@ -1563,7 +1566,7 @@ export let info = {
                 },
                 draw: {
                     audio: "xinxsongqu",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxsongqu3.mp3", "ext:杏雅三国/audio/xinxsongqu4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxsongqu3.mp3", "ext:永夜之境/audio/xinxsongqu4.mp3"],
                     trigger: {
                         global: ["useCard"],
                     },
@@ -1681,7 +1684,7 @@ export let info = {
             },
         },
         xinxfushen: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             marktext: "生",
             intro: {
                 name: "浮生",
@@ -1704,7 +1707,7 @@ export let info = {
             group: "xinxfushen_draw",
             subSkill: {
                 draw: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         global: "phaseJieshuBegin",
                     },
@@ -1732,7 +1735,7 @@ export let info = {
             },
         },
         xinxguizi: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "damageBegin4",
             },
@@ -1757,7 +1760,7 @@ export let info = {
         },
 
         xinxshuangmang: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
 
                 player: ["loseAsyncEnd"],
@@ -1781,7 +1784,7 @@ export let info = {
                     "_priority": 0,
                 },
                 use: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     enable: ["chooseToUse", "chooseToRespond"],
                     usable: 1,
                     filter: function (event, player) {
@@ -1826,7 +1829,7 @@ export let info = {
                                 filterCard: function (card) {
                                     return card.hasGaintag("xinxchiyu_tag");
                                 },
-                                audio: "ext:杏雅三国/audio:2",
+                                audio: "ext:永夜之境/audio:2",
                                 popname: true,
                                 check: function (card) {
                                     return 6 - get.value(card);
@@ -1889,7 +1892,7 @@ export let info = {
                 player: ["useCard", "respond"],
                 target: "useCardToTargeted",
             },
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             filter: function (event, player) {
                 if (event.name == "useCardToTargeted" && event.player == player) return false;
                 return get.color(event.card) == "red";
@@ -1945,9 +1948,9 @@ export let info = {
         },
 
         xinxshiren: {
-            audio: "ext:杏雅三国/audio:6",
-            logAudio: () => ["ext:杏雅三国/audio/xinxshiren1.mp3", "ext:杏雅三国/audio/xinxshiren2.mp3",
-                "ext:杏雅三国/audio/xinxshiren3.mp3", "ext:杏雅三国/audio/xinxshiren4.mp3"],
+            audio: "ext:永夜之境/audio:6",
+            logAudio: () => ["ext:永夜之境/audio/xinxshiren1.mp3", "ext:永夜之境/audio/xinxshiren2.mp3",
+                "ext:永夜之境/audio/xinxshiren3.mp3", "ext:永夜之境/audio/xinxshiren4.mp3"],
             trigger: {
                 global: "roundStart",
                 player: ["phaseZhunbeiBegin"],
@@ -2079,7 +2082,7 @@ export let info = {
             subSkill: {
                 lose: {
                     audio: "xinxshiren",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxshiren5.mp3", "ext:杏雅三国/audio/xinxshiren6.mp3",],
+                    logAudio: () => ["ext:永夜之境/audio/xinxshiren5.mp3", "ext:永夜之境/audio/xinxshiren6.mp3",],
                     trigger: {
                         player: "phaseEnd"
                     },
@@ -2146,7 +2149,7 @@ export let info = {
         xinxqianqiu:
         {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "damageBegin4",
             },
@@ -2167,7 +2170,7 @@ export let info = {
             }
         },
         xinxzhuoshao: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "phaseZhunbeiBefore",
             },
@@ -2210,7 +2213,7 @@ export let info = {
                     trigger: {
                         global: "damageEnd",
                     },
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     forced: true,
                     filter: function (event, player) {
                         return event.player.countMark("xinxzhuoshao") > 0;
@@ -2286,7 +2289,7 @@ export let info = {
 
                 return false;
             },
-            audio: "ext:杏雅三国/audio:6",
+            audio: "ext:永夜之境/audio:6",
             content: function () {
                 "step 0"
                 if (!player.storage.xinxcangyan) {
@@ -2394,7 +2397,7 @@ export let info = {
         },
 
         xinxtianzhi: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
 
                 player: "phaseJieshuBegin",
@@ -2458,7 +2461,7 @@ export let info = {
             group: ["xinxtianzhi_use", "xinxtianzhi_count"],
             subSkill: {
                 use: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         global: "useCardAfter",
                     },
@@ -2513,7 +2516,7 @@ export let info = {
 
         xinxshisheng: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             usable: 1,
             enable: "chooseToUse",
             locked: true,
@@ -2644,7 +2647,7 @@ export let info = {
             trigger: {
                 player: "phaseJieshuBegin",
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
 
             filter: function () {
                 return game.countPlayer(function (current) {
@@ -2698,7 +2701,7 @@ export let info = {
             trigger: {
                 source: "damageBegin1",
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             locked: true,
             forced: true,
             derivation: "dz_xing_beini",
@@ -2759,7 +2762,7 @@ export let info = {
         },
         dz_xing_quanxiang: {
             enable: "phaseUse",
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             usable: 1,
             locked: true,
             filterTarget: function (card, player, target) {
@@ -2805,7 +2808,7 @@ export let info = {
             trigger: {
                 global: "phaseJieshuBegin",
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             filter: function (event, player) {
                 var targets = game.filterPlayer(function (current) {
                     return current != player && current.hasSkill('dz_xing_beifa');
@@ -2861,7 +2864,7 @@ export let info = {
             trigger: {
                 player: "phaseZhunbeiBegin",
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             forced: true,
             locked: true,
             async content(event, trigger, player) {
@@ -2909,7 +2912,7 @@ export let info = {
         xinxyice:
         {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "loseAfter",
                 global: ["cardsDiscardAfter", "loseAsyncAfter"],
@@ -3008,8 +3011,8 @@ export let info = {
 
 
         xinxlinyou: {
-            audio: "ext:杏雅三国/audio:12",
-            logAudio: () => ["ext:杏雅三国/audio/xinxlinyou1.mp3", "ext:杏雅三国/audio/xinxlinyou2.mp3"],
+            audio: "ext:永夜之境/audio:12",
+            logAudio: () => ["ext:永夜之境/audio/xinxlinyou1.mp3", "ext:永夜之境/audio/xinxlinyou2.mp3"],
             trigger: {
                 player: ["useCard", "respond"],
             },
@@ -3038,7 +3041,7 @@ export let info = {
 
                 tao: {
                     audio: "xinxlinyou",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxlinyou3.mp3", "ext:杏雅三国/audio/xinxlinyou4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxlinyou3.mp3", "ext:永夜之境/audio/xinxlinyou4.mp3"],
                     trigger: {
                         player: "useCard",
                     },
@@ -3048,9 +3051,7 @@ export let info = {
                         return event.card.name == 'tao' || event.card.name == 'jiu';
                     },
                     content: function () {
-
-                        player.gainMaxHp();
-                        player.recover();
+                        trigger.card.name == 'tao' ? player.gainMaxHp() : player.recover();
                     },
                     sub: true,
                     "_priority": 0,
@@ -3058,7 +3059,7 @@ export let info = {
                 },
                 jiu: {
                     audio: "xinxlinyou",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxlinyou3.mp3", "ext:杏雅三国/audio/xinxlinyou4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxlinyou3.mp3", "ext:永夜之境/audio/xinxlinyou4.mp3"],
                     trigger: {
                         player: "useCard",
                     },
@@ -3068,7 +3069,6 @@ export let info = {
                         return event.card.name == 'jiu';
                     },
                     content: function () {
-                        player.gainMaxHp();
                         player.recover();
                     },
                     sub: true,
@@ -3077,7 +3077,7 @@ export let info = {
                 },
                 sha: {
                     audio: "xinxlinyou",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxlinyou5.mp3", "ext:杏雅三国/audio/xinxlinyou6.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxlinyou5.mp3", "ext:永夜之境/audio/xinxlinyou6.mp3"],
                     trigger: {
                         player: "useCard",
                     },
@@ -3111,7 +3111,7 @@ export let info = {
                 },
                 sg: {
                     audio: "xinxlinyou",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxlinyou9.mp3", "ext:杏雅三国/audio/xinxlinyou10.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxlinyou9.mp3", "ext:永夜之境/audio/xinxlinyou10.mp3"],
                     trigger: {
                         global: "useCardToTargeted",
                         // player: "useCard",
@@ -3138,7 +3138,7 @@ export let info = {
                 },
                 da: {
                     audio: "xinxlinyou",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxlinyou7.mp3", "ext:杏雅三国/audio/xinxlinyou8.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxlinyou7.mp3", "ext:永夜之境/audio/xinxlinyou8.mp3"],
                     trigger: {
                         player: "useCard",
                     },
@@ -3158,7 +3158,7 @@ export let info = {
                 },
                 wt: {
                     audio: "xinxlinyou",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxlinyou11.mp3", "ext:杏雅三国/audio/xinxlinyou12.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxlinyou11.mp3", "ext:永夜之境/audio/xinxlinyou12.mp3"],
                     trigger: {
                         target: "useCardToTarget",
                     },
@@ -3198,7 +3198,7 @@ export let info = {
         },
         xinxfuhan: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "dying",
             },
@@ -3218,7 +3218,7 @@ export let info = {
             "_priority": 0,
         },
         xinxwansha: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             global: "xinxwansha2",
             trigger: {
 
@@ -3247,8 +3247,8 @@ export let info = {
             },
         },
         xinxyingfu: {
-            audio: "ext:杏雅三国/audio:6",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxyingfu" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:6",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxyingfu" + index + ".mp3" : 2),
             trigger: {
                 player: "damageEnd",
                 source: "damageSource",
@@ -3340,7 +3340,7 @@ export let info = {
                 },
                 gain: {
                     audio: "xinxyingfu",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxyingfu5.mp3", "ext:杏雅三国/audio/xinxyingfu6.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxyingfu5.mp3", "ext:永夜之境/audio/xinxyingfu6.mp3"],
                     trigger: {
                         player: "phaseEnd",
                     },
@@ -3388,7 +3388,7 @@ export let info = {
             },
         },
         xinxqianlong: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 global: "gameDrawAfter",
                 player: ["useCardAfter", "enterGame"],
@@ -3568,7 +3568,7 @@ export let info = {
         },
 
         xinxyini: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 source: "damageSource",
             },
@@ -3622,7 +3622,7 @@ export let info = {
         },
 
         xinxchenlan: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 global: "phaseEnd",
             },
@@ -3661,7 +3661,7 @@ export let info = {
             group: "xinxchenlan_mark",
             subSkill: {
                 re: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         global: "phaseEnd",
 
@@ -3705,7 +3705,7 @@ export let info = {
 
 
         xinxshixi: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             usable: 1,
             locked: true,
             trigger: {
@@ -3738,7 +3738,7 @@ export let info = {
 
         xinxyiyue: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 target: "useCardToTarget",
             },
@@ -3782,7 +3782,7 @@ export let info = {
         },
 
         xinxjuewu: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "phaseEnd",
             },
@@ -3832,7 +3832,7 @@ export let info = {
             subSkill: {
 
                 dying: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         player: "damageBefore",
                     },
@@ -3881,8 +3881,8 @@ export let info = {
         xinxqingchen: {
 
             group: ["xinxqingchen_control", "xinxqingchen_draw", "xinxqingchen_charge", "xinxqingchen_init"],
-            audio: "ext:杏雅三国/audio:6",
-            logAudio: () => ["ext:杏雅三国/audio/xinxqingchen1.mp3", "ext:杏雅三国/audio/xinxqingchen2.mp3"],
+            audio: "ext:永夜之境/audio:6",
+            logAudio: () => ["ext:永夜之境/audio/xinxqingchen1.mp3", "ext:永夜之境/audio/xinxqingchen2.mp3"],
             enable: "phaseUse",
             filter: function (event, player, name) {
                 return player.countCharge() > 3;
@@ -3948,7 +3948,7 @@ export let info = {
                 },
                 control: {
                     audio: "xinxqingchen",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxqingchen3.mp3", "ext:杏雅三国/audio/xinxqingchen4.mp3", "ext:杏雅三国/audio/xinxqingchen5.mp3", "ext:杏雅三国/audio/xinxqingchen6.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxqingchen3.mp3", "ext:永夜之境/audio/xinxqingchen4.mp3", "ext:永夜之境/audio/xinxqingchen5.mp3", "ext:永夜之境/audio/xinxqingchen6.mp3"],
                     forced: true,
                     trigger: {
                         global: "phaseBeginStart",
@@ -4087,8 +4087,8 @@ export let info = {
 
         xinxxieling: {
             enable: "phaseUse",
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxxieling1.mp3", "ext:杏雅三国/audio/xinxxieling2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxxieling1.mp3", "ext:永夜之境/audio/xinxxieling2.mp3"],
             usable: 1,
             onremove: true,
             filterTarget: function (card, player, target) {
@@ -4153,7 +4153,7 @@ export let info = {
                         content: "受到的伤害+#",
                     },
                     audio: "xinxxieling",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxxieling3.mp3", "ext:杏雅三国/audio/xinxxieling4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxxieling3.mp3", "ext:永夜之境/audio/xinxxieling4.mp3"],
                     trigger: {
                         global: "damageBegin1",
                     },
@@ -4177,7 +4177,7 @@ export let info = {
 
 
         xinxxieling3: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "damageBegin3",
             },
@@ -4233,17 +4233,14 @@ export let info = {
 
         //奸雄 
         xinxjianxiong: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxjianxiong1.mp3", "ext:杏雅三国/audio/xinxjianxiong2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxjianxiong1.mp3", "ext:永夜之境/audio/xinxjianxiong2.mp3"],
             trigger: {
                 player: "damageBefore",
 
             },
             locked: true,
-
-
             mark: true,
-
             intro: {
                 content(storage, player) {
                     return `剩余可发动次数为${1 - player.countMark("xinxjianxiong")}`;
@@ -4297,7 +4294,7 @@ export let info = {
             subSkill: {
                 die: {
                     audio: "xinxjianxiong",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxjianxiong3.mp3", "ext:杏雅三国/audio/xinxjianxiong4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxjianxiong3.mp3", "ext:永夜之境/audio/xinxjianxiong4.mp3"],
                     trigger: {
                         global: "die",
                     },
@@ -4349,8 +4346,8 @@ export let info = {
         },
 
         xinxcangren: {
-            audio: "ext:杏雅三国/audio:6",
-            logAudio: () => ["ext:杏雅三国/audio/xinxcangren1.mp3", "ext:杏雅三国/audio/xinxcangren2.mp3"],
+            audio: "ext:永夜之境/audio:6",
+            logAudio: () => ["ext:永夜之境/audio/xinxcangren1.mp3", "ext:永夜之境/audio/xinxcangren2.mp3"],
             trigger: {
                 //global: "loseEnd",
 
@@ -4406,7 +4403,7 @@ export let info = {
             subSkill: {
                 init: {
                     audio: "xinxcangren",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxcangren3.mp3", "ext:杏雅三国/audio/xinxcangren4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxcangren3.mp3", "ext:永夜之境/audio/xinxcangren4.mp3"],
                     trigger:
                     {
                         global: ['phaseBefore', 'die'],
@@ -4445,7 +4442,7 @@ export let info = {
                 },
                 da: {
                     audio: "xinxcangren",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxcangren5.mp3", "ext:杏雅三国/audio/xinxcangren6.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxcangren5.mp3", "ext:永夜之境/audio/xinxcangren6.mp3"],
                     trigger: {
                         source: "dieAfter",
                     },
@@ -4468,7 +4465,7 @@ export let info = {
                             return Math.sqrt(target.countCards('he'));
                         }
                         if (target.hasMark('xinxcangren')) {
-                            return -Math.sqrt(target.countCards('he')); // 优先攻击有标记的角色
+                            return -Math.sqrt(target.countCards('he'));
                         }
                         return 0;
                     },
@@ -4500,7 +4497,7 @@ export let info = {
                 // if(name=='phaseDiscard'&&card.hasGaintag('xinxfenglu_tag')) return false;
                 //  }
             },
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger:
             {
                 global: "phaseEnd",
@@ -4560,8 +4557,8 @@ export let info = {
 
 
         xinxquanmou: {
-            audio: "ext:杏雅三国/audio:6",
-            logAudio: () => ["ext:杏雅三国/audio/xinxquanmou1.mp3", "ext:杏雅三国/audio/xinxquanmou2.mp3"],
+            audio: "ext:永夜之境/audio:6",
+            logAudio: () => ["ext:永夜之境/audio/xinxquanmou1.mp3", "ext:永夜之境/audio/xinxquanmou2.mp3"],
             trigger: {
                 player: "phaseDiscardEnd",
             },
@@ -4580,7 +4577,9 @@ export let info = {
                 'step 0'
                 var list = [];
                 trigger.player.getHistory('useCard', function (evt) {
-                    if (!evt.isPhaseUsing() || !['trick', 'basic'].contains(get.type(evt.card))) return;
+                    if (!evt.isPhaseUsing() || !['trick', 'basic'].contains(get.type(evt.card)) && game.hasPlayer(target => {
+                        return player.canUse(evt.card, target, false);
+                    })) return;
                     var name = evt.card.name;
                     if (name == "sha") {
                         var nature = evt.card.nature;
@@ -4632,7 +4631,7 @@ export let info = {
                         global: "phaseEnd",
                     },
                     audio: "xinxquanmou",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxquanmou3.mp3", "ext:杏雅三国/audio/xinxquanmou4.mp3", "ext:杏雅三国/audio/xinxquanmou5.mp3", "ext:杏雅三国/audio/xinxquanmou6.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxquanmou3.mp3", "ext:永夜之境/audio/xinxquanmou4.mp3", "ext:永夜之境/audio/xinxquanmou5.mp3", "ext:永夜之境/audio/xinxquanmou6.mp3"],
                     forced: true,
                     round: 1,
                     filter(event, player) {
@@ -4658,9 +4657,10 @@ export let info = {
                     trigger: {
                         player: "phaseDrawBegin2",
                     },
+                    mark: true,
                     forced: true,
                     charlotte: true,
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     filter: function (event, player) {
                         return !event.numFixed && player.countMark("xinxquanmou_Draw");
                     },
@@ -4680,7 +4680,7 @@ export let info = {
 
         xinxwugui: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "dying",
             },
@@ -4703,8 +4703,8 @@ export let info = {
 
         xinxwuyi: {
 
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxwuyi1.mp3", "ext:杏雅三国/audio/xinxwuyi2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxwuyi1.mp3", "ext:永夜之境/audio/xinxwuyi2.mp3"],
             trigger: {
                 global: "gainAfter",
             },
@@ -4733,7 +4733,7 @@ export let info = {
                         content: "不能回复体力",
                     },
                     audio: "xinxwuyi",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxwuyi3.mp3", "ext:杏雅三国/audio/xinxwuyi4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxwuyi3.mp3", "ext:永夜之境/audio/xinxwuyi4.mp3"],
                     trigger: {
                         player: "recoverBefore",
                     },
@@ -4762,8 +4762,8 @@ export let info = {
         },
 
         xinxhuoji: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxhuoji" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxhuoji" + index + ".mp3" : 2),
             trigger: {
                 player: "useCardToPlayered",
             },
@@ -4852,7 +4852,7 @@ export let info = {
                 gian: {
 
                     audio: "xinxhuoji",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxhuoji3.mp3", "ext:杏雅三国/audio/xinxhuoji4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxhuoji3.mp3", "ext:永夜之境/audio/xinxhuoji4.mp3"],
                     trigger: {
                         global: "useCardToPlayered",
                         // global: "damageEnd",
@@ -4910,7 +4910,7 @@ export let info = {
             },
             locked: true,
             forced: true,
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             filter: function (event, player) {
                 return !event.numFixed && player.countMark("xinxhuoji_handcard");
             },
@@ -4925,7 +4925,7 @@ export let info = {
         },
 
         xinxcanjing: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
 
                 global: ["shaMiss", "eventNeutralized"],
@@ -4963,7 +4963,7 @@ export let info = {
             subSkill: {
 
                 dixiao: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
 
                         player: ["shaMiss", "eventNeutralized"],
@@ -5005,8 +5005,8 @@ export let info = {
 
 
         xinxsanku: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxsanku1.mp3", "ext:杏雅三国/audio/xinxsanku2.mp3", "ext:杏雅三国/audio/xinxsanku3.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxsanku1.mp3", "ext:永夜之境/audio/xinxsanku2.mp3", "ext:永夜之境/audio/xinxsanku3.mp3"],
             trigger: {
                 global: "roundStart",
             },
@@ -5067,7 +5067,7 @@ export let info = {
                 re:
                 {
                     audio: "xinxsanku",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxsanku3.mp3", "ext:杏雅三国/audio/xinxsanku4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxsanku3.mp3", "ext:永夜之境/audio/xinxsanku4.mp3"],
                     trigger: {
                         player: "dying",
 
@@ -5099,7 +5099,7 @@ export let info = {
         },
 
         xinxluexin: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 global: "phaseEnd",
             },
@@ -5204,7 +5204,7 @@ export let info = {
 
         xinxyangjian: {
 
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 player: ["useCard", "respond"],
                 //player: "loseEnd",
@@ -5233,7 +5233,7 @@ export let info = {
             //group:'xinxyangjian_ga', //②每回合限一次。当你于回合外不因使用而失去牌时，你摸等同体力上限的牌。
             subSkill: {
                 ga: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         player: "loseAfter",
                         //global: "gainAfter",
@@ -5277,8 +5277,8 @@ export let info = {
 
         xinxjinbi: {
 
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxjinbi1.mp3", "ext:杏雅三国/audio/xinxjinbi2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxjinbi1.mp3", "ext:永夜之境/audio/xinxjinbi2.mp3"],
             trigger: {
                 player: "phaseEnd",
             },
@@ -5307,7 +5307,7 @@ export let info = {
             subSkill: {
                 gain: {
                     audio: "xinxjinbi",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxjinbi3.mp3", "ext:杏雅三国/audio/xinxjinbi4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxjinbi3.mp3", "ext:永夜之境/audio/xinxjinbi4.mp3"],
                     trigger: {
                         source: "damageSource",
                     },
@@ -5337,7 +5337,7 @@ export let info = {
                 },
                 damageCancle: {
                     audio: "xinxjinbi",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxjinbi1.mp3", "ext:杏雅三国/audio/xinxjinbi2.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxjinbi1.mp3", "ext:永夜之境/audio/xinxjinbi2.mp3"],
                     trigger: {
                         player: "damageBegin4",
                     },
@@ -5366,8 +5366,8 @@ export let info = {
         },
 
         xinxwusheng: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxwusheng1.mp3", "ext:杏雅三国/audio/xinxwusheng2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxwusheng1.mp3", "ext:永夜之境/audio/xinxwusheng2.mp3"],
             trigger: {
 
                 source: "damageBegin2",
@@ -5387,7 +5387,7 @@ export let info = {
             subSkill: {
                 draw: {
                     audio: "xinxwusheng",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxwusheng3.mp3", "ext:杏雅三国/audio/xinxwusheng4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxwusheng3.mp3", "ext:永夜之境/audio/xinxwusheng4.mp3"],
                     trigger: {
                         player: "useCardToPlayered",
                     },
@@ -5448,7 +5448,7 @@ export let info = {
             },
         },
         xinxmingshi: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "judge",
             },
@@ -5510,8 +5510,8 @@ export let info = {
 
         },
         xinxqizhen: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxqizhen1.mp3", "ext:杏雅三国/audio/xinxqizhen2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxqizhen1.mp3", "ext:永夜之境/audio/xinxqizhen2.mp3"],
             trigger: {
                 player: "phaseZhunbeiBegin",
             },
@@ -5590,7 +5590,7 @@ export let info = {
             subSkill: {
                 hp: {
                     audio: "xinxqizhen",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxqizhen3.mp3", "ext:杏雅三国/audio/xinxqizhen4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxqizhen3.mp3", "ext:永夜之境/audio/xinxqizhen4.mp3"],
                     trigger: {
                         player: "changeHp",
                     },
@@ -5658,7 +5658,7 @@ export let info = {
             }
         },
         xinxshiyu: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 global: "useCard",
             },
@@ -5717,7 +5717,7 @@ export let info = {
 
                 clear: {//②当你受到大于1点的伤害时，你可弃置一张“奇”令此伤害减半（向下取整）。
 
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         player: "damageBegin4",
                     },
@@ -5761,7 +5761,7 @@ export let info = {
 
                 player: "phaseJieshuBegin",
             },
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             // forced: true,
             direct: true,
             filter: function (event, player) {
@@ -5798,7 +5798,7 @@ export let info = {
             },
         },
         xinxzhaohan: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
 
             trigger: {
                 global: "phaseBegin",
@@ -5886,7 +5886,7 @@ export let info = {
         },
         xinxrenshi: {
 
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 player: "useCardToPlayered",
             },
@@ -5931,7 +5931,7 @@ export let info = {
             // group:"xinxrenshi_tar",
             subSkill: {
                 tar: {
-                    audio: "ext:杏雅三国/audio:4",
+                    audio: "ext:永夜之境/audio:4",
                     trigger: {
                         target: "useCardToTargeted",
                     },
@@ -5991,7 +5991,7 @@ export let info = {
         xinxchushi: {
 
             derivation: ["xinxchushid", "xinxchushi_draw", "xinxchushi_lose"],
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             enable: "phaseUse",
             usable: 1,
             filterTarget: true,
@@ -6002,7 +6002,7 @@ export let info = {
             async content(event, trigger, player) {
 
                 const target = event.target || player;
-
+                player.loseMaxHp();
                 //  const allDerivations = lib.skill.xinxchushi.derivation;
                 //  const storage = player.getStorage("xinxchushi");
                 //const list = allDerivations.filter(option => !storage.includes(option));
@@ -6013,16 +6013,6 @@ export let info = {
                     choice = await player.chooseControl(list).set('choiceList', (() => {
                         return list.map(i => '<div class="skill">【' + lib.translate[i] + '】</div><div>' + lib.translate[i + '_info'] + '</div>');
                     })())
-                        // .set("ai", function (button) {
-                        //     let controls = get.event("controls").slice();
-                        //     if (button.link === "xinxchushid" && get.attitude(player, target) > 0) {
-                        //         return "xinxchushid";
-                        //     } 
-                        //     if (button.link === "xinxchushi_lose" && get.attitude(player, target) <= 0) {
-                        //         return "xinxchushi_lose";
-                        //     } 
-                        //     return controls[controls.length - 1];
-                        // })
                         .set("ai", () => {
                             return get.event("choice");
                         })
@@ -6049,29 +6039,27 @@ export let info = {
                     player: function (target) {
                         const player = _status.event.player;
                         const usedOptions = player.storage.xinxchushi || [];
-                        if (usedOptions.length === 2) return -30;
-                        if (target == player) {
+                        if (usedOptions.length === 1) return -30;
+                        if (player == target) {
                             if (!usedOptions.includes("xinxchushid")) {
-                                return 20; // 优先使用 xinxchushid
+                                return 20;
                             } else if (!usedOptions.includes("xinxchushi_draw")) {
-                                return 15; // 然后使用 xinxchushi_draw
+                                return 15;
                             }
                         }
                         if (player.isEnemyOf(target)) {
                             if (usedOptions.includes("xinxchushid") && usedOptions.includes("xinxchushi_draw")) {
-                                return 10; // 最后使用 xinxchushi_lose 对敌人
+                                return -10;
                             }
                         }
                         return -10;
                     }
                 },
             },
-
-
             subSkill: {
 
                 damage: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         source: "damageBegin2",
                     },
@@ -6089,7 +6077,7 @@ export let info = {
                     },
                 },
                 draw: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         player: ["phaseZhunbeiBegin", "phaseEnd"],
                     },
@@ -6115,7 +6103,7 @@ export let info = {
                 },
 
                 lose: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         global: "roundStart",
                     },
@@ -6143,7 +6131,7 @@ export let info = {
             }
         },
         xinxchushid: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 source: "damageBegin2",
             },
@@ -6162,7 +6150,7 @@ export let info = {
             group: 'xinxchushid_cl',
             subSkill: {
                 cl: {
-                    audio: "ext:杏雅三国/audio:1",
+                    audio: "ext:永夜之境/audio:1",
                     trigger: {
                         player: "damageBegin4"
                     },
@@ -6179,7 +6167,7 @@ export let info = {
 
         xinxyinshi: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: ["useCard", "respond"],
                 // player: "loseEnd",
@@ -6330,7 +6318,7 @@ export let info = {
 
 
         xinxruilue: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             enable: "phaseUse",
 
             usable: 1,
@@ -6436,7 +6424,7 @@ export let info = {
         },
 
         xinxbainei: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "damageEnd",
             },
@@ -6519,7 +6507,7 @@ export let info = {
 
         xinxlianyin: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
 
             trigger: {
                 global: "roundStart",
@@ -6592,7 +6580,7 @@ export let info = {
 
                 gain: {
                     charlotte: true,
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         //global: "phaseEnd",
                         global: "die",
@@ -6616,7 +6604,7 @@ export let info = {
                 },
 
                 add: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
 
                     trigger: {
                         //player: ["phaseZhunbeiBegin","phaseJieshuBegin"],
@@ -6656,7 +6644,7 @@ export let info = {
 
 
         xinxfenkui: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "useCard",
             },
@@ -6732,7 +6720,7 @@ export let info = {
 
         xinxqianyi: {
 
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 global: "phaseJieshuBegin",
             },
@@ -6815,8 +6803,8 @@ export let info = {
         },
 
         xinxquanbian: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxquanbian1.mp3", "ext:杏雅三国/audio/xinxquanbian2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxquanbian1.mp3", "ext:永夜之境/audio/xinxquanbian2.mp3"],
             trigger: {
                 global: "phaseBegin",
             },
@@ -6878,7 +6866,7 @@ export let info = {
 
                 buff: {
                     audio: "xinxquanbian",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxquanbian3.mp3", "ext:杏雅三国/audio/xinxquanbian4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxquanbian3.mp3", "ext:永夜之境/audio/xinxquanbian4.mp3"],
                     trigger: {
                         player: "useCardToPlayered",
                     },
@@ -6909,7 +6897,7 @@ export let info = {
         },
         //当有角色使用虚拟牌或点数为7的牌时，你可以选择一名其他角色，并从牌堆或弃牌堆中获得三张类型各不相同的牌，然后你选择一项：1.令其执行与你同样的操作；2.令其弃置一种类型的所有手牌。
         xinxshunhua: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "useCard",
             },
@@ -7043,7 +7031,7 @@ export let info = {
         },
 
         xinxbaiyi: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             enable: "phaseUse",
 
             // usable: 1,
@@ -7161,7 +7149,7 @@ export let info = {
         //锁定技。①当你使用黑色牌时，你获得一枚“学”。你的手牌上限+X（X为你的“学”数）。②当你造成或受到伤害时，你可移去任意枚“学”，摸等量的牌并观看牌堆顶五张牌，然后获得等量的牌。
         xinxtaoyin: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 // player: "useCard",
                 player: "loseAfter",
@@ -7213,7 +7201,7 @@ export let info = {
                 },
                 damage: {
 
-                    audio: "ext:杏雅三国/audio:3",
+                    audio: "ext:永夜之境/audio:3",
                     trigger: {
                         source: "damageBegin1",
                         player: "damageBefore",
@@ -7280,7 +7268,7 @@ export let info = {
         },
 
         xinxpixing: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "phaseZhunbeiBegin",
             },
@@ -7376,7 +7364,7 @@ export let info = {
             }
         },
         xinxbeifa: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "useCardToPlayer",
                 target: "useCardToTarget",
@@ -7494,7 +7482,7 @@ export let info = {
         },
 
         xinxlianbing: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "useCardToPlayered",
             },
@@ -7530,7 +7518,7 @@ export let info = {
         },
 
         xinxbugui: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "phaseJieshuBegin",
             },
@@ -7565,8 +7553,8 @@ export let info = {
         },
 
         xinxfeiyan: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxfeiyan1.mp3", "ext:杏雅三国/audio/xinxfeiyan2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxfeiyan1.mp3", "ext:永夜之境/audio/xinxfeiyan2.mp3"],
             trigger: {
                 player: "phaseChange",
 
@@ -7630,7 +7618,7 @@ export let info = {
             subSkill: {
                 back: {
                     audio: "xinxfeiyan",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxfeiyan3.mp3", "ext:杏雅三国/audio/xinxfeiyan4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxfeiyan3.mp3", "ext:永夜之境/audio/xinxfeiyan4.mp3"],
                     trigger: {
                         player: "phaseUseAfter",
                         // player:"phaseEnd",
@@ -7661,7 +7649,7 @@ export let info = {
         },
 
         xinxciyou: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 player: "phaseUseBegin",
             },
@@ -7686,7 +7674,7 @@ export let info = {
                 gain: {
 
                     audio: "xinxciyou",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxciyou3.mp3", "ext:杏雅三国/audio/xinxciyou4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxciyou3.mp3", "ext:永夜之境/audio/xinxciyou4.mp3"],
 
                     trigger: {
                         player: "phaseJieshuBegin",
@@ -7708,7 +7696,7 @@ export let info = {
                 },
 
                 effect: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         source: "damageBegin1",
                     },
@@ -7757,7 +7745,7 @@ export let info = {
 
         xinxjishi: {          //犄势：锁定技。当一名角色使用不为其手牌区的牌时，你视为使用一张牌名和元素相同牌。
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "useCard",
             },
@@ -7794,7 +7782,7 @@ export let info = {
 
 
         xinxxinlue: {   //心略：每回合限一次，当一名角色使用牌时，你观看当前回合角色手牌并可以重铸其一张牌，然后你可以使用此牌。
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "useCardToPlayered",
             },
@@ -7839,7 +7827,7 @@ export let info = {
 
 
         xinxhemou: {//合谋：准备阶段，你可以选择一名其他角色并展示牌堆底X张牌（X为场上存活人数，至多为5），其依次使用其中的伤害牌。若其以此法使用的牌造成过伤害，你摸X张牌，否则其失去2点体力。
-            audio: "ext:杏雅三国/audio:3",
+            audio: "ext:永夜之境/audio:3",
             trigger: {
                 player: "phaseZhunbeiBegin",
             },
@@ -7915,12 +7903,12 @@ export let info = {
 
 
         xinxweixi: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxweixi1.mp3", "ext:杏雅三国/audio/xinxweixi2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxweixi1.mp3", "ext:永夜之境/audio/xinxweixi2.mp3"],
 
             trigger: {
-                player: ["phaseBefore", "changeHp"],
-                // player: "changeHp",
+                // player: ["phaseBefore", "changeHp"],
+                player: "phaseBefore",
                 //  "damageBegin","loseHpBegin"
             },
 
@@ -7935,9 +7923,9 @@ export let info = {
                     return 6 - get.value(card);
                 }).forResult();
                 if (result.bool) {
-                    game.log(player, "将一张牌置于了牌堆底");
+                    game.log(player, "将 " + result.cards.length + "张牌置于了牌堆底");
                     player.lose(result.cards, ui.cardPile, 'bottom');
-                    await player.$throw(1, 1000);
+                    await player.$throw(result.cards.length, 1000);
 
                 }
                 await player.draw(result.cards.length);
@@ -7948,7 +7936,7 @@ export let info = {
             subSkill: {
 
                 use: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     enable: "chooseToUse",
                     hiddenCard(player, name) {
                         return get.type(name) == 'basic' && player.hasCard(function (card) {
@@ -8105,7 +8093,7 @@ export let info = {
         },
 
         xinxquanpao: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 player: "phaseDrawAfter",
 
@@ -8187,8 +8175,8 @@ export let info = {
 
         xinxqingqiang: {
 
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxqingqiang1.mp3", "ext:杏雅三国/audio/xinxqingqiang2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxqingqiang1.mp3", "ext:永夜之境/audio/xinxqingqiang2.mp3"],
 
             trigger: {
                 target: "useCardToTargeted",
@@ -8216,7 +8204,8 @@ export let info = {
                     const target = trigger.player;
 
                     const { result } = await player
-                        .chooseTarget(lib.filter.notMe, true)
+                        .chooseTarget(lib.filter.notMe,
+                            true)
                         .set("ai", function (target) {
                             return get.damageEffect(target, _status.event.source, player);
                         })
@@ -8240,7 +8229,7 @@ export let info = {
             subSkill: {
                 effect: {
                     audio: "xinxqingqiang",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxqingqiang3.mp3", "ext:杏雅三国/audio/xinxqingqiang4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxqingqiang3.mp3", "ext:永夜之境/audio/xinxqingqiang4.mp3"],
                     charlotte: true,
                     onremove: true,
                     trigger: {
@@ -8276,7 +8265,7 @@ export let info = {
 
 
         xinxxzhaohan: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             forced: true,
             locked: true,
             mark: true,
@@ -8478,7 +8467,7 @@ export let info = {
 
 
         xinxduanwan: {//锁定技。每回合限一次。一名角色的体力值变化时，若其体力值不大于2，你选择一项：1.获得一名角色等同其体力值张牌；2.弃置装备区一张牌，令一名角色弃置所有基本牌，然后你与其距离视为1直到下轮开始。
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "changeHp",
             },
@@ -8571,7 +8560,7 @@ export let info = {
         },
 
         xinxjingong: {//锁定技。当你造成或受到伤害时，你展示目标角色一张牌，若此牌牌名字数大于你的体力值，此伤害+1，否则你随机获得本回合进入弃牌堆的一张牌。
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 source: "damageBegin1",
                 player: "damageBefore",
@@ -8633,7 +8622,7 @@ export let info = {
 
         },
         xinxshanjiao: { //一名角色使用牌后，若其手牌中没有与此牌花色相同的牌，你可以进行一次判定，若为红色，你摸等同你手牌中花色数的牌；若为黑色，你令一名其他角色无法使用或打出与此判定牌类型或花色相同的牌，直到其下个回合结束。
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "useCard",
 
@@ -8727,8 +8716,8 @@ export let info = {
 
         },
         xinxhuiyan: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxhuiyan1.mp3", "ext:杏雅三国/audio/xinxhuiyan2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxhuiyan1.mp3", "ext:永夜之境/audio/xinxhuiyan2.mp3"],
             trigger: {
                 player: "judgeEnd",
             },
@@ -8745,7 +8734,7 @@ export let info = {
             subSkill: {
                 gl: {
                     audio: "xinxhuiyan",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxhuiyan3.mp3", "ext:杏雅三国/audio/xinxhuiyan4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxhuiyan3.mp3", "ext:永夜之境/audio/xinxhuiyan4.mp3"],
                     trigger: {
                         global: "judgeEnd",
                     },
@@ -8767,7 +8756,7 @@ export let info = {
 
         xinxzhenying: {
 
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "showCharacterAfter",
             },
@@ -8818,8 +8807,8 @@ export let info = {
 
         },
         xinxzhebian: {
-            audio: "ext:杏雅三国/audio:5",
-            logAudio: () => ["ext:杏雅三国/audio/xinxzhebian1.mp3", "ext:杏雅三国/audio/xinxzhebian2.mp3"],
+            audio: "ext:永夜之境/audio:5",
+            logAudio: () => ["ext:永夜之境/audio/xinxzhebian1.mp3", "ext:永夜之境/audio/xinxzhebian2.mp3"],
             trigger: {
                 player: "phaseEnd",
             },
@@ -8870,8 +8859,8 @@ export let info = {
             subSkill: {
                 change: {
                     //audio: "xinxzhebian",
-                    audio: "ext:杏雅三国/audio:3",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxzhebian3.mp3", "ext:杏雅三国/audio/xinxzhebian4.mp3", "ext:杏雅三国/audio/xinxzhebian5.mp3"],
+                    audio: "ext:永夜之境/audio:3",
+                    logAudio: () => ["ext:永夜之境/audio/xinxzhebian3.mp3", "ext:永夜之境/audio/xinxzhebian4.mp3", "ext:永夜之境/audio/xinxzhebian5.mp3"],
                     trigger: {
                         player: ["turnOverEnd", "linkEnd", "showCharacterEnd", "hideCharacterEnd", "removeCharacterEnd"],
                     },
@@ -8898,7 +8887,7 @@ export let info = {
 
         xinxxuanxiao: {//出牌阶段限一次。你可以与一名其他角色议事。若结果为：红色，你回复1点体力；黑色，你视为使用一张【出其不意】。
             //若你与其意见:相同，你将势力变更为与其相同，从牌堆获得一张坐骑牌，然后重复执行一次议事的红黑结果；不同，你摸一张牌并从牌堆获得两张【杀】，本回合你对其使用牌无次数和距离限制，其无法响应你的牌。
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             enable: "phaseUse",
             usable: 1,
             filter(event, player) {
@@ -9040,7 +9029,7 @@ export let info = {
         },
         xinxshiji: {
             derivation: "xinxwushuang",
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 source: "damageBegin1",
             },
@@ -9097,8 +9086,8 @@ export let info = {
 
         },
         xinxwushuang: {
-            audio: "ext:杏雅三国/audio:2",
-            logAudio: () => ["ext:杏雅三国/audio/xinxwushuang1.mp3", "ext:杏雅三国/audio/xinxwushuang2.mp3"],
+            audio: "ext:永夜之境/audio:2",
+            logAudio: () => ["ext:永夜之境/audio/xinxwushuang1.mp3", "ext:永夜之境/audio/xinxwushuang2.mp3"],
             trigger: {
                 global: "dyingBegin",
             },
@@ -9126,7 +9115,7 @@ export let info = {
             },
             subSkill: {
                 after: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         global: "dyingAfter",
                     },
@@ -9143,7 +9132,7 @@ export let info = {
             }
         },
         xinxjiaojue: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 player: "useCardToPlayered",
             },
@@ -9273,7 +9262,7 @@ export let info = {
             subSkill: {
                 counter: {
                     audio: "xinxjiaojue",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxjiaojue3.mp3", "ext:杏雅三国/audio/xinxjiaojue4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxjiaojue3.mp3", "ext:永夜之境/audio/xinxjiaojue4.mp3"],
                     trigger: {
                         player: "damageEnd",
                     },
@@ -9301,7 +9290,7 @@ export let info = {
 
         },
         xinxfengyao: {
-            audio: "ext:杏雅三国/audio:5",
+            audio: "ext:永夜之境/audio:5",
             trigger: {
                 player: ["phaseBegin", "phaseEnd"],
                 source: "damageSource",
@@ -9367,7 +9356,7 @@ export let info = {
             subSkill: {
                 draw: {
                     audio: "xinxfengyao",
-                    logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxfengyao" + index + ".mp3" : 2),
+                    logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxfengyao" + index + ".mp3" : 2),
                     trigger: {
                         player: ["phaseDrawBegin2", "damageBegin3"]
                     },
@@ -9390,7 +9379,7 @@ export let info = {
 
 
         xinxyingqi: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "roundStart",
             },
@@ -9419,12 +9408,14 @@ export let info = {
                     } else if (button.link == '弃牌阶段') return 2;
                     return 1;
                 }).set('filterButton', (button, player) => {
-                    return button.link != player.storage[event.name + '_lastPhase']; // 不能选择上次选择过的阶段
+                    //return button.link != player.storage[event.name + '_lastPhase']; // 不能选择上次选择过的阶段
+                    return !player.getStorage(event.name+'_use').includes(button.link); // 不能选择选择过的阶段
                 });
                 if (result.bool) {
-                    player.storage[event.name + '_lastPhase'] = result.links[0];// 记录本次选择的阶段
+                   // player.storage[event.name + '_lastPhase'] = result.links[0];// 记录上次选择的阶段
                     player.addSkill(event.name + '_use');
-                    //   player.storage[event.name+'_use'].push(map[result.links[0]]);
+                    player.markAuto(event.name+'_use', [result.links[0]]);// 记录选择的阶段
+                    //player.storage[event.name+'_use'].push(map[result.links[0]]);// 添加到记录
                     player.markSkill(event.name + '_use');
 
                     const phase = map[result.links[0]];
@@ -9451,7 +9442,7 @@ export let info = {
                 use: {
                     charlotte: true,
                     mark: true,
-                    /* intro: {
+                     intro: {
                          name: "已记录的阶段",
                          content(storage, player) {
                              return get.translation(storage);
@@ -9459,7 +9450,7 @@ export let info = {
                          markcount() {
                              return 0;
                          },
-                     },*/
+                     },
                     init(player, skill) {
                         player.storage[skill] = [];
                     },
@@ -9488,7 +9479,7 @@ export let info = {
 
 
         xinxyanhui: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 player: "phaseUseBegin",
             },
@@ -9558,7 +9549,7 @@ export let info = {
 
         },
         xinxduanzhi: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 global: "phaseJieshuBegin",
             },
@@ -9632,7 +9623,7 @@ export let info = {
             },
         },
         xinxjinshu: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "damageEnd",
             },
@@ -9732,7 +9723,7 @@ export let info = {
 
         },
         xinxqueyi: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 target: "useCardToTargeted",
             },
@@ -9789,8 +9780,8 @@ export let info = {
 
         xinxshexin: {//判定阶段开始时，你可以展示判定区任意张牌，然后令一名其他角色选择一项：1.将所有手牌置入牌堆，然后获得展示的牌；2.令你弃置其等量张牌，并使用展示的牌。
 
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxshexin" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxshexin" + index + ".mp3" : 2),
             trigger: {
                 player: "phaseJudgeBegin",
             },
@@ -9871,7 +9862,6 @@ export let info = {
                     .forResult();
                 if (targetHandcards > 0) {
                     if (choice.index === 0) {
-
                         player.logSkill("xinxshexin", [target1], null, null, [3]);
                         const card = target1.getCards("h");
                         game.log(player, `将${get.cnNumber(cards.length)}张牌置入了牌堆`);
@@ -9880,9 +9870,7 @@ export let info = {
                         };
                         await target1.give(card, player);
                         // await player.give(cards, target1);
-
                     }
-
                     else if (choice.index === 1) {
                         player.logSkill("xinxshexin", [target1], null, null, [4]);
                         game.log(target1, '选择了让', player, '使用这些牌');
@@ -9905,7 +9893,7 @@ export let info = {
             },
         },
         xinxjinmian: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 player: "phaseUseBegin",
             },
@@ -9943,8 +9931,8 @@ export let info = {
         },
         xinxsukan: {
             enable: "phaseUse",
-            audio: "ext:杏雅三国/audio:7",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxsukan" + index + ".mp3" : "ext:杏雅三国/audio/xinxsukan" + get.rand(6, 7) + ".mp3"),
+            audio: "ext:永夜之境/audio:7",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxsukan" + index + ".mp3" : "ext:永夜之境/audio/xinxsukan" + get.rand(6, 7) + ".mp3"),
             usable: 1,
             filterTarget: function (card, player, target) {
                 return player != target;
@@ -10119,7 +10107,7 @@ export let info = {
             }
         },
         xinxbingjun: {
-            audio: "ext:杏雅三国/audio:3",
+            audio: "ext:永夜之境/audio:3",
             trigger: {
                 global: "die",
             },
@@ -10135,8 +10123,8 @@ export let info = {
         },
 
         xinxzhiyi: {
-            audio: "ext:杏雅三国/audio:2",
-            logAudio: () => ["ext:杏雅三国/audio/xinxzhiyi1.mp3", "ext:杏雅三国/audio/xinxzhiyi2.mp3"],
+            audio: "ext:永夜之境/audio:2",
+            logAudio: () => ["ext:永夜之境/audio/xinxzhiyi1.mp3", "ext:永夜之境/audio/xinxzhiyi2.mp3"],
             trigger: {
                 global: "gameDrawAfter",
                 player: "enterGame",
@@ -10151,7 +10139,7 @@ export let info = {
             subSkill: {
                 gain: {
                     audio: "xinxzhiyi",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxzhiyi1.mp3", "ext:杏雅三国/audio/xinxzhiyi2.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxzhiyi1.mp3", "ext:永夜之境/audio/xinxzhiyi2.mp3"],
                     trigger: {
                         player: "loseAfter",
                         global: ["equipAfter", "addJudgeAfter", "gainAfter", "loseAsyncAfter", "addToExpansionAfter"],
@@ -10169,8 +10157,8 @@ export let info = {
         },
         xinxshenai: {
 
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxshenai" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxshenai" + index + ".mp3" : 2),
             zhuanhuanji: true,
             mark: true,
             marktext: "☯",
@@ -10225,7 +10213,7 @@ export let info = {
 
         },
         xinxxishuo: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "phaseZhunbeiBegin",
             },
@@ -10286,7 +10274,7 @@ export let info = {
             },
         },
         xinxhaopo: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             // trigger: {
             //     player: "dying",
             // },
@@ -10305,7 +10293,12 @@ export let info = {
 
                 const [bool, targets] = await player
                     .chooseTarget(get.prompt2("xinxhaopo"), '选择一名其他角色，其将手牌摸至体力上限，你将体力回复至与其相同', lib.filter.notMe, true)
-                    .set("ai", target => get.effect(target, { name: "guohe_copy2" }, player, player))
+                    .set("ai", target => {
+                        const player = get.player(),
+                            hs = game.countPlayer();
+                        if (target.isMaxHp()) return hs * 2;
+                        return hs;
+                    })
                     .forResult("bool", "targets");
                 if (bool) {
                     const target = targets[0];
@@ -10322,7 +10315,7 @@ export let info = {
         },
 
         xinxjuyan: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 player: "useCardToPlayer",
             },
@@ -10367,7 +10360,7 @@ export let info = {
             subSkill: {
                 gain: {
                     audio: "xinxjuyan",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxjuyan1.mp3", "ext:杏雅三国/audio/xinxjuyan2.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxjuyan1.mp3", "ext:永夜之境/audio/xinxjuyan2.mp3"],
                     trigger: {
                         player: ["phaseJieshuBegin", "dying"],
 
@@ -10428,7 +10421,7 @@ export let info = {
                 if (cards.length) player.loseToDiscardpile(cards);
             },
         },
-        xinxqianjun_eff:{
+        xinxqianjun_eff: {
             charlotte: true,
             mark: true,
             marktext: "千军",
@@ -10444,8 +10437,8 @@ export let info = {
         },
 
         xinxqiansi: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxqiansi1.mp3", "ext:杏雅三国/audio/xinxqiansi2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxqiansi1.mp3", "ext:永夜之境/audio/xinxqiansi2.mp3"],
             trigger: {
                 // player: "phaseZhunbeiBegin",
                 // global: "phaseZhunbeiBegin",
@@ -10509,7 +10502,7 @@ export let info = {
 
                 use: {
                     audio: "xinxqiansi",
-                    logAudio: () => ["ext:杏雅三国/audio/xinxqiansi3.mp3", "ext:杏雅三国/audio/xinxqiansi4.mp3"],
+                    logAudio: () => ["ext:永夜之境/audio/xinxqiansi3.mp3", "ext:永夜之境/audio/xinxqiansi4.mp3"],
                     trigger: {
                         global: "useCardToTarget",
                     },
@@ -10602,8 +10595,8 @@ export let info = {
         },
 
         xinxxiaoling: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxxiaoling" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxxiaoling" + index + ".mp3" : 2),
             enable: ["chooseToUse", "chooseToRespond"],
             locked: true,
             hiddenCard(player, card) {
@@ -10666,11 +10659,13 @@ export let info = {
                                 }
                                 else if (["equip3", "equip4", "equip5"].includes(get.subtype(cards[0]))) {
                                     player.logSkill('xinxxiaoling', [result.targets[0]], null, null, [get.rand(3, 4)]);
-                                    await player.draw();
+                                    // await player.draw();
+                                    await player.addTempSkill('xinxxiaoling_used');
                                 }
                                 else if (["delay"].includes(get.type(cards[0]))) {
                                     player.logSkill('xinxxiaoling', [result.targets[0]], null, null, [get.rand(3, 4)]);
-                                    await player.draw();
+                                    // await player.draw();
+                                    await player.addTempSkill('xinxxiaoling_used');
                                 }
                                 player.addExpose(0.2);
                             }
@@ -10735,7 +10730,7 @@ export let info = {
 
         },
         xinxyuanyan: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             trigger: {
                 player: "damageEnd",
                 source: "damageSource",
@@ -10818,8 +10813,8 @@ export let info = {
         },
 
         xinxchengshu: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxchengshu" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxchengshu" + index + ".mp3" : 2),
             trigger: {
                 // global: ["loseAfter","loseAsyncAfter"],,"gainAfter"
                 global: ["loseAfter", "equipAfter", "addJudgeAfter", "loseAsyncAfter", "addToExpansionAfter"],
@@ -10902,8 +10897,8 @@ export let info = {
             },
         },
         xinxlongxiang: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxlongxiang" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxlongxiang" + index + ".mp3" : 2),
             trigger: {
                 player: ["loseAfter"],
                 global: ["equipAfter", "addJudgeAfter", "gainAfter", "loseAsyncAfter", "addToExpansionAfter"],
@@ -11063,8 +11058,8 @@ export let info = {
             }
         },
         xinxcangnuo: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxcangnuo" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxcangnuo" + index + ".mp3" : 2),
             trigger: {
                 target: "useCardToTargeted",
             },
@@ -11148,8 +11143,8 @@ export let info = {
         },
 
         xinxlujing: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: () => ["ext:杏雅三国/audio/xinxlujing1.mp3", "ext:杏雅三国/audio/xinxlujing2.mp3"],
+            audio: "ext:永夜之境/audio:4",
+            logAudio: () => ["ext:永夜之境/audio/xinxlujing1.mp3", "ext:永夜之境/audio/xinxlujing2.mp3"],
             trigger: {
                 player: "useCardToPlayered",
             },
@@ -11201,10 +11196,10 @@ export let info = {
                         target.flashAvatar(event.name, name);
 
                         // if (target.node.avatar) {
-                        //     target.node.avatar.setBackgroundImage(`extension/杏雅三国/image/${name}.png`);
+                        //     target.node.avatar.setBackgroundImage(`extension/永夜之境/image/${name}.png`);
                         // }
                         // if (target.node.avatar2) {
-                        //     target.node.avatar2.setBackgroundImage(`extension/杏雅三国/image/${name}.png`);    //永久替换武将图片
+                        //     target.node.avatar2.setBackgroundImage(`extension/永夜之境/image/${name}.png`);    //永久替换武将图片
                         // }
                     }
                 }
@@ -11236,7 +11231,7 @@ export let info = {
                         content: "已被太师掳获",
                         markcount: () => 0,
                     },
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     trigger: {
                         global: ["recoverBegin", "gainAfter", "loseAsyncAfter"],
                     },
@@ -11313,8 +11308,8 @@ export let info = {
             }
         },
         xinxzisui: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxzisui" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxzisui" + index + ".mp3" : 2),
             trigger: {
                 player: "phaseJieshuBegin",
             },
@@ -11447,8 +11442,8 @@ export let info = {
                     players: [],
                 };
             },
-            audio: "ext:杏雅三国/audio:3",
-            logAudio: () => ["ext:杏雅三国/audio/xinxqiyi1.mp3", "ext:杏雅三国/audio/xinxqiyi2.mp3", "ext:杏雅三国/audio/xinxqiyi3.mp3"],
+            audio: "ext:永夜之境/audio:3",
+            logAudio: () => ["ext:永夜之境/audio/xinxqiyi1.mp3", "ext:永夜之境/audio/xinxqiyi2.mp3", "ext:永夜之境/audio/xinxqiyi3.mp3"],
             trigger: {
                 player: "phaseZhunbeiBegin",
             },
@@ -11513,7 +11508,10 @@ export let info = {
                         });
                         if (num > 0 && target.isIn()) {
                             player.chooseBool("契翊：是否令" + get.translation(target) + "摸" + get.cnNumber(num) + "张牌？", lib.filter.notMe).set("choice")
-                                .set("ai", target => get.recoverEffect(target, get.player(), get.player()));
+                                .set("ai", function () {
+                                    let evt = _status.event.getParent();
+                                    return get.attitude(evt.player, evt.target) > 0;
+                                });
                         }
                     })
                     .then(() => {
@@ -11585,7 +11583,7 @@ export let info = {
                 },
                 clear: {
                     // audio: "xinxqiyi",
-                    // logAudio: () => ["ext:杏雅三国/audio/xinxqiyi1.mp3", "ext:杏雅三国/audio/xinxqiyi2.mp3", "ext:杏雅三国/audio/xinxqiyi3.mp3"],
+                    // logAudio: () => ["ext:永夜之境/audio/xinxqiyi1.mp3", "ext:永夜之境/audio/xinxqiyi2.mp3", "ext:永夜之境/audio/xinxqiyi3.mp3"],
                     charlotte: true,
                     silent: true,
                     trigger: { global: ['dieBefore'] },
@@ -11812,8 +11810,8 @@ export let info = {
         },
 
         xinxfanjian: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxfanjian" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxfanjian" + index + ".mp3" : 2),
             trigger: {
                 player: "phaseUseBegin",
             },
@@ -11888,7 +11886,7 @@ export let info = {
             subSkill:
             {
                 use: {
-                    audio: "ext:杏雅三国/audio:2",
+                    audio: "ext:永夜之境/audio:2",
                     charlotte: true,
                     trigger: {
                         // global: "useCardAfter",
@@ -11980,8 +11978,8 @@ export let info = {
             }
         },
         xinxjinjie: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxjinjie" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxjinjie" + index + ".mp3" : 2),
             trigger: {
                 global: "gainAfter",
             },
@@ -12068,8 +12066,8 @@ export let info = {
         },
         xinxyunjue: {
             derivation: ["xinxyunjue_re"],
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxyunjue" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxyunjue" + index + ".mp3" : 2),
             // filter: function (event, player) {
             //     if (player.getStorage("xinxyunjue_debuff")) return true;
             //     return event.getParent(4).name == "xinxyunjue_debuff";
@@ -12225,26 +12223,26 @@ export let info = {
             }
         },
         xinxyunjue_re: {
-            audio: "ext:杏雅三国/audio:4",
+            audio: "ext:永夜之境/audio:4",
             "audioname2": {
                 xinx_wangyun: "xinxyunjue",
             },
         },
         xinxpanzhi_re: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             "audioname2": {
                 xinx_jiangwei: "xinxpanzhi",
             },
         },
         xinxxishuo_re: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             "audioname2": {
                 xinxzhu_caocao: "xinxxishuo",
             },
         },
         xinxjieshuo: {
-            audio: "ext:杏雅三国/audio:4",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxjieshuo" + index + ".mp3" : "ext:杏雅三国/audio/xinxjieshuo" + get.rand(1, 2) + ".mp3"),
+            audio: "ext:永夜之境/audio:4",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxjieshuo" + index + ".mp3" : "ext:永夜之境/audio/xinxjieshuo" + get.rand(1, 2) + ".mp3"),
             init(player) {
                 player.storage.xinxjieshuoCount = 0;
             },
@@ -12336,18 +12334,17 @@ export let info = {
 
         },
         xinxhuolu: {
-            audio: "ext:杏雅三国/audio:6",
+            audio: "ext:永夜之境/audio:6",
             trigger: {
                 global: "useCard1",
             },
             priority: 10,
             filter(event, player) {
-                // return (get.type(event.card) == "trick" && get.tag(event.card, "damage"));
                 return get.tag(event.card, "damage") >= 0.5 && event.player !== player && event.cards && event.cards.filterInD().length;
             },
             forced: true,
             popup: false,
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxhuolu" + index + ".mp3" : 2),
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxhuolu" + index + ".mp3" : 2),
             async content(event, trigger, player) {
 
                 const target = trigger.player;
@@ -12465,8 +12462,8 @@ export let info = {
             }
         },
         xinxkejing: {
-            audio: "ext:杏雅三国/audio:6",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxkejing" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:6",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxkejing" + index + ".mp3" : 2),
             trigger: {
                 global: "roundStart",
             },
@@ -12637,7 +12634,7 @@ export let info = {
             }
         },
         xinxjuyi: {
-            audio: "ext:杏雅三国/audio:2",
+            audio: "ext:永夜之境/audio:2",
             trigger: {
                 global: "phaseBefore",
             },
@@ -12679,10 +12676,10 @@ export let info = {
             }
         },
 
-        
+
         xinxgushu: {
-            audio: "ext:杏雅三国/audio:5",
-            logAudio: index => (typeof index === "number" ? "ext:杏雅三国/audio/xinxgushu" + index + ".mp3" : 2),
+            audio: "ext:永夜之境/audio:5",
+            logAudio: index => (typeof index === "number" ? "ext:永夜之境/audio/xinxgushu" + index + ".mp3" : 2),
             trigger: {
                 source: "damageSource",
                 player: "damageEnd",
@@ -12704,7 +12701,7 @@ export let info = {
 
             filter(event, player) {
                 if (!event.card) return false;
-                 return typeof get.number(event.card) == 'number';
+                return typeof get.number(event.card) == 'number';
             },
             async content(event, trigger, player) {
                 const num = player.maxHp - get.number(trigger.card);
@@ -12746,6 +12743,130 @@ export let info = {
                 }
             }
         },
+        xinxchanyi: {
+            audio: "ext:永夜之境/audio:2",
+            audioname: ["xinx_moqiongshu_shadow"],
+            global: "xinxchanyi_global",
+            subSkill: {
+                global: {
+                    forceaudio: true,
+                    enable: "phaseUse",
+                    usable: 1,
+                    filter(event, player) {
+                        if (!player.countCards("he")) return false;
+                        return game.hasPlayer(current => current.hasSkill("xinxchanyi"));
+                    },
+                    filterTarget(card, player, target) {
+                        return target.hasSkill("xinxchanyi");
+                    },
+                    selectTarget() {
+                        const num = game.countPlayer(current => current.hasSkill("xinxchanyi"));
+                        return num > 1 ? 1 : -1;
+                    },
+                    filterCard: true,
+                    position: "he",
+                    check(card) {
+                        const player = get.player();
+                        const hasFriend = game.hasPlayer(current => {
+                            return current.hasSkill("xinxchanyi") && get.attitude(player, current) > 0;
+                        });
+                        return (hasFriend ? 7 : 1) - get.value(card);
+                    },
+                    prompt() {
+                        const list = game.filterPlayer(current => {
+                            return current.hasSkill("xinxchanyi");
+                        });
+                        return `将一张牌交给${get.translation(list)}${list.length > 1 ? "中的一人" : ""}，然后执行后续效果。`;
+                    },
+                    discard: false,
+                    lose: false,
+                    prepare(cards, player, targets) {
+                        if (targets[0] != player) player.$give(cards, targets[0], false);
+                    },
+                    async content(event, trigger, player) {
+                        const card = event.cards[0],
+                            target = event.target;
+                        if (target != player) await player.give(card, target);
+                        else await player.recast(card);
+                        await game.delayx();
+                        await game.asyncDraw([player, target]);
+                        const { result: { bool } } =
+                            player.countMark("xinxchanyi") < 3 ? await target.chooseBool(`蝉翼：是否令${get.translation(player)}选择获得一个额外装备栏?`) :
+                                player.isDamaged() ? await target.chooseBool(`蝉翼：是否令${get.translation(player)}回复1点体力?`) :
+                                    await target.chooseBool(`蝉翼：是否令${get.translation(player)}增加1点体力上限?`)
+                                        .set("choice")
+                                        .set("ai", () => {
+                                            let evt = _status.event.getParent();
+                                            return get.attitude(evt.player, evt.target) > 0;
+                                        });
+                        if (bool) {
+                            target.line(player);
+                            target.logSkill("xinxchanyi");
+                            target.storage['xinxchanyi_global'] = !target.storage['xinxchanyi_global'];
+                            target.changeSkin({ characterName: "xinx_moqiongshu" }, "xinx_moqiongshu" + (target.storage['xinxchanyi_global'] ? "_shadow" : ""));
+                            if (player.countMark("xinxchanyi") < 3) {
+                                let map = {};
+                                let list = ['equip1', 'equip2', 'equip3', 'equip4'];
+                                let choose = [];
+                                for (let equip of list) {
+                                    let cn = get.translation(equip);
+                                    map[cn] = equip;
+                                    choose.push(cn);
+                                };
+                                const result1 = await player.chooseButton(['〖' + get.skillTranslation(event.name) + '〗:选择要获得的额外装备栏', [choose, 'tdnodes']], 1, true)
+                                    .set('ai', (button) => {
+                                        const player = get.player();
+                                        const randomValue = Math.random();
+                                        if (randomValue < 0.7 && button.link === "武器") {
+                                            return 3;
+                                        }
+                                        if (button.link === "防具") {
+                                            return 2;
+                                        }
+                                        return 1;
+                                    })
+                                    // .set('filterButton', (button, player) => {
+                                    //     return !player.getStorage("xinxchanyi").includes(button.link);
+                                    // })
+                                    .forResult();
+                                if (result1.bool) {
+                                    player.addMark("xinxchanyi", 1, false);
+                                    const equip = map[result1.links[0]];
+                                    await player.expandEquip(equip);
+                                }
+                            } else {
+                                player.isDamaged() ? await player.recover() : await player.gainMaxHp();
+                            }
+                        }
+                    },
+                    ai: {
+                        order: 10,
+                        result: {
+                            player(player, target) {
+                                if (get.attitude(player, target) > 0) return 1;
+                                return 0;
+                            },
+                            target: 0.5,
+                        },
+                    },
+                    sub: true,
+                    sourceSkill: "xinxchanyi",
+                    "_priority": 0,
+                },
+            }
+
+        },
+
+        xinxzejuan: {
+
+
+
+        },
+
+
+
+
+
 
 
     },
@@ -12870,12 +12991,8 @@ export let info = {
         xinx_caoshuang_prefix: '杏',
         xinx_moqiongshu: '杏莫琼树',
         xinx_moqiongshu_prefix: '杏',
-
-
-
-
-
-
+        xinx_bailingyun: '杏柏灵筠',
+        xinx_bailingyun_prefix: '杏',
 
 
 
@@ -12892,110 +13009,52 @@ export let info = {
         qianjungongjin_info: "出牌阶段，对一名其他角色使用。你亮出牌堆顶的五张牌，依次对其使用其中的牌，然后将剩余的牌置于武将牌上，称为“军”。此牌结算后，你本回合无法使用伤害牌。",
         dz_xing_yinxi: "吟兮",
         dz_xing_yinxi_info: "锁定技。准备阶段，你可以令一名其他角色获得一枚“吟”标记。有“吟”的角色使用牌时，你可令此牌无效或无法被响应，然后你获得此牌对应的实体牌，其移去一枚“吟”。",
-        '#ext:杏雅三国/audio/dz_xing_yinxi1': '知我者谓我心忧，所忧者君尔。',
-        '#ext:杏雅三国/audio/dz_xing_yinxi2': '我本局中子，上接青云，下怀江河。',
-        '#ext:杏雅三国/audio/dz_xing_yinxi3': '妾御春风细雨，可保君无虞。',
-        '#ext:杏雅三国/audio/dz_xing_yinxi4': '纵天地将合，悦君之心不移。',
         dz_xing_jiangchun: "绛唇",
         dz_xing_jiangchun_info: "锁定技，当你受到其他角色造成的伤害后，伤害来源获得一枚“吟”标记。然后场上有“吟”的角色选择一项：1.交给你一张牌并令你手牌上限+1。2.获得一枚“吟”标记并令你摸两张牌。",
-        '#ext:杏雅三国/audio/dz_xing_jiangchun1': '求死易，求生难，欲生则畏死。',
-        '#ext:杏雅三国/audio/dz_xing_jiangchun2': '浊世汹汹，既得白首之人，怎可超然物外。',
         dz_xing_duanmou: "断谋",
         dz_xing_duanmou_info: "其他角色的回合开始时，若其体力值大于手牌数，你可为其指定两张任意牌名。若如此做，该角色摸牌阶段，改为从牌堆／弃牌堆获得你指定的牌（若没有指定的牌，则改为获得一张【杀】）。",
         xing_dengbei: "登北",
         xing_dengbei_info: "每轮限一次。其他角色的回合内，当你使用牌指定其他角色为目标后或成为其他角色使用牌的目标后，你可与一名其他角色交换手牌或装备区里的牌。",
         xing_xingyu: "星雨",
-        '#ext:杏雅三国/audio/xing_xingyu1': '逝者如斯，亘古长流，唯英烈之魂悬北斗而长存！',
-        '#ext:杏雅三国/audio/xing_xingyu2': '赵氏之女，跪祈诸公勿渡黄泉，暂留人间，佑大汉万年！',
         xing_xingyu_xingluo: "星落",
         xing_xingyu_info: "锁定技。①准备阶段，你将牌堆顶X张牌（X为场上存活其他角色数）标记为“星落”，并令所有其他角色随机以一张非“星落”手牌交换，若没有则失去1点体力。②“星落”仅你可使用或打出。当你获得牌时，将其标记为“星落”。",
         xing_ningshuang: "凝霜",
-        xing_ningshuang_info: '转换技。一名角色的回合结束时，若你本回合成为过牌的目标，则你可以：阳，观看一名角色的手牌并获得其区域一张牌，然后将其随机一张非“星落”手牌标记为“星落”；阴，令额外摸牌数+1且获得〖铸魄〗直到再次发动此技能。',
-        '#ext:杏雅三国/audio/xing_ningshuang1': '当年明月凝霜刃，此日送尔渡黄泉！',
-        '#ext:杏雅三国/audio/xing_ningshuang2': '已识万里乾坤大，何虑千山草木青！',
+        xing_ningshuang_info: "转换技。一名角色的回合结束时，若你本回合成为过牌的目标，则你可以：阳，观看一名角色的手牌并获得其区域一张牌，然后将其随机一张非“星落”手牌标记为“星落”；阴，令<a style='color:#03f7fe' href=\"javascript:get.xinx_skillTips('当你不因此效果获得牌时，你摸等同额外摸牌数张牌。','0');\">额外摸牌数</a>+1且获得〖铸魄〗直到再次发动此技能。",
         xing_zhupo: "铸魄",
         xing_zhupo_info: "锁定技。每回合限一次，你可将一张牌当做任意基本牌使用或打出。",
-        '#ext:杏雅三国/audio/xing_zhupo1': '凝傲雪之梅为魄，英魂长存，独耀山河万古明！',
-        '#ext:杏雅三国/audio/xing_zhupo2': '铸凌霜之寒成剑，青锋出鞘，斩尽天下不臣贼！',
         xing_ewaimopai: '额外摸牌数',
         xing_ewaimopai_info: "当你不因此效果获得牌时，你摸等同额外摸牌数张牌。",
         xing_hanming: '汉明',
         xing_hanming_info: '限定技。当你进入濒死状态时，你可以弃置所有牌，获得所有其他角色的非“星落”手牌。',
-        '#ext:杏雅三国/audio/xing_hanming1': '龙凤在侧，五虎在前，天命在汉，既寿永昌！',
-        '#ext:杏雅三国/audio/xing_hanming2': '人言为信，日月为明，言日月为证，佑大汉长明！',
         xxxhuanren: "焕刃",
         xxxhuanren_info: "每回合限一次，当你使用牌指定一名其他角色为唯一目标后，你可以令一名角色重铸其区域的所有牌，然后若其重铸的牌中有：基本牌，你获得之；锦囊牌，你可以使用其中的一张牌；装备牌，你令此牌不能被响应并额外结算一次。",
-        '#ext:杏雅三国/audio/xxxhuanren1': '由此突破！',
-        '#ext:杏雅三国/audio/xxxhuanren2': '下役，当活捉孙仲谋。',
         xxxzhenxi: "震袭",
         xxxzhenxi_info: "锁定技。当你对其他角色造成伤害时，若其武将牌上有技能，则你可以获得其武将牌上的一个技能，然后其失去此技能。当其对你造成伤害后，你为其恢复一个以此法失去的技能。",
-        '#ext:杏雅三国/audio/xxxzhenxi1': '找到你了！',
-        '#ext:杏雅三国/audio/xxxzhenxi2': '以霹雳之势，扫平江东！',
-        '#ext:杏雅三国/audio/xxxzhenxi3': '你躲不掉的。',
-        '#ext:杏雅三国/audio/xxxzhenxi4': '我会让你哭不出来。',
         xxxzhenxi1: "金焕刃",
         xxxzhenxi_append: '<span style="font-family: yuanli">金焕刃。以至亲之血，哺其锐锋。此刃出鞘，无人不惧。</span>',
         xinxsongqu: "送曲",
         xinxsongqu_info: "出牌阶段限一次。你可以秘密指定一种类型和颜色，并将一张牌称为“送曲”交给一名其他角色。直到你下回合开始：①当其使用牌时，若与你指定的类型或颜色相同，你选择至多两项本回合未选择过的：1.令其对自己造成1点伤害； 2.令此牌无效；3.回复1点体力；4.获得此牌。②其使用的下一张牌只能从“送曲”中选择。",
-        '#ext:杏雅三国/audio/xinxsongqu1': '洛灵感焉，徙倚彷徨。',
-        '#ext:杏雅三国/audio/xinxsongqu2': '浮长川而忘返，思绵绵而增慕。',
-        '#ext:杏雅三国/audio/xinxsongqu3': '忽焉纵体，以遨以嬉。',
-        '#ext:杏雅三国/audio/xinxsongqu4': '瑰姿艳逸，仪静体闲。',
         xinxfushen: "浮生",
         xinxfushen_info: "锁定技。当一名角色造成1点伤害后，你令其获得1枚“生”；一名角色的结束阶段，你移除场上所有的“生”并摸等量的牌。",
-        '#ext:杏雅三国/audio/xinxfushen1': '有美一人，婉如清扬。',
-        '#ext:杏雅三国/audio/xinxfushen2': '巧笑倩兮，美目盼兮。',
         xinxguizi: "瑰姿",
         xinxguizi_info: "锁定技。每回合限一次，当你受到伤害时，若伤害来源有“生”，你防止此伤害。",
-        '#ext:杏雅三国/audio/xinxguizi1': '靓糚刻饰，便嬛绰约。',
-        '#ext:杏雅三国/audio/xinxguizi2': '绝殊离俗，妖冶嫺都。',
         xinxchiyu: "赤羽",
         xinxchiyu_tag: "羽",
         xinxchiyu_info: "锁定技。当你使用或打出红色牌时，或成为其他角色使用红色牌的目标后，你将牌堆顶的一张牌置于你的武将牌上，称为“羽”。你可以将“羽”如手牌般使用或打出（无使用次数和距离限制）。",
-        '#ext:杏雅三国/audio/xinxchiyu1': '能进能退，方显英雄本色！',
-        '#ext:杏雅三国/audio/xinxchiyu2': '曹阿瞒的青釭剑，很好用。',
-        '#ext:杏雅三国/audio/xinxchiyu3': '该胆寒的是他们。',
-        '#ext:杏雅三国/audio/xinxchiyu4': '云为汉室，无所畏惧！',
         xinxshuangmang: "霜芒",
         xinxshuangmang_info: "当你将“羽”置于武将牌上时，若此“羽”可以使用，你可立即使用“羽”。每回合限一次，你可将一张“羽”当作任意基本牌或锦囊牌使用。",
-        '#ext:杏雅三国/audio/xinxshuangmang1': '常山赵子龙，在此！',
-        '#ext:杏雅三国/audio/xinxshuangmang2': '长枪之下，不留宵小！',
         xinxshiren: "识人",
         xinxshiren_info: "锁定技。每回合限两次。每轮开始时/准备阶段/当你造成伤害后，若你以此法获得的技能数不小于7，你从五张武将牌（非本扩展武将）中选择一个技能，然后获得之。回合结束时，你可以选择失去一个以此法获得的技能。",
-        '#ext:杏雅三国/audio/xinxshiren1': '识人读心，评荐推达。',
-        '#ext:杏雅三国/audio/xinxshiren2': '月旦雅评，试论天下。',
-        '#ext:杏雅三国/audio/xinxshiren3': '议于草野间，评荐俊才多。',
-        '#ext:杏雅三国/audio/xinxshiren4': '君清平之奸贼，乱世之英雄。',
-        '#ext:杏雅三国/audio/xinxshiren5': '千帆过尽，评枭雄之谋，论天下分合！',
-        '#ext:杏雅三国/audio/xinxshiren6': '三尺毛峰，引九天之水，濯一世功名！',
         xinxqianqiu: "千秋",
         xinxqianqiu_info: "锁定技，你不能成为延时锦囊的目标。当你受到不为实体牌造成的伤害时，防止此伤害。",
-        '#ext:杏雅三国/audio/xinxqianqiu1': '我乘轻舟访人间，人如江鲫逐功名。',
-        '#ext:杏雅三国/audio/xinxqianqiu2': '一言难道千秋业，一纸雅评半世人。',
         xinxzhuoshao: "灼灭",
         xinxzhuoshao_info: "①一名的角色准备阶段开始前，若其有“灼”，你移去其一枚“灼”并选择一项：1.令其受到1点火焰伤害。2.令其摸一张牌。②有“灼”的角色受到伤害后，你摸一张牌。",
-        '#ext:杏雅三国/audio/xinxzhuoshao1': '这把火，便是我送给尔等的礼物。',
-        '#ext:杏雅三国/audio/xinxzhuoshao2': '火凭风势！',
         xinxcangyan: "苍焱",
         xinxcangyan_info: "锁定技。当你获得或失去牌后，若此牌花色:<br>为♦️，你随机令一名其他角色获得一枚“灼”；<br>为♥️，你回复1点体力；<br>为♠️，你随机令一名其他角色弃置一张手牌；<br>为♣️，你随机获得一名其他角色场上一张牌。",
-        '#ext:杏雅三国/audio/xinxcangyan1': '不消一曲，汝必败。',
-        '#ext:杏雅三国/audio/xinxcangyan2': '妙哉，妙哉。',
-        '#ext:杏雅三国/audio/xinxcangyan3': '一曲尽兴，余心快哉。',
-        '#ext:杏雅三国/audio/xinxcangyan4': '请诸君，听我一曲。',
-        '#ext:杏雅三国/audio/xinxcangyan5': '攻心不定，请回。',
-        '#ext:杏雅三国/audio/xinxcangyan6': '听琴时，不必说话。',
         xing_sizhu: '思助',
         xing_sizhu_info: '锁定技。当你不因〖思助〗使用或打出牌结算完毕后，你视为使用一张与此牌字数相同的基本牌或普通锦囊牌（无距离和次数限制），然后你可将此牌对应的所有实体牌交给一名其他角色。',
-        '#ext:杏雅三国/audio/xing_sizhu1': '此心相印，非山河可阻，兵戈可断。',
-        '#ext:杏雅三国/audio/xing_sizhu2': '角中有白纹，灵如线，君心我心系两端。',
-        '#ext:杏雅三国/audio/xing_sizhu_xinx_caoxian_shadow1': '灵犀越千山，君在彼，欲寄青鸟相思十万。',
-        '#ext:杏雅三国/audio/xing_sizhu_xinx_caoxian_shadow2': '日暮苍山远，雪女怨寒，此心可栖君畔。',
         xing_mengran: '梦染',
         xing_mengran_info: '每轮限一次。当你需要使用或打出基本牌时，你可视为使用或打出之。',
-        '#ext:杏雅三国/audio/xing_mengran1': '君知春风带暖意，可知丝丝皆妾语？',
-        '#ext:杏雅三国/audio/xing_mengran2': '愿将满腹相思语，化为春风拂君面。',
-        '#ext:杏雅三国/audio/xing_mengran_xinx_caoxian_shadow1': '恨名曹，幸为妾，心怀焦炭难两全。',
-        '#ext:杏雅三国/audio/xing_mengran_xinx_caoxian_shadow2': '君知否，君知否，墙外浓雪杀翠柳。',
         xinxyice: '遗策',
         xinxyice_info: '锁定技。当你使用/打出/弃置的牌进入弃牌堆后，你将这些牌以任意顺序置于你的武将牌上，称为“策”。若这些“策”中有点数相同的牌，则你获得这两张牌中间的所有牌，将这两张牌置于牌堆两端，然后摸两张牌。若场上没有处于濒死状态的角色，则你对一名角色造成1点伤害。',
         dz_xing_beifa: "北伐",
@@ -13008,191 +13067,157 @@ export let info = {
         dz_xing_bugui_info: "结束阶段，若场内有“伐”的角色数大于1，你加1点体力上限并回复1点体力，移去场内所有的“伐”，并对因此而移去“伐”的角色造成等同于移除数的伤害。",
         xinxpanzhi: '磐志',
         xinxpanzhi_info: '锁定技。准备阶段，你观看牌堆顶X张牌（X为你的体力值且至多为5），使用其中任意张牌，然后你获得剩余的牌并失去1点体力。',
-        '#ext:杏雅三国/audio/xinxpanzhi1': '愿以此身为烛，齐七星之数。',
-        '#ext:杏雅三国/audio/xinxpanzhi2': '逐阳而战，血染天幕之彤云！',
         xinxlinyou: '麟佑',
-        xinxlinyou_info: '锁定技。 每回合每项限一次。你使用或打出以下牌时，获得附加效果。<li>「杀」：可选择“雷、火、冰、神”属性。<li>「闪/无懈可击/装备牌/延时类锦囊牌」：摸一张牌并对一名其他角色造成1点伤害。<li>「桃/酒」：增加1点体力上限并回复1点体力。<li>「具有唯一目标且非伤害类的普通锦囊牌」：令此牌额外结算一次。<li>「伤害类普通锦囊牌」：可令此牌伤害值基数+1。<li>「五谷丰登/桃源结义」：可令此牌对任意目标无效。',
-        '#ext:杏雅三国/audio/xinxlinyou1': '我辈慕光而行，不为浮云障目。',
-        '#ext:杏雅三国/audio/xinxlinyou2': '怀麒麟之志，负柱国之托，奔天涯海角！',
-        '#ext:杏雅三国/audio/xinxlinyou3': '师恩如山，维所报者，唯此身尔。',
-        '#ext:杏雅三国/audio/xinxlinyou4': '天下齐喑，我辈秉身为烛，当照四海九州！',
-        '#ext:杏雅三国/audio/xinxlinyou5': '效逐日之夸父，怀忠志而长存。',
-        '#ext:杏雅三国/audio/xinxlinyou6': '知天命而不顺，履穷途而强为。',
-        '#ext:杏雅三国/audio/xinxlinyou7': '炎阳将坠，可为者，唯舍生擎天！',
-        '#ext:杏雅三国/audio/xinxlinyou8': '维既抱逐日之远志，不在念当归之遐思。',
-        '#ext:杏雅三国/audio/xinxlinyou9': '孤鸿鸣于野，其以身为奉，引春风入汉关。',
-        '#ext:杏雅三国/audio/xinxlinyou10': '炎阳在悬，岂因乌云障日而弃金光于野。',
-        '#ext:杏雅三国/audio/xinxlinyou11': '家国存亡之际，不可弃一线生机。',
-        '#ext:杏雅三国/audio/xinxlinyou12': '棘路万里，雄关亘原，今乃迈步之始。',
+        xinxlinyou_info: '锁定技。 每回合每项限一次。你使用或打出以下牌时，获得附加效果。<li>「杀」：可选择“雷、火、冰、神”属性。<li>「闪/无懈可击/装备牌/延时类锦囊牌」：摸一张牌并对一名其他角色造成1点伤害。<li>「桃/酒」：增加1点体力上限/回复1点体力。<li>「具有唯一目标且非伤害类的普通锦囊牌」：令此牌额外结算一次。<li>「伤害类普通锦囊牌」：可令此牌伤害值基数+1。<li>「五谷丰登/桃源结义」：可令此牌对任意目标无效。',
         xinxfuhan: '复汉',
         xinxfuhan_info: '觉醒技。当你进入濒死状态时，你将体力回复至2点，并修改〖磐志〗。',
-        '#ext:杏雅三国/audio/xinxfuhan1': '此生未止，志随先烈之遗风！',
-        '#ext:杏雅三国/audio/xinxfuhan2': '九州齐喑，我辈燃己长明，君欲同否？',
         xinxpanzhi_re: '磐志·改',
         xinxpanzhi_re_info: '锁定技。准备阶段，你观看牌堆顶3张牌，使用其中任意张牌，然后你获得剩余的牌。',
         xinxyice: '遗策',
         xinxyice_info: '锁定技。当你使用/打出/弃置的牌进入弃牌堆后，你将这些牌以任意顺序置于你的武将牌上，称为“策”。若这些“策”中有点数相同的牌，则你获得这两张牌中间的所有牌，将这两张牌置于牌堆两端，然后摸两张牌。若场上没有处于濒死状态的角色，则你对一名角色造成1点伤害。',
-        '#ext:杏雅三国/audio/xinxyice1': '汝等若心存隐忍，顷刻便尸骨无存！',
-        '#ext:杏雅三国/audio/xinxyice2': '在下所谋之法，唯恐天下不乱！',
         xinxwansha: '完杀',
         xinxwansha_info: '锁定技。你的回合内，只有你能使用基本牌。',
-        '#ext:杏雅三国/audio/xinxwansha1': '吾之所好，杀人诛心。',
-        '#ext:杏雅三国/audio/xinxwansha2': '汝可遣使相问，四下可有援军？',
         xinxshixi: '噬袭',
         xinxshixi_info: '锁定技。每回合限一次。当你使用牌指定其他角色为唯一目标后，或成为其他角色使用牌的唯一目标后，你可观看对方的手牌，然后可获取其区域一张牌。',
-        '#ext:杏雅三国/audio/xinxshixi1': '将军一副好骨，不如留于此山！',
-        '#ext:杏雅三国/audio/xinxshixi2': '气势凌人，以智制敌。',
         xinxyingfu: '影伏',
         xinxyingfu_info: '锁定技。①当你造成或受到1点伤害后，你将一名角色的一张牌置于你的武将牌上，称为“伏”。②其他角色的准备阶段，你可移去任意张“伏”对其造成无来源的X点伤害（X为移去“伏”数的一半，向上取整）。③结束阶段，若你的“伏”大于3，你摸三张牌，并可用任意张手牌替换等量的“伏”。',
-        '#ext:杏雅三国/audio/xinxyingfu1': '隐伏暗藏，待敌入阵。',
-        '#ext:杏雅三国/audio/xinxyingfu2': '设伏布兵，擒贼易如反掌。',
-        '#ext:杏雅三国/audio/xinxyingfu3': '埋伏在此，就等将军你来了。',
-        '#ext:杏雅三国/audio/xinxyingfu4': '神藏鬼伏，将军岂能察觉？',
-        '#ext:杏雅三国/audio/xinxyingfu5': '栖身隐伏，暗查敌情。',
-        '#ext:杏雅三国/audio/xinxyingfu6': '兼善皆驭，方能稳固。',
         xinxqianlong: '潜龙',
         xinxqianlong_tag: '死士',
         xinxqianlong_info: '锁定技。①游戏开始/当你使用牌后，若此牌与你使用的上一张牌的类型不同，你将牌堆一张方块牌置于你的武将牌上，称为“死士”。你可以将“死士”如手牌般使用或打出。②你使用“死士”牌无距离限制、无法被响应且数值+1。',
-        '#ext:杏雅三国/audio/xinxqianlong1': '成大事者，当务实权而远虚名。',
-        '#ext:杏雅三国/audio/xinxqianlong2': '潜龙隐于千丈海，胸有韬晦十万兵。',
-        '#ext:杏雅三国/audio/xinxqianlong3': '大隐于朝，韬略八方。',
-        '#ext:杏雅三国/audio/xinxqianlong4': '隐居幕后，挥斥八方。',
         xinxyini: '夷逆',
         xinxyini_info: '每名角色限一次。当你造成伤害后，你可令受伤角色失去X点体力上限，然后你增加X点体力上限（X为伤害值）。其进入濒死状态时，恢复以此法失去的体力上限。',
-        '#ext:杏雅三国/audio/xinxyini1': '夷此僚三族，以儆效尤！',
-        '#ext:杏雅三国/audio/xinxyini2': '逆我司马氏者，罪无可恕！',
         xinxchenlan: '沉澜',
         xinxchenlan_info: '锁定技。一名角色的结束阶段，若你本回合造成或受到的伤害数之和大于1：你回复1点体力；大于2：你从牌堆获得一张【杀】并置入“死士”中。',
-        '#ext:杏雅三国/audio/xinxchenlan1': '宦海沉浮，历尽风浪，方显英雄本色。',
-        '#ext:杏雅三国/audio/xinxchenlan2': '壁立千仞，泰然本英雄！',
-        '#ext:杏雅三国/audio/xinxchenlan3': '不动如山，气定神闲。',
-        '#ext:杏雅三国/audio/xinxchenlan4': '胸怀若谷，波澜不惊。',
+        '#ext:永夜之境/audio/xinxchenlan1': '宦海沉浮，历尽风浪，方显英雄本色。',
+        '#ext:永夜之境/audio/xinxchenlan2': '壁立千仞，泰然本英雄！',
+        '#ext:永夜之境/audio/xinxchenlan3': '不动如山，气定神闲。',
+        '#ext:永夜之境/audio/xinxchenlan4': '胸怀若谷，波澜不惊。',
         xinxyiyue: '倚月',
         xinxyiyue_info: '锁定技。每回合限一次，当你成为【杀】或伤害类锦囊牌的目标时，你可选择一名不为此牌使用者的角色。该角色视为对此牌使用者使用一张【决斗】。若其因此【决斗】造成了伤害，你令此牌无效，并与其各摸一张牌。',
-        '#ext:杏雅三国/audio/xinxyiyue1': '不要小瞧了女人。',
-        '#ext:杏雅三国/audio/xinxyiyue2': '你愿意，为了我而死吗？',
+        '#ext:永夜之境/audio/xinxyiyue1': '不要小瞧了女人。',
+        '#ext:永夜之境/audio/xinxyiyue2': '你愿意，为了我而死吗？',
         xinxjuewu: '绝舞',
         xinxjuewu_info: "结束阶段，你可令所有其他角色依次对你使用一张牌（无距离限制），否则你获得其一张牌。当你因此受到伤害时，防止之。结算完成后，你获得“绝舞”过程中进入弃牌堆的牌。",
-        '#ext:杏雅三国/audio/xinxjuewu1': '下一次，轮到谁了？',
-        '#ext:杏雅三国/audio/xinxjuewu2': '上吧，就像扑火的飞蛾那样。',
+        '#ext:永夜之境/audio/xinxjuewu1': '下一次，轮到谁了？',
+        '#ext:永夜之境/audio/xinxjuewu2': '上吧，就像扑火的飞蛾那样。',
         xinxqingchen: '倾城',
         xinxqingchen_info: '蓄力技（1/4）。①出牌阶段限一次，你可消耗4点蓄力值，令一名其他角色的下回合改为由你操控。该回合结束时，其可将一张牌当【决斗】使用。②当你造成1点伤害后，你获得1点蓄力值。',
         xinxqingchen2: '倾城',
-        '#ext:杏雅三国/audio/xinxqingchen1': '妾之美貌，永不凋零。',
-        '#ext:杏雅三国/audio/xinxqingchen2': '春伴蝶眷落红满，居何处，妾顾盼。',
-        '#ext:杏雅三国/audio/xinxqingchen3': '你们会喜欢的。',
-        '#ext:杏雅三国/audio/xinxqingchen4': '又美了几分呢。',
-        '#ext:杏雅三国/audio/xinxqingchen5': '嗯呵呵，美貌的胜利。',
-        '#ext:杏雅三国/audio/xinxqingchen6': '我美吗？',
+        '#ext:永夜之境/audio/xinxqingchen1': '妾之美貌，永不凋零。',
+        '#ext:永夜之境/audio/xinxqingchen2': '春伴蝶眷落红满，居何处，妾顾盼。',
+        '#ext:永夜之境/audio/xinxqingchen3': '你们会喜欢的。',
+        '#ext:永夜之境/audio/xinxqingchen4': '又美了几分呢。',
+        '#ext:永夜之境/audio/xinxqingchen5': '嗯呵呵，美貌的胜利。',
+        '#ext:永夜之境/audio/xinxqingchen6': '我美吗？',
         xinxxieling: "挟令",
         xinxxieling_info: '①出牌阶段限一次。你可以令一名其他角色获得一枚“敕”，并交给你X张牌（因此获得的牌不计入你的手牌上限，且无次数限制）。②有“敕”的角色受到伤害时，令此伤害+X。（X为其“敕”数）',
-        '#ext:杏雅三国/audio/xinxxieling1': '严刑正法，奸鬼不敢前！',
-        '#ext:杏雅三国/audio/xinxxieling2': '犯吾禁令者，虽豪强权贵，亦当严惩！',
-        '#ext:杏雅三国/audio/xinxxieling3': '妇人之仁，焉能成大事？',
-        '#ext:杏雅三国/audio/xinxxieling4': '挟天子以令不臣！',
+        '#ext:永夜之境/audio/xinxxieling1': '严刑正法，奸鬼不敢前！',
+        '#ext:永夜之境/audio/xinxxieling2': '犯吾禁令者，虽豪强权贵，亦当严惩！',
+        '#ext:永夜之境/audio/xinxxieling3': '妇人之仁，焉能成大事？',
+        '#ext:永夜之境/audio/xinxxieling4': '挟天子以令不臣！',
         xinxxieling3: "敕令",
         xinxxieling3_info: "锁定技，你受到的伤害+X（X为“敕”数）。当你受到伤害后，你获得一枚“敕”。",
         xinxxieling_keep1: "令",
         xinxxieling_keep1_info: "",
         xinxjianxiong: "奸雄",
         xinxjianxiong_info: "锁定技。①每局游戏限一次。当你受到伤害时，你可对伤害来源造成Y点伤害（Y为本回合进入弃牌堆的伤害牌数）。若其因此进入濒死状态，则〖奸雄〗的发动次数+1。②有“敕”的角色死亡时，你可选择其武将牌上的一个技能获得之。",
-        '#ext:杏雅三国/audio/xinxjianxiong1': '既定九州乱，雄吞天下兵！',
-        '#ext:杏雅三国/audio/xinxjianxiong2': '为谋天下一统，何惜眼前小损！',
-        '#ext:杏雅三国/audio/xinxjianxiong3': '恨其才不为我所用，宁杀之亦胜入他人之手。',
-        '#ext:杏雅三国/audio/xinxjianxiong4': '兵行错役之制，可绝负我之人！',
+        '#ext:永夜之境/audio/xinxjianxiong1': '既定九州乱，雄吞天下兵！',
+        '#ext:永夜之境/audio/xinxjianxiong2': '为谋天下一统，何惜眼前小损！',
+        '#ext:永夜之境/audio/xinxjianxiong3': '恨其才不为我所用，宁杀之亦胜入他人之手。',
+        '#ext:永夜之境/audio/xinxjianxiong4': '兵行错役之制，可绝负我之人！',
         dz_K_huanren: "焕刃",
         dz_K_huanren_info: "锁定技。每回合限一次，当你使用牌指定其他角色为唯一目标后，或成为其他角色使用牌的唯一目标后，你令对方摸三张牌，然后其受到来自你的1点伤害。当前回合弃牌阶段，你观看其手牌，获得其X张牌。（X为其手牌数一半且向上取整，X至少为一）。",
-        '#ext:杏雅三国/audio/dz_K_huanren1': '没有防备我吧？',
-        '#ext:杏雅三国/audio/dz_K_huanren2': '逍遥津下溃吴侯！',
+        '#ext:永夜之境/audio/dz_K_huanren1': '没有防备我吧？',
+        '#ext:永夜之境/audio/dz_K_huanren2': '逍遥津下溃吴侯！',
         dz_K_wuqian: "无前",
         dz_K_wuqian_info: "锁定技。当你杀死一名角色后，你令你本局游戏〖焕刃〗的X的数值+1。",
-        '#ext:杏雅三国/audio/dz_K_wuqian1': '动作，就是要这样快！',
-        '#ext:杏雅三国/audio/dz_K_wuqian2': '策马袭敌，乘胜追击！',
+        '#ext:永夜之境/audio/dz_K_wuqian1': '动作，就是要这样快！',
+        '#ext:永夜之境/audio/dz_K_wuqian2': '策马袭敌，乘胜追击！',
         xinxcangren: "藏刃",
         xinxcangren_info: "锁定技。①一名角色的准备阶段或有角色死亡时，若场上没有“藏”，你令一名角色获得“藏”。有“藏”的角色因使用/弃置/打出而失去牌后，你获得此牌。②当你杀死一名角色后，若其有“藏”，你加1点体力上限并回复1点体力。",
-        '#ext:杏雅三国/audio/xinxcangren1': '大逆无道，罪当伏诛！',
-        '#ext:杏雅三国/audio/xinxcangren2': '族消仇逆，以血遗恨！',
-        '#ext:杏雅三国/audio/xinxcangren3': '此贼不除，我心中仇恨难消！',
-        '#ext:杏雅三国/audio/xinxcangren4': '这把匕首，可是为你专门准备的。',
-        '#ext:杏雅三国/audio/xinxcangren5': '汝等奸贼，何当今日丧命！',
-        '#ext:杏雅三国/audio/xinxcangren6': '含恨谋划，忍辱数年，只为今日！',
+        '#ext:永夜之境/audio/xinxcangren1': '大逆无道，罪当伏诛！',
+        '#ext:永夜之境/audio/xinxcangren2': '族消仇逆，以血遗恨！',
+        '#ext:永夜之境/audio/xinxcangren3': '此贼不除，我心中仇恨难消！',
+        '#ext:永夜之境/audio/xinxcangren4': '这把匕首，可是为你专门准备的。',
+        '#ext:永夜之境/audio/xinxcangren5': '汝等奸贼，何当今日丧命！',
+        '#ext:永夜之境/audio/xinxcangren6': '含恨谋划，忍辱数年，只为今日！',
         xinxfenglu: "锋露",
         xinxfenglu_info: "锁定技。一名角色的结束阶段，若其有“藏”，你视为对其使用一张刺【杀】。",
-        '#ext:杏雅三国/audio/xinxfenglu1': '这把匕首，就是为你准备的！',
-        '#ext:杏雅三国/audio/xinxfenglu2': '诛杀逆贼，我决不手软！',
+        '#ext:永夜之境/audio/xinxfenglu1': '这把匕首，就是为你准备的！',
+        '#ext:永夜之境/audio/xinxfenglu2': '诛杀逆贼，我决不手软！',
         xinxfenglu_tag: '锋',
         xinxtianzhi: "天智",
         xinxtianzhi_info: "锁定技。①当你使用基本牌或普通锦囊牌时，你记录此牌名。②每回合限一次，当一名其他角色使用已被本技能记录的牌结算后，你可视为使用一张与此牌同名同元素的牌。③结束阶段，你从牌堆中获得两张基本牌。若已记录牌名数不小于5，则额外摸两张牌。",
-        '#ext:杏雅三国/audio/xinxtianzhi1': '嘉不受此劫，安能以凡人之躯窥得天机！',
-        '#ext:杏雅三国/audio/xinxtianzhi2': '绸缪于未雨，手握胜机，雨落何妨高歌？',
+        '#ext:永夜之境/audio/xinxtianzhi1': '嘉不受此劫，安能以凡人之躯窥得天机！',
+        '#ext:永夜之境/audio/xinxtianzhi2': '绸缪于未雨，手握胜机，雨落何妨高歌？',
         xinxshisheng: '十胜',
         xinxshisheng_info: "锁定技。每回合限一次。你可以视为使用一张〖天智〗记录过的牌（无次数限制）。",
-        '#ext:杏雅三国/audio/xinxshisheng1': '公有此十胜，败绍非难事尔。',
-        '#ext:杏雅三国/audio/xinxshisheng2': '嘉窃料之，绍有十败，公有十胜。',
+        '#ext:永夜之境/audio/xinxshisheng1': '公有此十胜，败绍非难事尔。',
+        '#ext:永夜之境/audio/xinxshisheng2': '嘉窃料之，绍有十败，公有十胜。',
         xinxquanmou: "权谋",
         xinxquanmou_info: "锁定技。①每轮限一次。其他角色的结束阶段，若其本回合于摸牌阶段外获得的牌大于其体力值，你加1点体力上限，获得一个额外回合，并令手牌上限和额定摸牌数+1。②弃牌阶段结束时，你可视为使用一张本回合使用过的基本牌或普通锦囊牌。",
-        '#ext:杏雅三国/audio/xinxquanmou1': '且施小策，以襄伯约之谋。',
-        '#ext:杏雅三国/audio/xinxquanmou2': '伯约疲敌之法，吾亦精擅。',
-        '#ext:杏雅三国/audio/xinxquanmou3': '吾得伯约一心，大事必成！',
-        '#ext:杏雅三国/audio/xinxquanmou4': '以吾与伯约之智，必可无虞。',
-        '#ext:杏雅三国/audio/xinxquanmou5': '莽行轻进，不如缓进徐图。',
-        '#ext:杏雅三国/audio/xinxquanmou6': '谋谟帷幄之间，定断未来之局。',
+        '#ext:永夜之境/audio/xinxquanmou1': '且施小策，以襄伯约之谋。',
+        '#ext:永夜之境/audio/xinxquanmou2': '伯约疲敌之法，吾亦精擅。',
+        '#ext:永夜之境/audio/xinxquanmou3': '吾得伯约一心，大事必成！',
+        '#ext:永夜之境/audio/xinxquanmou4': '以吾与伯约之智，必可无虞。',
+        '#ext:永夜之境/audio/xinxquanmou5': '莽行轻进，不如缓进徐图。',
+        '#ext:永夜之境/audio/xinxquanmou6': '谋谟帷幄之间，定断未来之局。',
         xinxwugui: "无归",
         xinxwugui_info: "觉醒技。当你令一名其他角色进入濒死状态时，你回复1点体力，并获得技能〖诬异〗。",
-        '#ext:杏雅三国/audio/xinxwugui1': '哼，司马氏可为，吾如何不可为？',
-        '#ext:杏雅三国/audio/xinxwugui2': '这天下，未必不能姓钟！',
+        '#ext:永夜之境/audio/xinxwugui1': '哼，司马氏可为，吾如何不可为？',
+        '#ext:永夜之境/audio/xinxwugui2': '这天下，未必不能姓钟！',
         xinxwuyi: "诬异",
         xinxwuyi_info: "锁定技。每回合限一次。其他角色于摸牌阶段外获得牌时，你可对其造成1点雷电伤害，并令其不能回复体力直到本回合结束。",
-        '#ext:杏雅三国/audio/xinxwuyi1': '汝居功自傲，致有吾施谋之机。',
-        '#ext:杏雅三国/audio/xinxwuyi2': '天下唾手可得，岂容宵小妄为？',
-        '#ext:杏雅三国/audio/xinxwuyi3': '借君之手，扫除所惮之敌。',
-        '#ext:杏雅三国/audio/xinxwuyi4': '虚己诱纳，自可得吾所欲。',
+        '#ext:永夜之境/audio/xinxwuyi1': '汝居功自傲，致有吾施谋之机。',
+        '#ext:永夜之境/audio/xinxwuyi2': '天下唾手可得，岂容宵小妄为？',
+        '#ext:永夜之境/audio/xinxwuyi3': '借君之手，扫除所惮之敌。',
+        '#ext:永夜之境/audio/xinxwuyi4': '虚己诱纳，自可得吾所欲。',
         xinxwuyi_norecover: "诬异",
         xinxwuyi_norecover_info: "",
         xinxhuoji: "祸济",
         xinxhuoji_info: "每回合每项限一次。①当你使用非伤害牌指定目标后，你令一名角色视为对令另一名角色A使用一张火【杀】，并令A的手牌上限视为0直到其下个回合结束。②其他角色于出牌阶段使用伤害牌指定唯一目标后，你可令目标角色摸一张牌，然后结束当前出牌阶段。",
-        '#ext:杏雅三国/audio/xinxhuoji1': '恩仇付浊酒，荡平劫波，且做英雄吼。',
-        '#ext:杏雅三国/audio/xinxhuoji2': '不周之柱已折，这世间，当起一阵风，落一场雨！',
-        '#ext:杏雅三国/audio/xinxhuoji3': '谋先于行则昌，行先于谋则亡。',
-        '#ext:杏雅三国/audio/xinxhuoji4': '善谋者，不与善战者争功。',
+        '#ext:永夜之境/audio/xinxhuoji1': '恩仇付浊酒，荡平劫波，且做英雄吼。',
+        '#ext:永夜之境/audio/xinxhuoji2': '不周之柱已折，这世间，当起一阵风，落一场雨！',
+        '#ext:永夜之境/audio/xinxhuoji3': '谋先于行则昌，行先于谋则亡。',
+        '#ext:永夜之境/audio/xinxhuoji4': '善谋者，不与善战者争功。',
         xinxhuoji_handcard: "祸济",
         xinxhuoji_handcard_info: "",
         xinxcanjing: "残旌",
         xinxcanjing_info: "锁定技。当你使用牌被抵消时，或有牌被你抵消时，你摸一张牌，然后可使用一张牌（无距离和次数限制）。",
-        '#ext:杏雅三国/audio/xinxcanjing1': '曾寄青鸟凌云志，归来城头看王旗。',
-        '#ext:杏雅三国/audio/xinxcanjing2': '烽火照长安，清水洗枯骨，今日对弈何人？',
+        '#ext:永夜之境/audio/xinxcanjing1': '曾寄青鸟凌云志，归来城头看王旗。',
+        '#ext:永夜之境/audio/xinxcanjing2': '烽火照长安，清水洗枯骨，今日对弈何人？',
         xxinxsanku: '逝影',
         xxinxsanku_info: "觉醒技。当你进入濒死状态时，你可以令伤害来源失去1点体力，然后你将体力回复至X点（X为其手牌数且至少为1），获得技能〖〗。",
         xinxsanku: '三窟',
         xinxsanku_info: "锁定技。①每轮开始时，你获得一张【影】。你的【影】不计入手牌上限。②你可将一张【影】当【闪】使用或打出。③当你处于濒死状态时，你可弃置一张【影】将体力回复至1点。",
-        '#ext:杏雅三国/audio/xinxsanku1': '天行五色，雪覆林间睡狐，独我执白。',
-        '#ext:杏雅三国/audio/xinxsanku2': '已积千里跬步，欲履万里河山。',
-        '#ext:杏雅三国/audio/xinxsanku3': '我有三窟之筹谋，不蹈背水之维谷。',
-        '#ext:杏雅三国/audio/xinxsanku4': '九州如画，怎可空老人间？',
+        '#ext:永夜之境/audio/xinxsanku1': '天行五色，雪覆林间睡狐，独我执白。',
+        '#ext:永夜之境/audio/xinxsanku2': '已积千里跬步，欲履万里河山。',
+        '#ext:永夜之境/audio/xinxsanku3': '我有三窟之筹谋，不蹈背水之维谷。',
+        '#ext:永夜之境/audio/xinxsanku4': '九州如画，怎可空老人间？',
         xinxluexin: '掠星',
         xinxluexin_info: "一名角色的结束阶段，若本回合你的牌因弃置而进入过弃牌堆，你可以依次使用之。",
-        '#ext:杏雅三国/audio/xinxluexin1': '飞叶摘星辰，红枫飘落，好似蝴蝶舞。',
-        '#ext:杏雅三国/audio/xinxluexin2': '月霜凝露华，玉盘白练，遗珠赠明月。',
-        '#ext:杏雅三国/audio/xinxluexin3': '寒光映霜雪，邀君献命，赠汝雪上一点红！',
-        '#ext:杏雅三国/audio/xinxluexin4': '以箭做陷，欺张郃于此，诱夏侯分兵。',
+        '#ext:永夜之境/audio/xinxluexin1': '飞叶摘星辰，红枫飘落，好似蝴蝶舞。',
+        '#ext:永夜之境/audio/xinxluexin2': '月霜凝露华，玉盘白练，遗珠赠明月。',
+        '#ext:永夜之境/audio/xinxluexin3': '寒光映霜雪，邀君献命，赠汝雪上一点红！',
+        '#ext:永夜之境/audio/xinxluexin4': '以箭做陷，欺张郃于此，诱夏侯分兵。',
         xinxyangjian: '佯箭',
         xinxyangjian_info: "锁定技。当你不因〖掠星〗而使用或打出基本牌时，你弃置手牌数一半的牌（向上取整），然后将手牌摸至体力上限。",
-        '#ext:杏雅三国/audio/xinxyangjian1': '箭射天外，可毙天狼！',
-        '#ext:杏雅三国/audio/xinxyangjian2': '举弓望北，箭狩群星。',
-        '#ext:杏雅三国/audio/xinxyangjian3': '长弓在手，可效龙城飞将，箭没在野石棱！',
-        '#ext:杏雅三国/audio/xinxyangjian4': '金矢鸣锋镝，飞羽漫云，鞭长可击九霄！',
+        '#ext:永夜之境/audio/xinxyangjian1': '箭射天外，可毙天狼！',
+        '#ext:永夜之境/audio/xinxyangjian2': '举弓望北，箭狩群星。',
+        '#ext:永夜之境/audio/xinxyangjian3': '长弓在手，可效龙城飞将，箭没在野石棱！',
+        '#ext:永夜之境/audio/xinxyangjian4': '金矢鸣锋镝，飞羽漫云，鞭长可击九霄！',
         xinxjinbi: "矜愎",
         xinxjinbi_info: "锁定技。①当你每回合首次受到伤害时，你防止此伤害并将伤害来源的一张牌置于你的武将牌上，称为“愎”；当你造成1点伤害后，你获得一张“愎”。②结束阶段，你弃置所有“愎”，然后失去等量体力。",
-        '#ext:杏雅三国/audio/xinxjinbi1': '士大夫之流，不过尔尔。',
-        '#ext:杏雅三国/audio/xinxjinbi2': '哼，毛贼而已。',
-        '#ext:杏雅三国/audio/xinxjinbi3': '汉水暴溢，是进攻之机！',
-        '#ext:杏雅三国/audio/xinxjinbi4': '樊城之乱，是某之良机。',
+        '#ext:永夜之境/audio/xinxjinbi1': '士大夫之流，不过尔尔。',
+        '#ext:永夜之境/audio/xinxjinbi2': '哼，毛贼而已。',
+        '#ext:永夜之境/audio/xinxjinbi3': '汉水暴溢，是进攻之机！',
+        '#ext:永夜之境/audio/xinxjinbi4': '樊城之乱，是某之良机。',
         xinxwusheng: '武圣',
         xinxwusheng_info: "锁定技。①当你造成伤害时，你令此伤害+X（X为游戏轮数-1）。②每回合限一次。当你使用牌指定其他角色为唯一目标后，你令其展示所有手牌，其选择一种颜色，你获得该颜色的所有手牌。你以此法或通过“愎”获得的牌不计入本回合手牌上限。",
-        '#ext:杏雅三国/audio/xinxwusheng1': '此战，某必胜！',
-        '#ext:杏雅三国/audio/xinxwusheng2': '尔等不降，便纳命来！',
-        '#ext:杏雅三国/audio/xinxwusheng3': '不日，将北定中原！',
-        '#ext:杏雅三国/audio/xinxwusheng4': '北取中原，某势在必得！',
+        '#ext:永夜之境/audio/xinxwusheng1': '此战，某必胜！',
+        '#ext:永夜之境/audio/xinxwusheng2': '尔等不降，便纳命来！',
+        '#ext:永夜之境/audio/xinxwusheng3': '不日，将北定中原！',
+        '#ext:永夜之境/audio/xinxwusheng4': '北取中原，某势在必得！',
         xinxwusheng_tag: '武',
         xinxwusheng2: '武圣',
         xinxmingshi: '明势',
@@ -13200,38 +13225,38 @@ export let info = {
         xinxqizhen_tag: '奇',
         xinxqizhen: "奇阵",
         xinxqizhen_info: "锁定技。①当你获得牌时，你将所有手牌置于武将牌上，称为“奇”。你可以如手牌般使用或打出“奇”。②准备阶段，你获得一名其他角色一张牌，然后你失去1点体力。③当你体力值变化1点时，你摸一张牌。④每回合限一次。当你失去“奇”时，你回复1点体力。",
-        '#ext:杏雅三国/audio/xinxqizhen1': '兵之用者，其状不定见也。',
-        '#ext:杏雅三国/audio/xinxqizhen2': '因势而动，变生于阵之间。',
-        '#ext:杏雅三国/audio/xinxqizhen3': '天覆地载，龙变其中。',
-        '#ext:杏雅三国/audio/xinxqizhen4': '行则为阵，立则为营。',
+        '#ext:永夜之境/audio/xinxqizhen1': '兵之用者，其状不定见也。',
+        '#ext:永夜之境/audio/xinxqizhen2': '因势而动，变生于阵之间。',
+        '#ext:永夜之境/audio/xinxqizhen3': '天覆地载，龙变其中。',
+        '#ext:永夜之境/audio/xinxqizhen4': '行则为阵，立则为营。',
         xinxshiyu: '识愚',
         xinxshiyu_info: "锁定技。每轮限一次。当其他角色使用【无懈可击】时，你可弃置两张“奇”取消此牌的所有目标，然后你获得此牌并可使用之。",
-        '#ext:杏雅三国/audio/xinxshiyu1': '区区雕虫小技，微不足道矣。',
-        '#ext:杏雅三国/audio/xinxshiyu2': '识众寡之用者，胜之。',
-        '#ext:杏雅三国/audio/xinxshiyu3': '此……小儿之计乎？哈哈哈哈！',
-        '#ext:杏雅三国/audio/xinxshiyu4': '汝予智予雄，殊不知，吾早已看破。',
+        '#ext:永夜之境/audio/xinxshiyu1': '区区雕虫小技，微不足道矣。',
+        '#ext:永夜之境/audio/xinxshiyu2': '识众寡之用者，胜之。',
+        '#ext:永夜之境/audio/xinxshiyu3': '此……小儿之计乎？哈哈哈哈！',
+        '#ext:永夜之境/audio/xinxshiyu4': '汝予智予雄，殊不知，吾早已看破。',
         xinxlihuo: '离火',
         xinxlihuo_info: "结束阶段，你可弃置两张“奇”对一名其他角色造成1点火焰伤害。",
-        '#ext:杏雅三国/audio/xinxlihuo1': '以火焚敌，乱其行阵。',
-        '#ext:杏雅三国/audio/xinxlihuo2': '赤焰飚发，焚轻舟，坠敌身。',
-        '#ext:杏雅三国/audio/xinxlihuo3': '诱敌深入，焚其粮草，敌无委积，必败！',
-        '#ext:杏雅三国/audio/xinxlihuo4': '天时地利，更兼人和，佐以火攻，必胜！',
+        '#ext:永夜之境/audio/xinxlihuo1': '以火焚敌，乱其行阵。',
+        '#ext:永夜之境/audio/xinxlihuo2': '赤焰飚发，焚轻舟，坠敌身。',
+        '#ext:永夜之境/audio/xinxlihuo3': '诱敌深入，焚其粮草，敌无委积，必败！',
+        '#ext:永夜之境/audio/xinxlihuo4': '天时地利，更兼人和，佐以火攻，必胜！',
         xinxzhaohan: '昭汉',
         xinxzhaohan_info: "锁定技。一名角色的回合开始时，你观看牌堆顶X张牌（X为你的体力值），并可使用其中一张牌（无距离限制）。若此时在你的回合内，你可用任意手牌替换这些牌。",
-        '#ext:杏雅三国/audio/xinxzhaohan1': '此身抱薪，可付丹鼎，五十四年春秋昭炎汉长明。',
-        '#ext:杏雅三国/audio/xinxzhaohan2': '南征北伐，誓还旧都，二十四代王业不偏安一隅。',
-        '#ext:杏雅三国/audio/xinxzhaohan3': '情寄三顾之恩，亮必继之以死。',
-        '#ext:杏雅三国/audio/xinxzhaohan4': '身负六尺之孤，臣当鞠躬尽瘁。',
+        '#ext:永夜之境/audio/xinxzhaohan1': '此身抱薪，可付丹鼎，五十四年春秋昭炎汉长明。',
+        '#ext:永夜之境/audio/xinxzhaohan2': '南征北伐，誓还旧都，二十四代王业不偏安一隅。',
+        '#ext:永夜之境/audio/xinxzhaohan3': '情寄三顾之恩，亮必继之以死。',
+        '#ext:永夜之境/audio/xinxzhaohan4': '身负六尺之孤，臣当鞠躬尽瘁。',
         xinxrenshi: '任势',
         xinxrenshi_info: "锁定技。每回合限一次。当你使用牌指定其他角色为唯一目标后，你观看其手牌，使用其中一张牌。若未使用牌，其弃置一张基本牌。",
-        '#ext:杏雅三国/audio/xinxrenshi1': '兵者，行霸道之势，彰王道之实。',
-        '#ext:杏雅三国/audio/xinxrenshi2': '将为军魂，可因势而袭，其有战无类。',
-        '#ext:杏雅三国/audio/xinxrenshi3': '平二川，定三足，恍惚草堂梦里，挥斥千古风流。',
-        '#ext:杏雅三国/audio/xinxrenshi4': '战群儒，守空城，今摆乱石八阵，笑谈将军死生。',
+        '#ext:永夜之境/audio/xinxrenshi1': '兵者，行霸道之势，彰王道之实。',
+        '#ext:永夜之境/audio/xinxrenshi2': '将为军魂，可因势而袭，其有战无类。',
+        '#ext:永夜之境/audio/xinxrenshi3': '平二川，定三足，恍惚草堂梦里，挥斥千古风流。',
+        '#ext:永夜之境/audio/xinxrenshi4': '战群儒，守空城，今摆乱石八阵，笑谈将军死生。',
         xinxchushi: '出师',
-        xinxchushi_info: "出牌阶段限一次。你可以选择一名角色。你从如下效果中选择一项，其获得此效果，然后移除此选项。<li>「北定」：当你每回合首次造成伤害时，此伤害+1。当你受到大于1的伤害时，此伤害改为1。<li>「整驽」：准备阶段或结束阶段，你摸两张牌，然后重铸一张牌。<li>「攘奸」：每轮开始时，你失去1点体力。若为偶数次发动此技能，则减少1点体力上限。",
-        '#ext:杏雅三国/audio/xinxchushi1': '轻舟载浊酒，此去，我欲借箭十万。',
-        '#ext:杏雅三国/audio/xinxchushi2': '主公有多大胆略，亮便有多少谋略。',
+        xinxchushi_info: "出牌阶段限一次。你可以选择一名角色。你减1点体力上限，从如下效果中选择一项，其获得此效果，然后移除此选项。<li>「北定」：当你每回合首次造成伤害时，此伤害+1。当你受到大于1的伤害时，此伤害改为1。<li>「整驽」：准备阶段或结束阶段，你摸两张牌，然后重铸一张牌。<li>「攘奸」：每轮开始时，你失去1点体力。若为偶数次发动此技能，则减少1点体力上限。",
+        '#ext:永夜之境/audio/xinxchushi1': '轻舟载浊酒，此去，我欲借箭十万。',
+        '#ext:永夜之境/audio/xinxchushi2': '主公有多大胆略，亮便有多少谋略。',
         'xinxchushi_damage': '北定',
         'xinxchushi_damage_info': '当你每回合首次造成伤害时，此伤害+1。',
         'xinxchushi_draw': '整驽',
@@ -13242,314 +13267,314 @@ export let info = {
         'xinxchushid_info': '当你每回合首次造成伤害时，此伤害+1。当你受到大于1的伤害时，此伤害改为1。',
         xinxxzhaohan: '昭汉',
         xinxxzhaohan_info: "锁定技。牌堆顶的X张牌始终对你可见（X为你的体力值）。每回合限X次，你可以将牌堆顶的X张牌如手牌般使用或打出。",
-        '#ext:杏雅三国/audio/xinxxzhaohan1': '此身抱薪，可付丹鼎，五十四年春秋昭炎汉长明。',
-        '#ext:杏雅三国/audio/xinxxzhaohan2': '南征北伐，誓还旧都，二十四代王业不偏安一隅。',
-        '#ext:杏雅三国/audio/xinxxzhaohan3': '情寄三顾之恩，亮必继之以死。',
-        '#ext:杏雅三国/audio/xinxxzhaohan4': '身负六尺之孤，臣当鞠躬尽瘁。',
+        '#ext:永夜之境/audio/xinxxzhaohan1': '此身抱薪，可付丹鼎，五十四年春秋昭炎汉长明。',
+        '#ext:永夜之境/audio/xinxxzhaohan2': '南征北伐，誓还旧都，二十四代王业不偏安一隅。',
+        '#ext:永夜之境/audio/xinxxzhaohan3': '情寄三顾之恩，亮必继之以死。',
+        '#ext:永夜之境/audio/xinxxzhaohan4': '身负六尺之孤，臣当鞠躬尽瘁。',
         xinxyinshi_tag: '死士',
         xinxruilue_tag: '对方的牌',
         xinxruilue: '睿略',
         xinxruilue_info: "出牌阶段限一次。你可观看一名其他角色的手牌，然后可用任意张牌替换其任意张牌。",
-        '#ext:杏雅三国/audio/xinxruilue1': '天下诸事，现在由我定夺！',
-        '#ext:杏雅三国/audio/xinxruilue2': '趁此良宵，待吾一探朝中虚实。',
+        '#ext:永夜之境/audio/xinxruilue1': '天下诸事，现在由我定夺！',
+        '#ext:永夜之境/audio/xinxruilue2': '趁此良宵，待吾一探朝中虚实。',
         xinxyinshi: '阴士',
         xinxyinshi_info: '锁定技。①每回合限一次。当你使用或打出基本牌和普通锦囊牌时，你可获得一张此牌的复制和两张【影】。②你以此获得的牌不计入手牌上限。当其离开你的手牌区时，将其移出游戏。',
-        '#ext:杏雅三国/audio/xinxyinshi1': '吾尽用间之谋，亦极用人之要。',
-        '#ext:杏雅三国/audio/xinxyinshi2': '尔等暂且不麾不动，来日必有奇用。',
+        '#ext:永夜之境/audio/xinxyinshi1': '吾尽用间之谋，亦极用人之要。',
+        '#ext:永夜之境/audio/xinxyinshi2': '尔等暂且不麾不动，来日必有奇用。',
         xinxbainei: '败馁',
         xinxbainei_info: '持恒技。①一名角色的回合结束后，你失去所有Charlotte技。②当你受到伤害后，你从牌堆或弃牌堆中获得X张牌名各不相同的基本牌（X为你已损失的体力值），并使用对你造成伤害的实体牌。若此牌造成过伤害，此技能本回合失效。',
-        '#ext:杏雅三国/audio/xinxbainei1': '败而不馁，围骄兵以敌之。',
-        '#ext:杏雅三国/audio/xinxbainei2': '此吾之过也，望诸君勿复言之。',
+        '#ext:永夜之境/audio/xinxbainei1': '败而不馁，围骄兵以敌之。',
+        '#ext:永夜之境/audio/xinxbainei2': '此吾之过也，望诸君勿复言之。',
         xinxlianyin_tag: '夷',
         xinxlianyin: '连营',
         xinxlianyin_info: '每轮开始时，你令一名其他角色将其随机一张牌置于其武将牌上，称为“营”。其对自己使用牌时，将一张牌置于其武将牌上。其死亡时，你获得其武将牌上的“营”。',
-        '#ext:杏雅三国/audio/xinxlianyin1': '先观大势，然后方可成形。',
-        '#ext:杏雅三国/audio/xinxlianyin2': '小不忍则乱大谋。',
+        '#ext:永夜之境/audio/xinxlianyin1': '先观大势，然后方可成形。',
+        '#ext:永夜之境/audio/xinxlianyin2': '小不忍则乱大谋。',
         xinxfenkui: '焚溃',
         xinxfenkui_info: "锁定技。有“营”的角色使用与“营”花色相同的牌时，你选择一项：<br>1.横置至多两名角色；<br>2.对一名其他角色造成X点火焰伤害（X为你上次选择选项1的次数+1）。",
-        '#ext:杏雅三国/audio/xinxfenkui1': '不灭之火！',
-        '#ext:杏雅三国/audio/xinxfenkui2': '感受一下火的力量吧！',
+        '#ext:永夜之境/audio/xinxfenkui1': '不灭之火！',
+        '#ext:永夜之境/audio/xinxfenkui2': '感受一下火的力量吧！',
         xinxqianyi: '潜翼',
         xinxqianyi_info: "锁定技。一名角色的回合结束时，你可以选择获得至多X张本回合进入弃牌堆的牌（X为你本回合使用的非伤害牌数，至少为1且至多为3）。",
-        '#ext:杏雅三国/audio/xinxqianyi1': '洛水为誓，皇天为证，吾意不在刀兵。',
-        '#ext:杏雅三国/audio/xinxqianyi2': '以谋代战，攻形不以力，攻心不以勇。',
-        '#ext:杏雅三国/audio/xinxqianyi3': '率土之滨皆为王臣，辽土亦居普天之下。',
-        '#ext:杏雅三国/audio/xinxqianyi4': '青云远上，寒锋试刃，北雁当寄红翎。',
+        '#ext:永夜之境/audio/xinxqianyi1': '洛水为誓，皇天为证，吾意不在刀兵。',
+        '#ext:永夜之境/audio/xinxqianyi2': '以谋代战，攻形不以力，攻心不以勇。',
+        '#ext:永夜之境/audio/xinxqianyi3': '率土之滨皆为王臣，辽土亦居普天之下。',
+        '#ext:永夜之境/audio/xinxqianyi4': '青云远上，寒锋试刃，北雁当寄红翎。',
         xinxqianyi_tag: '潜翼',
         xinxquanbian: '权变',
         xinxquanbian_info: "锁定技。每轮限一次，一名角色的回合开始时，若你手牌中因〖潜翼〗获得的牌不小于3张，你执行一个额外的出牌阶段，并获得场上一张牌。本阶段你使用牌指定其他角色为目标后，其弃置所有红色手牌。",
-        '#ext:杏雅三国/audio/xinxquanbian1': '鸿门之宴虽歇，会稽之胆尚悬，孤岂姬、项之辈。',
-        '#ext:杏雅三国/audio/xinxquanbian2': '昔藏青锋于沧海，今潮落，可现兵！',
-        '#ext:杏雅三国/audio/xinxquanbian3': '烽烟起大荒，戎军远役，问不臣者谁？',
-        '#ext:杏雅三国/audio/xinxquanbian4': '挥斥千军之贲，长驱万里之远。',
+        '#ext:永夜之境/audio/xinxquanbian1': '鸿门之宴虽歇，会稽之胆尚悬，孤岂姬、项之辈。',
+        '#ext:永夜之境/audio/xinxquanbian2': '昔藏青锋于沧海，今潮落，可现兵！',
+        '#ext:永夜之境/audio/xinxquanbian3': '烽烟起大荒，戎军远役，问不臣者谁？',
+        '#ext:永夜之境/audio/xinxquanbian4': '挥斥千军之贲，长驱万里之远。',
         xinxzengren: '赠刃',
         xinxzengren_info: "锁定技。①游戏开始时，你选择一项：1.令一名其他角色获得〖赠刃〗，然后你失去之；2.将【金焕刃】置入装备区。②当你失去装备区的武器牌时，若你的武器栏为空，你将一张【金焕刃】置入装备区。",
         xinxzengren_lose: '赠刃',
         xinxzengren_lose_info: "锁定技。①游戏开始时，你将【金焕刃】置入装备区。②当你失去装备区的武器牌时，若你的武器栏为空，你将一张【金焕刃】置入装备区。",
-        '#ext:杏雅三国/audio/xinxzengren1': '君携此焕刃，可解燃眉之危。',
-        '#ext:杏雅三国/audio/xinxzengren2': '灯火灼烁酒微映，与君同醉，此情可寄夜雨时。',
+        '#ext:永夜之境/audio/xinxzengren1': '君携此焕刃，可解燃眉之危。',
+        '#ext:永夜之境/audio/xinxzengren2': '灯火灼烁酒微映，与君同醉，此情可寄夜雨时。',
         xinxshunhua: '舜华',
         xinxshunhua_info: "每回合限一次。当有角色使用虚拟牌或点数为7的牌时，你可以选择一名其他角色，并从牌堆或弃牌堆中获得3-X张类型各不相同的牌（X为本轮此技能的已发动次数，至多为2），然后你选择一项：<br>1.令其执行与你同样的操作；<br>2.令其弃置一种类型的所有手牌。",
-        //'#ext:杏雅三国/audio/xinxshunhua1':'有女同车，颜如舜华。',
-        //'#ext:杏雅三国/audio/xinxshunhua2':'彼美孟姜，德音不忘。',
-        '#ext:杏雅三国/audio/xinxshunhua1': '我心悦君，愿为卿而死，愿为君刀俎。',
-        '#ext:杏雅三国/audio/xinxshunhua2': '我之私君者，爱也，君之私我者，情也。',
+        //'#ext:永夜之境/audio/xinxshunhua1':'有女同车，颜如舜华。',
+        //'#ext:永夜之境/audio/xinxshunhua2':'彼美孟姜，德音不忘。',
+        '#ext:永夜之境/audio/xinxshunhua1': '我心悦君，愿为卿而死，愿为君刀俎。',
+        '#ext:永夜之境/audio/xinxshunhua2': '我之私君者，爱也，君之私我者，情也。',
         xinxbaiyi: '白衣',
         xinxbaiyi_info: "出牌阶段每项限一次，你可选择一项：<br>1.将一名角色区域内的一半牌置于其武将牌上，你于其回合结束时可获得其中一张牌；<br>2.获得一名角色武将牌上的牌，并令其失去1点体力。",
-        '#ext:杏雅三国/audio/xinxbaiyi1': '该是谁的，就是谁的！',
-        '#ext:杏雅三国/audio/xinxbaiyi2': '来！给你看点好东西！',
+        '#ext:永夜之境/audio/xinxbaiyi1': '该是谁的，就是谁的！',
+        '#ext:永夜之境/audio/xinxbaiyi2': '来！给你看点好东西！',
         xinxtaoyin: '韬隐',
         xinxtaoyin_info: "锁定技。①当你失去一张♠牌时，你获得一枚“学”。你的手牌上限+X（X为你的“学”数）。②当你造成或受到伤害时，你可移去任意枚“学”（至多为5），观看牌堆顶五张牌，然后获得等量的牌。",
-        '#ext:杏雅三国/audio/xinxtaoyin1': '多读书，总是有好处。',
-        '#ext:杏雅三国/audio/xinxtaoyin2': '落后并不可怕，可怕的是甘于落后。',
+        '#ext:永夜之境/audio/xinxtaoyin1': '多读书，总是有好处。',
+        '#ext:永夜之境/audio/xinxtaoyin2': '落后并不可怕，可怕的是甘于落后。',
         xinxpixing: '披星',
         xinxpixing_info: "准备阶段，你可以观看牌堆底X+2张牌，获得其中X张牌（X为你杀死过的角色数+1），然后将其中任意数量的牌以任意顺序置于牌堆顶，其余以任意顺序置于牌堆底。",
-        '#ext:杏雅三国/audio/xinxpixing1': '观今夜天象，议丞相遗志。',
-        '#ext:杏雅三国/audio/xinxpixing2': '知天意，逆天安不可为？',
+        '#ext:永夜之境/audio/xinxpixing1': '观今夜天象，议丞相遗志。',
+        '#ext:永夜之境/audio/xinxpixing2': '知天意，逆天安不可为？',
         xinxbeifa: '北伐',
         xinxbeifa_info: "锁定技。①当你使用牌指定唯一目标或成为唯一牌的目标时，若此牌不为转化牌且对应的实体牌牌数为1且不为装备牌且此时在一名角色的出牌阶段，则你将此牌置于目标角色的武将牌上，称为“伐”。②一名角色的回合开始时，你可以依次使用其武将牌上的“伐”。",
-        '#ext:杏雅三国/audio/xinxbeifa1': '潜麟虽困，其志犹宏！',
-        '#ext:杏雅三国/audio/xinxbeifa2': '困守非良策，奋战突险围！',
+        '#ext:永夜之境/audio/xinxbeifa1': '潜麟虽困，其志犹宏！',
+        '#ext:永夜之境/audio/xinxbeifa2': '困守非良策，奋战突险围！',
         xinxlianbing: '敛兵',
         xinxlianbing_info: "每回合限一次。当你于出牌阶段外使用牌指定其他角色为唯一目标后，你可以摸一张牌并与目标角色拼点。若你赢，你获得对方的拼点牌，然后重复此流程直到其手牌数不大于你。",
-        '#ext:杏雅三国/audio/xinxlianbing1': '撤营百步，汝敢来追？',
-        '#ext:杏雅三国/audio/xinxlianbing2': '藏头露尾，可是大丈夫所为？',
+        '#ext:永夜之境/audio/xinxlianbing1': '撤营百步，汝敢来追？',
+        '#ext:永夜之境/audio/xinxlianbing2': '藏头露尾，可是大丈夫所为？',
         xinxbugui: '不归',
         xinxbugui_info: "觉醒技。结束阶段，若场上有“伐”的角色数大于1，你加1点体力上限，获得技能〖披星〗。",
-        '#ext:杏雅三国/audio/xinxbugui1': '臣誓讨贼，以报国恩。',
-        '#ext:杏雅三国/audio/xinxbugui2': '继丞相遗略，以攻代守，伺图中原。',
+        '#ext:永夜之境/audio/xinxbugui1': '臣誓讨贼，以报国恩。',
+        '#ext:永夜之境/audio/xinxbugui2': '继丞相遗略，以攻代守，伺图中原。',
         xinxfeiyan: '飞燕',
         xinxfeiyan_info: "锁定技，你的判定阶段改为出牌阶段，此阶段开始时，你观看五张武将牌，将你的武将牌改为其中一名角色。此阶段结束后把武将牌替换回吕玲绮。当你因此技能变更武将牌时，你摸一张牌。",
-        '#ext:杏雅三国/audio/xinxfeiyan1': '可听说过飞将军大名？',
-        '#ext:杏雅三国/audio/xinxfeiyan2': '尝尝这个！',
-        '#ext:杏雅三国/audio/xinxfeiyan3': '我会保护大家。',
-        '#ext:杏雅三国/audio/xinxfeiyan4': '我从不后悔拿起兵刃。',
+        '#ext:永夜之境/audio/xinxfeiyan1': '可听说过飞将军大名？',
+        '#ext:永夜之境/audio/xinxfeiyan2': '尝尝这个！',
+        '#ext:永夜之境/audio/xinxfeiyan3': '我会保护大家。',
+        '#ext:永夜之境/audio/xinxfeiyan4': '我从不后悔拿起兵刃。',
         xinxciyou_tag: '刺幽',
         xinxciyou: '刺幽',
         xinxciyou_info: "锁定技。①出牌阶段开始时，你获得一张伤害牌。结束阶段，你获得位于弃牌堆的此牌。②当你使用此牌造成伤害时，受伤角色失去1点体力，你回复1点体力并跳过下个弃牌阶段。",
-        '#ext:杏雅三国/audio/xinxciyou1': '这世上，最可靠的人，只有自己。',
-        '#ext:杏雅三国/audio/xinxciyou2': '我，不会放弃！',
-        '#ext:杏雅三国/audio/xinxciyou3': '可不要小看小姑娘！',
-        '#ext:杏雅三国/audio/xinxciyou4': '父亲的失败，我铭记在心。',
+        '#ext:永夜之境/audio/xinxciyou1': '这世上，最可靠的人，只有自己。',
+        '#ext:永夜之境/audio/xinxciyou2': '我，不会放弃！',
+        '#ext:永夜之境/audio/xinxciyou3': '可不要小看小姑娘！',
+        '#ext:永夜之境/audio/xinxciyou4': '父亲的失败，我铭记在心。',
         xinxjishi: '犄势',
         xinxjishi_info: "锁定技。当一名角色不因〖犄势〗使用不为其手牌区的牌时，你视为使用一张牌名和元素相同的牌（无距离限制）。",
-        '#ext:杏雅三国/audio/xinxjishi1': '筹谋部划，知天机，行人事。',
-        '#ext:杏雅三国/audio/xinxjishi2': '兵法谙熟于胸，今乃施为之时。',
+        '#ext:永夜之境/audio/xinxjishi1': '筹谋部划，知天机，行人事。',
+        '#ext:永夜之境/audio/xinxjishi2': '兵法谙熟于胸，今乃施为之时。',
         xinxxinlue: '心略',
         xinxxinlue_info: "每回合限一次，当一名角色使用牌指定目标时，你观看当前回合角色手牌并可以重铸其一张牌，然后你可以使用此牌（无距离限制）。",
-        '#ext:杏雅三国/audio/xinxxinlue1': '读兵书千卷，今到用时，可左右施为。',
-        '#ext:杏雅三国/audio/xinxxinlue2': '我军待时而动，以有备击不备。',
+        '#ext:永夜之境/audio/xinxxinlue1': '读兵书千卷，今到用时，可左右施为。',
+        '#ext:永夜之境/audio/xinxxinlue2': '我军待时而动，以有备击不备。',
         xinxhemou: '合谋',
         xinxhemou_info: "准备阶段，你可以选择一名其他角色并展示牌堆底X张牌（X为场上存活人数，至多为5），其依次使用其中的伤害牌。若其以此法使用的牌造成过伤害，你摸X张牌，否则其失去1点体力并交给你一张♠牌。",
-        '#ext:杏雅三国/audio/xinxhemou1': '蜀中自成天地，士季何必俯首称臣？',
-        '#ext:杏雅三国/audio/xinxhemou2': '司马氏篡曹，大逆之贼也，君何不复义于天下？',
-        '#ext:杏雅三国/audio/xinxhemou3': '益州千里，高祖以为龙兴之地，将军亦可图之。',
+        '#ext:永夜之境/audio/xinxhemou1': '蜀中自成天地，士季何必俯首称臣？',
+        '#ext:永夜之境/audio/xinxhemou2': '司马氏篡曹，大逆之贼也，君何不复义于天下？',
+        '#ext:永夜之境/audio/xinxhemou3': '益州千里，高祖以为龙兴之地，将军亦可图之。',
         xinxweixi: '未息',
-        xinxweixi_info: "锁定技。①回合开始前或你的体力值变化时，你获得一张【影】，然后将至多X张牌置于牌堆底并摸等量的牌。②每回合限一次。你可以展示手牌中的【影】，视为使用一张基本牌。",
-        '#ext:杏雅三国/audio/xinxweixi1': '秋风卷孤灯，七星并落，愿以我身饲五丈原之烛。',
-        '#ext:杏雅三国/audio/xinxweixi2': '大河将竭，桃园霜落，夸父岂存畏死之心。',
-        '#ext:杏雅三国/audio/xinxweixi3': '光始于薪，众人皆承光之惠，我独续光之源。',
-        '#ext:杏雅三国/audio/xinxweixi4': '哀兵多艰，犹被甲带戈，诚非束手之时。',
+        xinxweixi_info: "锁定技。①回合开始前，你获得一张【影】，然后将至多X张牌置于牌堆底并摸等量的牌。②每回合限一次。你可以展示手牌中的【影】，视为使用一张基本牌。",
+        '#ext:永夜之境/audio/xinxweixi1': '秋风卷孤灯，七星并落，愿以我身饲五丈原之烛。',
+        '#ext:永夜之境/audio/xinxweixi2': '大河将竭，桃园霜落，夸父岂存畏死之心。',
+        '#ext:永夜之境/audio/xinxweixi3': '光始于薪，众人皆承光之惠，我独续光之源。',
+        '#ext:永夜之境/audio/xinxweixi4': '哀兵多艰，犹被甲带戈，诚非束手之时。',
         xinxquanpao_tag: '权',
         xinxquanpao: '权袍',
         xinxquanpao_info: "摸牌阶段结束时，你获得X张【影】（X为你的手牌上限），然后将你手牌中的【影】置于牌堆顶，从牌堆或弃牌堆中获得X张牌名各不相同的牌，将其标记为“权”，并获得位于弃牌堆/牌堆/一名角色区域内的所有“权”。",
-        '#ext:杏雅三国/audio/xinxquanpao1': '风水轮流转，轮到我钟某问鼎重几何了。',
-        '#ext:杏雅三国/audio/xinxquanpao2': '今长缨在手，欲问鼎九州。',
-        '#ext:杏雅三国/audio/xinxquanpao3': '空将宝地赠他人，某怎会心甘情愿？',
-        '#ext:杏雅三国/audio/xinxquanpao4': '心怀屠龙之术，何患手无长缨？',
+        '#ext:永夜之境/audio/xinxquanpao1': '风水轮流转，轮到我钟某问鼎重几何了。',
+        '#ext:永夜之境/audio/xinxquanpao2': '今长缨在手，欲问鼎九州。',
+        '#ext:永夜之境/audio/xinxquanpao3': '空将宝地赠他人，某怎会心甘情愿？',
+        '#ext:永夜之境/audio/xinxquanpao4': '心怀屠龙之术，何患手无长缨？',
         xinxqingqiang: '倾戕',
         xinxqingqiang_info: "锁定技。每回合限一次。当你成为其他角色使用牌的目标后，其展示所有手牌，若其手牌中有【影】，你无法响应此牌，且本回合结束后，你的手牌上限+1，否则其视为对一名由你指定的其他角色使用一张【杀】。",
-        '#ext:杏雅三国/audio/xinxqingqiang1': '既已功高盖主，何妨冕服加身？',
-        '#ext:杏雅三国/audio/xinxqingqiang2': '天下大势无常，钟某亦可为王！',
-        '#ext:杏雅三国/audio/xinxqingqiang3': '我若束手无策，诸位又有何施为？',
-        '#ext:杏雅三国/audio/xinxqingqiang4': '我既搏一世之功，亦求万世之名！',
+        '#ext:永夜之境/audio/xinxqingqiang1': '既已功高盖主，何妨冕服加身？',
+        '#ext:永夜之境/audio/xinxqingqiang2': '天下大势无常，钟某亦可为王！',
+        '#ext:永夜之境/audio/xinxqingqiang3': '我若束手无策，诸位又有何施为？',
+        '#ext:永夜之境/audio/xinxqingqiang4': '我既搏一世之功，亦求万世之名！',
         xinxduanwan: '断腕',
         xinxduanwan_info: '锁定技。每回合限一次。一名角色的体力值变化时，若其体力值不大于2，你可以弃置装备区一张牌，选择一项：<br>1.获得一名角色X张牌（X为其体力值，至少为1）；<br>2.令一名角色弃置所有基本牌。<br>然后你与其距离视为1直到下轮开始。',
-        '#ext:杏雅三国/audio/xinxduanwan1': '取成都者，必过此崖。',
-        '#ext:杏雅三国/audio/xinxduanwan2': '兵法之奇，莫过于险。',
+        '#ext:永夜之境/audio/xinxduanwan1': '取成都者，必过此崖。',
+        '#ext:永夜之境/audio/xinxduanwan2': '兵法之奇，莫过于险。',
         xinxjingong: '矜功',
         xinxjingong_info: "锁定技。当你造成或受到伤害时，你展示对方一张牌，若此牌的牌名字数不小于你的体力值，此伤害+1。",
-        '#ext:杏雅三国/audio/xinxjingong1': '此战功成，当列云台。',
-        '#ext:杏雅三国/audio/xinxjingong2': '淮北劲旅，岂是蜀人可挡。',
+        '#ext:永夜之境/audio/xinxjingong1': '此战功成，当列云台。',
+        '#ext:永夜之境/audio/xinxjingong2': '淮北劲旅，岂是蜀人可挡。',
         xinxshanjiao: '善教',
         xinxshanjiao_info: '锁定技。一名角色使用牌时，若其手牌中没有与此牌花色相同的牌，你进行一次判定，若为红色，你摸X张牌（X为你手牌中花色数的一半，至少为1）；若为黑色，你令一名其他角色无法使用或打出与此判定牌类型相同的牌，直到本回合结束。',
-        '#ext:杏雅三国/audio/xinxshanjiao1': '清风透碧，彩线轻缠。',
-        '#ext:杏雅三国/audio/xinxshanjiao2': '书香彩慧，香囊幽沁。',
+        '#ext:永夜之境/audio/xinxshanjiao1': '清风透碧，彩线轻缠。',
+        '#ext:永夜之境/audio/xinxshanjiao2': '书香彩慧，香囊幽沁。',
         xinxhuiyan: '蕙言',
         xinxhuiyan_info: "其他角色/你的判定牌生效后，若你手牌中有与此牌花色/颜色相同的牌，你可以使用此判定牌。",
-        '#ext:杏雅三国/audio/xinxhuiyan1': '婵媛优姿，美好之时。',
-        '#ext:杏雅三国/audio/xinxhuiyan2': '端清才德，仙媛捧瓣。',
-        '#ext:杏雅三国/audio/xinxhuiyan3': '袭龟筮之良辰，启幽房之潜邃。',
-        '#ext:杏雅三国/audio/xinxhuiyan4': '整武驾之隆牡，结龙辀之缟驷。',
+        '#ext:永夜之境/audio/xinxhuiyan1': '婵媛优姿，美好之时。',
+        '#ext:永夜之境/audio/xinxhuiyan2': '端清才德，仙媛捧瓣。',
+        '#ext:永夜之境/audio/xinxhuiyan3': '袭龟筮之良辰，启幽房之潜邃。',
+        '#ext:永夜之境/audio/xinxhuiyan4': '整武驾之隆牡，结龙辀之缟驷。',
         xinxzhenying: '砧影',
         xinxzhenying_info: "隐匿技。你于其他角色的回合登场时，你可对当前回合的角色造成1点伤害。若如此做，本回合你下次受到伤害时，其摸两张牌。",
-        '#ext:杏雅三国/audio/xinxzhenying1': '佳燕并头语，不恋雕梁而归于万里。',
-        '#ext:杏雅三国/audio/xinxzhenying2': '灵禽非醴泉不饮，非积善之家不栖。',
+        '#ext:永夜之境/audio/xinxzhenying1': '佳燕并头语，不恋雕梁而归于万里。',
+        '#ext:永夜之境/audio/xinxzhenying2': '灵禽非醴泉不饮，非积善之家不栖。',
         xinxzhebian: '蛰变',
         xinxzhebian_info: "锁定技。回合结束时，你进入隐匿状态。当你的武将牌状态变化时，你可以对一名其他角色造成1点伤害，然后你摸两张牌。",
-        '#ext:杏雅三国/audio/xinxzhebian1': '大智若愚，女子之锦绣常隐于华服。',
-        '#ext:杏雅三国/audio/xinxzhebian2': '知者不惑，心有明镜以照人。',
-        '#ext:杏雅三国/audio/xinxzhebian3': '若与君之情可绝，此间天地又何存焉？',
-        '#ext:杏雅三国/audio/xinxzhebian4': '昔年之颜可化为泥，唯与君之情不可逝。',
-        '#ext:杏雅三国/audio/xinxzhebian5': '此身着无当硬铠，唯一软肋即恋君之心。',
+        '#ext:永夜之境/audio/xinxzhebian1': '大智若愚，女子之锦绣常隐于华服。',
+        '#ext:永夜之境/audio/xinxzhebian2': '知者不惑，心有明镜以照人。',
+        '#ext:永夜之境/audio/xinxzhebian3': '若与君之情可绝，此间天地又何存焉？',
+        '#ext:永夜之境/audio/xinxzhebian4': '昔年之颜可化为泥，唯与君之情不可逝。',
+        '#ext:永夜之境/audio/xinxzhebian5': '此身着无当硬铠，唯一软肋即恋君之心。',
         xinxxuanxiao: '旋枭',
         xinxxuanxiao_info: "出牌阶段限一次。你可以与一名其他角色议事。若你与其意见：相同，你将势力变更为与其相同，从牌堆获得一张坐骑牌，然后视为使用一张【出其不意】；不同，你摸一张牌并从牌堆获得一张【杀】，然后其获得〖崩坏〗，本回合你对其使用牌无次数和距离限制，其无法响应你的牌。",
-        '#ext:杏雅三国/audio/xinxxuanxiao1': '天予不取，反受其咎。时至不行，反受其殃。',
-        '#ext:杏雅三国/audio/xinxxuanxiao2': '人不为己，天诛地灭。',
+        '#ext:永夜之境/audio/xinxxuanxiao1': '天予不取，反受其咎。时至不行，反受其殃。',
+        '#ext:永夜之境/audio/xinxxuanxiao2': '人不为己，天诛地灭。',
         xinxbenhuai: '崩坏',
         xinxshiji: '弑戟',
         xinxshiji_info: "锁定技。当你造成伤害时，你可以弃置场上一张牌。若被弃置牌的角色与你势力相同，此伤害+1;若因此弃置的牌为装备牌，你获得〖无双〗直到本回合结束。",
-        '#ext:杏雅三国/audio/xinxshiji1': '蚍蜉撼树，不自量力。',
-        '#ext:杏雅三国/audio/xinxshiji2': '让你见识一下，什么才是天下无双。',
+        '#ext:永夜之境/audio/xinxshiji1': '蚍蜉撼树，不自量力。',
+        '#ext:永夜之境/audio/xinxshiji2': '让你见识一下，什么才是天下无双。',
         xinxwushuang: '无双',
         xinxwushuang_info: "锁定技。每回合限一次。你的回合内，当有角色进入濒死状态时，你加1点体力上限并回复1点体力，并可弃置相邻角色的一张牌。",
-        '#ext:杏雅三国/audio/xinxwushuang1': '汝等纵有万军，也难挡我吕布一人。',
-        '#ext:杏雅三国/audio/xinxwushuang2': '斩你何须费力，区区小卒弹指可灭。',
+        '#ext:永夜之境/audio/xinxwushuang1': '汝等纵有万军，也难挡我吕布一人。',
+        '#ext:永夜之境/audio/xinxwushuang2': '斩你何须费力，区区小卒弹指可灭。',
         xinxjiaojue: '狡谲',
         xinxjiaojue_info: "锁定技。当你使用黑色牌指定其他角色为唯一目标后，你选择一项：<br>1.你摸[1]张牌；<br>2.你重铸[1]张牌；<br>3.你弃置目标角色[1]张牌。<br>然后你将所选选项[ ]中的数值-1，其余选项[ ]中的数值+1（每项数值至多为4）。",
-        '#ext:杏雅三国/audio/xinxjiaojue1': '巾帼若动起心思，哪还有男人什么事？',
-        '#ext:杏雅三国/audio/xinxjiaojue2': '没想到本将军还有这一招吧？',
-        '#ext:杏雅三国/audio/xinxjiaojue3': '巾帼之师不鸣则已，鸣则一鸣惊人。',
-        '#ext:杏雅三国/audio/xinxjiaojue4': '这纵横捭阖之道，岂能专属你等男儿？',
+        '#ext:永夜之境/audio/xinxjiaojue1': '巾帼若动起心思，哪还有男人什么事？',
+        '#ext:永夜之境/audio/xinxjiaojue2': '没想到本将军还有这一招吧？',
+        '#ext:永夜之境/audio/xinxjiaojue3': '巾帼之师不鸣则已，鸣则一鸣惊人。',
+        '#ext:永夜之境/audio/xinxjiaojue4': '这纵横捭阖之道，岂能专属你等男儿？',
         xinxfengyao: '凤瑶',
         xinxfengyao_info: "锁定技。准备阶段或当你造成伤害/结束阶段或当你受到伤害时，你令下个摸牌阶段的摸牌数、攻击范围/出杀次数、体力上限+1。",
-        '#ext:杏雅三国/audio/xinxfengyao1': '尔等看好了，我便是凤瑶军统帅！',
-        '#ext:杏雅三国/audio/xinxfengyao2': '青丝为刀剑，弑尽敌血点绛唇！',
-        '#ext:杏雅三国/audio/xinxfengyao3': '不挨几鞭子，你还出不了力了？',
-        '#ext:杏雅三国/audio/xinxfengyao4': '给我向前冲，把敌人杀光！',
-        '#ext:杏雅三国/audio/xinxfengyao5': '凤瑶名震四方之日，便是尔等这膝裙下之时！',
+        '#ext:永夜之境/audio/xinxfengyao1': '尔等看好了，我便是凤瑶军统帅！',
+        '#ext:永夜之境/audio/xinxfengyao2': '青丝为刀剑，弑尽敌血点绛唇！',
+        '#ext:永夜之境/audio/xinxfengyao3': '不挨几鞭子，你还出不了力了？',
+        '#ext:永夜之境/audio/xinxfengyao4': '给我向前冲，把敌人杀光！',
+        '#ext:永夜之境/audio/xinxfengyao5': '凤瑶名震四方之日，便是尔等这膝裙下之时！',
         xinxyingqi: '影骑',
-        xinxyingqi_info: "每轮开始时，你令一名其他角色跳过其下回合的一个阶段（不能与上次选择的阶段相同），然后你执行一个相同的额外阶段。若如此做，其下个回合结束后，你执行一个没有摸牌阶段的额外回合。",
-        '#ext:杏雅三国/audio/xinxyingqi1': '无胆匹夫，汝欲着红装做女儿姿态乎？',
-        '#ext:杏雅三国/audio/xinxyingqi2': '尔等免战龟缩，何不剃发去髯，谋常侍之职？',
+        xinxyingqi_info: "每轮开始时，你令一名其他角色跳过其下回合的一个阶段（不能与选择过的阶段相同），然后你执行一个相同的额外阶段。若如此做，其下个回合结束后，你执行一个没有摸牌阶段的额外回合。",
+        '#ext:永夜之境/audio/xinxyingqi1': '无胆匹夫，汝欲着红装做女儿姿态乎？',
+        '#ext:永夜之境/audio/xinxyingqi2': '尔等免战龟缩，何不剃发去髯，谋常侍之职？',
         xinxyanhui: '雁徊',
         xinxyanhui_info: "锁定技。出牌阶段开始时，你可以重铸至多三张牌。若这些牌的牌名均不相同，你可以使用其中任意张牌（无距离限制）。",
-        '#ext:杏雅三国/audio/xinxyanhui1': '为将广智，观象知理，料敌于未动之时。',
-        '#ext:杏雅三国/audio/xinxyanhui2': '将者见微知著，一法通而万法破。',
-        '#ext:杏雅三国/audio/xinxyanhui3': '劲风折竹，春风起时竹复生。',
-        '#ext:杏雅三国/audio/xinxyanhui4': '歧路多艰，何妨一往无前。',
+        '#ext:永夜之境/audio/xinxyanhui1': '为将广智，观象知理，料敌于未动之时。',
+        '#ext:永夜之境/audio/xinxyanhui2': '将者见微知著，一法通而万法破。',
+        '#ext:永夜之境/audio/xinxyanhui3': '劲风折竹，春风起时竹复生。',
+        '#ext:永夜之境/audio/xinxyanhui4': '歧路多艰，何妨一往无前。',
         xinxduanzhi: '断织',
         xinxduanzhi_info: "其他角色的结束阶段，你可以令一名角色使用当前回合角色本回合使用的且进入弃牌堆的牌（至多使用4张），然后其获得剩余的牌。",
-        '#ext:杏雅三国/audio/xinxduanzhi1': '春庭落花坠，遇卿心弦动。',
-        '#ext:杏雅三国/audio/xinxduanzhi2': '桃夭芳菲浓，浅池双影照。',
-        '#ext:杏雅三国/audio/xinxduanzhi3': '佩玖清响，见君羞颜。',
-        '#ext:杏雅三国/audio/xinxduanzhi4': '玉佩琼琚挂桃李，兰溪粉蝶翻花枝。',
+        '#ext:永夜之境/audio/xinxduanzhi1': '春庭落花坠，遇卿心弦动。',
+        '#ext:永夜之境/audio/xinxduanzhi2': '桃夭芳菲浓，浅池双影照。',
+        '#ext:永夜之境/audio/xinxduanzhi3': '佩玖清响，见君羞颜。',
+        '#ext:永夜之境/audio/xinxduanzhi4': '玉佩琼琚挂桃李，兰溪粉蝶翻花枝。',
         xinxjinshu: '锦书',
         xinxjinshu_info: "锁定技。当你受到伤害后，若你没有“念”，你获得一枚“念”。结束阶段，你可以移去“念”并发动〖断织〗。",
-        '#ext:杏雅三国/audio/xinxjinshu1': '赠君摇佩，佑君安好。',
-        '#ext:杏雅三国/audio/xinxjinshu2': '共护边关，蜀汉可安。',
+        '#ext:永夜之境/audio/xinxjinshu1': '赠君摇佩，佑君安好。',
+        '#ext:永夜之境/audio/xinxjinshu2': '共护边关，蜀汉可安。',
         xinxqueyi: '阙弈',
         xinxqueyi_info: "锁定技。当你成为其他角色使用实体牌的目标时，你将此牌蓄谋并与其各摸一张牌。若其本回合因此获得的牌数不小于3，你观看其手牌，获得其一张牌。",
-        '#ext:杏雅三国/audio/xinxqueyi1': '满朝尽忠天子，何有不臣之人？',
-        '#ext:杏雅三国/audio/xinxqueyi2': '九辞封赐，足见臣一片忠心。',
-        '#ext:杏雅三国/audio/xinxqueyi3': '辅国臣之本分，何敢图于禄勋。',
-        '#ext:杏雅三国/audio/xinxqueyi4': '蜀贼吴寇未灭，臣未可受此殊荣。',
+        '#ext:永夜之境/audio/xinxqueyi1': '满朝尽忠天子，何有不臣之人？',
+        '#ext:永夜之境/audio/xinxqueyi2': '九辞封赐，足见臣一片忠心。',
+        '#ext:永夜之境/audio/xinxqueyi3': '辅国臣之本分，何敢图于禄勋。',
+        '#ext:永夜之境/audio/xinxqueyi4': '蜀贼吴寇未灭，臣未可受此殊荣。',
         xinxshexin: '摄衅',
         xinxshexin_info: "判定阶段开始时，你可以展示判定区任意张牌，然后令一名其他角色选择一项：<br>1.将展示的牌置入牌堆，然后交给你所有手牌；<br>2.令你弃置其等量张牌，并使用展示的牌。",
-        '#ext:杏雅三国/audio/xinxshexin1': '统摄朝野，威加海内，此皆陛下恩德！',
-        '#ext:杏雅三国/audio/xinxshexin2': '天下未定，吾当辞邑修身，何敢冒僭？',
-        '#ext:杏雅三国/audio/xinxshexin3': '天子亲征，淮南之乱，不日可平！',
-        '#ext:杏雅三国/audio/xinxshexin4': '臣请陛下亲讨乱贼，以昭帝威！',
+        '#ext:永夜之境/audio/xinxshexin1': '统摄朝野，威加海内，此皆陛下恩德！',
+        '#ext:永夜之境/audio/xinxshexin2': '天下未定，吾当辞邑修身，何敢冒僭？',
+        '#ext:永夜之境/audio/xinxshexin3': '天子亲征，淮南之乱，不日可平！',
+        '#ext:永夜之境/audio/xinxshexin4': '臣请陛下亲讨乱贼，以昭帝威！',
         xinxjinmian: '晋冕',
         xinxjinmian_info: "出牌阶段开始时，若你本回合使用的牌数不小于体力值或造成过伤害，你变更势力为晋，获得技能〖肃戡〗和〖秉钧〗直到回合结束。",
-        '#ext:杏雅三国/audio/xinxjinmian1': '陛下有罪，吾当治之以对天下！',
-        '#ext:杏雅三国/audio/xinxjinmian2': '天下名为曹姓，实归吾司马一族！',
-        '#ext:杏雅三国/audio/xinxjinmian3': '若得灭蜀之功，何不可受禅为帝。',
-        '#ext:杏雅三国/audio/xinxjinmian4': '已极人臣之贵，当一尝人主之威。',
+        '#ext:永夜之境/audio/xinxjinmian1': '陛下有罪，吾当治之以对天下！',
+        '#ext:永夜之境/audio/xinxjinmian2': '天下名为曹姓，实归吾司马一族！',
+        '#ext:永夜之境/audio/xinxjinmian3': '若得灭蜀之功，何不可受禅为帝。',
+        '#ext:永夜之境/audio/xinxjinmian4': '已极人臣之贵，当一尝人主之威。',
         xinxsukan: '肃戡',
         xinxsukan_info: "出牌阶段限一次。你可选择一名其他角色：当你本回合使用牌指定其为目标时，你进行一次判定，<br>若为红色，你选择一项效果直到回合结束：<br>1.获得其武将牌上的一个技能；<br>2.从三张魏或晋势力武将牌中获得一个技能。<br>若为黑色，其受到1点无来源的雷电伤害。",
-        '#ext:杏雅三国/audio/xinxsukan1': '吾领三军于外，岂容陛下收政于京！',
-        '#ext:杏雅三国/audio/xinxsukan2': '吾今大权独揽，何可再予他人？',
-        '#ext:杏雅三国/audio/xinxsukan3': '平叛淮南，吾司马氏当再立不世之功！',
-        '#ext:杏雅三国/audio/xinxsukan4': '城破之日，定诛此逆贼三族！',
-        '#ext:杏雅三国/audio/xinxsukan5': '众将平乱所获，皆为陛下所赐！',
-        '#ext:杏雅三国/audio/xinxsukan6': '汝等仍存异心，可见心存魏阙。',
-        '#ext:杏雅三国/audio/xinxsukan7': '哼！斩首示众，以儆效尤。',
+        '#ext:永夜之境/audio/xinxsukan1': '吾领三军于外，岂容陛下收政于京！',
+        '#ext:永夜之境/audio/xinxsukan2': '吾今大权独揽，何可再予他人？',
+        '#ext:永夜之境/audio/xinxsukan3': '平叛淮南，吾司马氏当再立不世之功！',
+        '#ext:永夜之境/audio/xinxsukan4': '城破之日，定诛此逆贼三族！',
+        '#ext:永夜之境/audio/xinxsukan5': '众将平乱所获，皆为陛下所赐！',
+        '#ext:永夜之境/audio/xinxsukan6': '汝等仍存异心，可见心存魏阙。',
+        '#ext:永夜之境/audio/xinxsukan7': '哼！斩首示众，以儆效尤。',
         xinxbingjun: '秉钧',
         xinxbingjun_info: "你的回合内，当有角色死亡后，你摸三张牌，并令〖肃戡〗视为未发动过。",
-        '#ext:杏雅三国/audio/xinxbingjun1': '呵呵哈哈哈哈哈……一统之世，当由我司马氏开创！',
-        '#ext:杏雅三国/audio/xinxbingjun2': '执掌朝野，尽吞大魏河山！',
-        '#ext:杏雅三国/audio/xinxbingjun3': '明日正为吉日，当举禅位之典。',
+        '#ext:永夜之境/audio/xinxbingjun1': '呵呵哈哈哈哈哈……一统之世，当由我司马氏开创！',
+        '#ext:永夜之境/audio/xinxbingjun2': '执掌朝野，尽吞大魏河山！',
+        '#ext:永夜之境/audio/xinxbingjun3': '明日正为吉日，当举禅位之典。',
         xinxzhiyi: '知懿',
         xinxzhiyi_info: "游戏开始时，你摸两张牌。当你失去牌时，若你的手牌区没有因〖知懿〗获得的牌，你摸两张牌。",
-        '#ext:杏雅三国/audio/xinxzhiyi1': '书中学问万千，女子可为博士。',
-        '#ext:杏雅三国/audio/xinxzhiyi2': '女子不可无德，亦不可无才。',
+        '#ext:永夜之境/audio/xinxzhiyi1': '书中学问万千，女子可为博士。',
+        '#ext:永夜之境/audio/xinxzhiyi2': '女子不可无德，亦不可无才。',
         xinxzhiyi_tag: '知懿',
         xinxshenai: '蜃霭',
         xinxshenai_info: "转换技。一名角色受到伤害后，你须：阳，重铸一张牌；阴，交给一名其他角色一张牌，然后你获得其一张牌。",
-        '#ext:杏雅三国/audio/xinxshenai1': '秋菊容曜，春松华茂，四时之灵也。',
-        '#ext:杏雅三国/audio/xinxshenai2': '皎若金乌之霞，灿若芙蕖之渌。',
-        '#ext:杏雅三国/audio/xinxshenai3': '一帘诗意千寻瀑，今夕人间四月天。',
-        '#ext:杏雅三国/audio/xinxshenai4': '野陌离人空自守，杏雨梧桐晚箫声。',
+        '#ext:永夜之境/audio/xinxshenai1': '秋菊容曜，春松华茂，四时之灵也。',
+        '#ext:永夜之境/audio/xinxshenai2': '皎若金乌之霞，灿若芙蕖之渌。',
+        '#ext:永夜之境/audio/xinxshenai3': '一帘诗意千寻瀑，今夕人间四月天。',
+        '#ext:永夜之境/audio/xinxshenai4': '野陌离人空自守，杏雨梧桐晚箫声。',
         xinxxishuo: '西槊',
-        xinxxishuo_info: "准备阶段，你可以重铸所有非伤害手牌，令所有角色选择是否将手牌中的一张【杀】置于牌堆顶，然后你视为使用一张【千军共进】（不可被【无懈可击】响应）。",
-        '#ext:杏雅三国/audio/xinxxishuo1': '挥剑断浮云，诸君共西向！',
-        '#ext:杏雅三国/audio/xinxxishuo2': '西望故都，何忍君父辱于匹夫之手！',
+        xinxxishuo_info: "准备阶段，你可以重铸所有非伤害手牌，令所有角色选择是否将手牌中的一张【杀】置于牌堆顶，然后你视为使用一张【<a style='color:#03f7fe' href=\"javascript:get.xinx_skillTips('千军共进：出牌阶段，对一名其他角色使用。你亮出牌堆顶的五张牌，依次对其使用其中的牌，然后将剩余的牌置于武将牌上，称为“军”。此牌结算后，你本回合无法使用伤害牌。','0');\">千军共进</a>】（不可被【无懈可击】响应）。",
+        '#ext:永夜之境/audio/xinxxishuo1': '挥剑断浮云，诸君共西向！',
+        '#ext:永夜之境/audio/xinxxishuo2': '西望故都，何忍君父辱于匹夫之手！',
         xinxxishuo_re: '西槊·改',
-        xinxxishuo_re_info: "准备阶段，你可以将所有非伤害手牌置于武将牌上，称为“青州”，并摸三张牌，令所有角色选择是否将手牌中的一张【杀】置于牌堆顶，然后你视为使用一张【千军共进】（不可被【无懈可击】响应）。",
+        xinxxishuo_re_info: "准备阶段，你可以将所有非伤害手牌置于武将牌上，称为“青州”，并摸三张牌，令所有角色选择是否将手牌中的一张【杀】置于牌堆顶，然后你视为使用一张【<a style='color:#03f7fe' href=\"javascript:get.xinx_skillTips('千军共进：出牌阶段，对一名其他角色使用。你亮出牌堆顶的五张牌，依次对其使用其中的牌，然后将剩余的牌置于武将牌上，称为“军”。此牌结算后，你本回合无法使用伤害牌。','0');\">千军共进</a>】（不可被【无懈可击】响应）。",
         xinxhaopo: '蒿魄',
         xinxhaopo_info: "觉醒技。当你体力值变为1时，你令一名其他角色将手牌摸至体力上限，然后你将体力回复至与其相同，修改〖西槊〗并获得〖踞兖〗。",
-        '#ext:杏雅三国/audio/xinxhaopo1': '奈何力不齐，踌躇而雁行。',
-        '#ext:杏雅三国/audio/xinxhaopo2': '生民百遗一，念之断人肠。',
+        '#ext:永夜之境/audio/xinxhaopo1': '奈何力不齐，踌躇而雁行。',
+        '#ext:永夜之境/audio/xinxhaopo2': '生民百遗一，念之断人肠。',
         xinxjuyan: '踞兖',
         xinxjuyan_info: "锁定技。当你使用【杀】指定其他角色为目标后，你令其将两张非伤害牌置于你的武将牌上，称为“青州”。结束阶段或当你进入濒死状态时，你可以选择获得武将牌上的至多X张牌（X为你的体力上限）。",
-        '#ext:杏雅三国/audio/xinxjuyan1': '虎踞青兖，欲补薄暮苍天。',
-        '#ext:杏雅三国/audio/xinxjuyan2': '欲止戈，必先执戈！',
+        '#ext:永夜之境/audio/xinxjuyan1': '虎踞青兖，欲补薄暮苍天。',
+        '#ext:永夜之境/audio/xinxjuyan2': '欲止戈，必先执戈！',
         xinxqianjun_card: '千军',
-        xinxqianjun_eff:'千军',
+        xinxqianjun_eff: '千军',
         xinxqiansi_tag: 'invisible',
         xinxqiansi: '潜嗣',
         xinxqiansi_info: "每轮开始时，你可以观看一名其他角色的手牌，将其中一张牌标记为“嗣”，其他角色使用“嗣”指定唯一目标时，你可以将此牌目标转移给一名角色，并清除此牌对应的“嗣”记录。一名角色的回合结束后，你获得位于弃牌堆中的“嗣”并清除此牌记录。",
-        '#ext:杏雅三国/audio/xinxqiansi1': '若非天下英雄，吾不事之！',
-        '#ext:杏雅三国/audio/xinxqiansi2': '擂鼓鸣金皆梦呓，烽烟翻覆绕指柔。',
-        '#ext:杏雅三国/audio/xinxqiansi3': '我江东女子，绝非孱弱娇嗔之辈。',
-        '#ext:杏雅三国/audio/xinxqiansi4': '弯弓策马呈肝胆，巾帼何必让须眉?',
+        '#ext:永夜之境/audio/xinxqiansi1': '若非天下英雄，吾不事之！',
+        '#ext:永夜之境/audio/xinxqiansi2': '擂鼓鸣金皆梦呓，烽烟翻覆绕指柔。',
+        '#ext:永夜之境/audio/xinxqiansi3': '我江东女子，绝非孱弱娇嗔之辈。',
+        '#ext:永夜之境/audio/xinxqiansi4': '弯弓策马呈肝胆，巾帼何必让须眉?',
         xinxxiaoling: '枭翎',
-        xinxxiaoling_info: "锁定技。当你需要使用或打出【杀】或【闪】时，你可以获得场上一张牌，视为使用或打出之。若此牌为武器牌或当你造成伤害后，此技能本回合失效；若为防具牌，你下次造成的伤害+1；否则你摸一张牌。",
-        '#ext:杏雅三国/audio/xinxxiaoling1': '矢石之间，取你性命。',
-        '#ext:杏雅三国/audio/xinxxiaoling2': '鞘内无白刃，马下无生魂。',
-        '#ext:杏雅三国/audio/xinxxiaoling3': '腰间白羽箭，东风为张弓。',
-        '#ext:杏雅三国/audio/xinxxiaoling4': '策马上阵，不输男儿。',
+        xinxxiaoling_info: "锁定技。当你需要使用或打出【杀】或【闪】时，你可以获得场上一张牌，视为使用或打出之。若此牌不为防具牌或当你造成伤害后，此技能本回合失效；若为防具牌，你下次造成的伤害+1。",
+        '#ext:永夜之境/audio/xinxxiaoling1': '矢石之间，取你性命。',
+        '#ext:永夜之境/audio/xinxxiaoling2': '鞘内无白刃，马下无生魂。',
+        '#ext:永夜之境/audio/xinxxiaoling3': '腰间白羽箭，东风为张弓。',
+        '#ext:永夜之境/audio/xinxxiaoling4': '策马上阵，不输男儿。',
         xinxyuanyan: '渊偃',
         xinxyuanyan_info: "锁定技。当你造成或受到有来源的伤害后，你可以使用一张本回合进入弃牌堆的牌。若此牌为基本牌或普通锦囊牌，你将其置于武将牌上，称为“渊”，然后对方获得两张【影】。",
-        '#ext:杏雅三国/audio/xinxyuanyan1': '横眉养红莲，此花开时，诸侯尽膝行！',
-        '#ext:杏雅三国/audio/xinxyuanyan2': '俯首效淮阴，圯下取履，吾不得拜天子？',
-        '#ext:杏雅三国/audio/xinxyuanyan3': '袖中藏莫邪，志高位卑，犹思屠犬豕。',
-        '#ext:杏雅三国/audio/xinxyuanyan4': '膝下生金，身不屈，以何掘？',
+        '#ext:永夜之境/audio/xinxyuanyan1': '横眉养红莲，此花开时，诸侯尽膝行！',
+        '#ext:永夜之境/audio/xinxyuanyan2': '俯首效淮阴，圯下取履，吾不得拜天子？',
+        '#ext:永夜之境/audio/xinxyuanyan3': '袖中藏莫邪，志高位卑，犹思屠犬豕。',
+        '#ext:永夜之境/audio/xinxyuanyan4': '膝下生金，身不屈，以何掘？',
         xinxchengshu: '承枢',
         xinxchengshu_info: "锁定技。其他角色失去【影】后，你摸一张牌并可用任意张手牌替换等量的“渊”，然后你可以使用一张“渊”（无距离限制），若此时你的“渊”颜色均相同，你摸一张牌。",
-        '#ext:杏雅三国/audio/xinxchengshu1': '金杯共君饮，极目江山，天下士在我！',
-        '#ext:杏雅三国/audio/xinxchengshu2': '受天命永昌，此时身立，此生不再屈！',
-        '#ext:杏雅三国/audio/xinxchengshu3': '乾坤得正，手摘十万星辰，不妨高声语。',
-        '#ext:杏雅三国/audio/xinxchengshu4': '掌中舞干将，再祭红刹三千，将相皆作古。',
+        '#ext:永夜之境/audio/xinxchengshu1': '金杯共君饮，极目江山，天下士在我！',
+        '#ext:永夜之境/audio/xinxchengshu2': '受天命永昌，此时身立，此生不再屈！',
+        '#ext:永夜之境/audio/xinxchengshu3': '乾坤得正，手摘十万星辰，不妨高声语。',
+        '#ext:永夜之境/audio/xinxchengshu4': '掌中舞干将，再祭红刹三千，将相皆作古。',
         xinxlongxiang: '龙骧',
         xinxlongxiang_info: "锁定技。当你失去最后的手牌时，你摸两张牌，然后声明一种基本牌或普通锦囊牌，从牌堆或弃牌堆中获得此牌并移除此牌名。若所有基本牌均被移除，你视为使用一张基本牌。",
-        '#ext:杏雅三国/audio/xinxlongxiang1': '龙鳞佑我，无伤分毫!',
-        '#ext:杏雅三国/audio/xinxlongxiang2': '凭此八门金锁，何以阻我？',
-        '#ext:杏雅三国/audio/xinxlongxiang3': '八方风雨，天涯何归。',
-        '#ext:杏雅三国/audio/xinxlongxiang4': '滴水不漏，稳若泰山。',
+        '#ext:永夜之境/audio/xinxlongxiang1': '龙鳞佑我，无伤分毫!',
+        '#ext:永夜之境/audio/xinxlongxiang2': '凭此八门金锁，何以阻我？',
+        '#ext:永夜之境/audio/xinxlongxiang3': '八方风雨，天涯何归。',
+        '#ext:永夜之境/audio/xinxlongxiang4': '滴水不漏，稳若泰山。',
         xinxcangnuo: '沧诺',
         xinxcangnuo_info: "当你于回合外成为伤害牌的目标后，你可以将至多X张牌当作无距离限制的【杀】使用（X为本回合此技能的触发次数），此【杀】结算后，你弃置目标角色对应实体牌数张牌。",
-        '#ext:杏雅三国/audio/xinxcangnuo1': '待敌须有略，孤勇岂可为？',
-        '#ext:杏雅三国/audio/xinxcangnuo2': '天崩可寻路，海角誓相随！',
-        '#ext:杏雅三国/audio/xinxcangnuo3': '银枪所至，前夫不敌！',
-        '#ext:杏雅三国/audio/xinxcangnuo4': '抽身而退，万军难挡！',
+        '#ext:永夜之境/audio/xinxcangnuo1': '待敌须有略，孤勇岂可为？',
+        '#ext:永夜之境/audio/xinxcangnuo2': '天崩可寻路，海角誓相随！',
+        '#ext:永夜之境/audio/xinxcangnuo3': '银枪所至，前夫不敌！',
+        '#ext:永夜之境/audio/xinxcangnuo4': '抽身而退，万军难挡！',
         xinxlujing: '掳京',
         xinxlujing_info: "每回合限一次。当你使用牌指定其他角色为目标后，你可以选择其中一个目标，直到你下回合开始，当其获得牌/回复体力时，你获得其中一半的牌（向下取整）/改为你增加等量体力上限。",
         xinxzisui: '恣睢',
         xinxzisui_info: "锁定技。结束阶段，你选择一名其他角色并选择一项：<br>1.令其摸X张牌；<br>2.令其回复X点体力；<br>3.令其将X张手牌当【决斗】对你使用，否则其失去2点体力。<br>然后你移除此选项。当所有选项移除后，你减3点体力上限（X为场上牌数）。",
         xinxqiyi: '契翊',
         xinxqiyi_info: "准备阶段，你可以与一名其他角色共享手牌直到其回合开始（你与其均可将对方手牌如手牌般使用或打出）。回合结束时，你摸X张牌，然后可以令其摸X张牌（X为其本回合失去的牌数）。",
-        '#ext:杏雅三国/audio/xinxqiyi1': '既遇知己之明主，当福祸共之，荣辱共之。',
-        '#ext:杏雅三国/audio/xinxqiyi2': '年少立志三千里，会当击水，屈指问东风！',
-        '#ext:杏雅三国/audio/xinxqiyi3': '君子行陌路，振翅破樊笼，何妨天涯万里！',
+        '#ext:永夜之境/audio/xinxqiyi1': '既遇知己之明主，当福祸共之，荣辱共之。',
+        '#ext:永夜之境/audio/xinxqiyi2': '年少立志三千里，会当击水，屈指问东风！',
+        '#ext:永夜之境/audio/xinxqiyi3': '君子行陌路，振翅破樊笼，何妨天涯万里！',
         xinxfanjian_tag: 'invisible',
         xinxfanjian: '反间',
         xinxfanjian_info: "出牌阶段开始时，你记录一张手牌，然后从牌堆中记录一张与此牌花色相同的牌。当有角色使用你记录的牌时，你可以对一名其他角色A造成1点火焰伤害，此牌结算后，若A未响应此牌，则A不能使用或打出非手牌区的牌直到其下回合开始。",
-        '#ext:杏雅三国/audio/xinxfanjian1': '若生铸剑为犁之心，须有纵钺止戈之力。',
-        '#ext:杏雅三国/audio/xinxfanjian2': '将者，贵在知敌虚实，而后避实而击虚。',
-        '#ext:杏雅三国/audio/xinxfanjian3': '红莲生碧波，水火相融之际、吴钩刈将之时！',
-        '#ext:杏雅三国/audio/xinxfanjian4': '千帆载丹鼎，万军为薪，一焚可引振翼之金乌！',
+        '#ext:永夜之境/audio/xinxfanjian1': '若生铸剑为犁之心，须有纵钺止戈之力。',
+        '#ext:永夜之境/audio/xinxfanjian2': '将者，贵在知敌虚实，而后避实而击虚。',
+        '#ext:永夜之境/audio/xinxfanjian3': '红莲生碧波，水火相融之际、吴钩刈将之时！',
+        '#ext:永夜之境/audio/xinxfanjian4': '千帆载丹鼎，万军为薪，一焚可引振翼之金乌！',
         xinxjinjie: '劲节',
         xinxjinjie_info: "锁定技。一名其他角色不因摸牌而获得牌时，你可将一张牌当本轮使用过的非装备牌对其使用。",
         xinxyunjue: '韫决',
@@ -13566,9 +13591,112 @@ export let info = {
         xinxjuyi_info: "觉醒技。一名角色的回合开始前，若〖恪旌〗记录的角色于本局游戏造成的伤害值大于存活人数，你回复1点体力或摸两张牌，获得技能〖孤戍〗。",
         xinxgushu: '孤戍',
         xinxgushu_info: "锁定技。①每回合限一次，当你受到或造成来自牌的伤害后，你将体力上限调整为此牌点数，然后摸X张牌（X为你因此变化的体力上限）。②结束阶段，若你本回合的体力上限发生过变化，你减1点体力上限。",
+        xinxchanyi: '蝉翼',
+        xinxchanyi_info: "一名角色的出牌阶段限一次。其可以交给你一张牌（若其为你改为重铸一张牌），并与你各摸一张牌，然后你可以令其选择获得一个额外装备栏。若其因此获得了3个装备栏，改为其回复1点体力，否则增加1点体力上限。",
+        xinxzejuan: '泽眷',
+        xinxzejuan_info: "锁定技。",
 
 
 
+
+
+
+
+
+
+        //台词
+        '#ext:永夜之境/audio/dz_xing_yinxi1': '知我者谓我心忧，所忧者君尔。',
+        '#ext:永夜之境/audio/dz_xing_yinxi2': '我本局中子，上接青云，下怀江河。',
+        '#ext:永夜之境/audio/dz_xing_yinxi3': '妾御春风细雨，可保君无虞。',
+        '#ext:永夜之境/audio/dz_xing_yinxi4': '纵天地将合，悦君之心不移。',
+        '#ext:永夜之境/audio/dz_xing_jiangchun1': '求死易，求生难，欲生则畏死。',
+        '#ext:永夜之境/audio/dz_xing_jiangchun2': '浊世汹汹，既得白首之人，怎可超然物外。',
+        '#ext:永夜之境/audio/xing_xingyu1': '逝者如斯，亘古长流，唯英烈之魂悬北斗而长存！',
+        '#ext:永夜之境/audio/xing_xingyu2': '赵氏之女，跪祈诸公勿渡黄泉，暂留人间，佑大汉万年！',
+        '#ext:永夜之境/audio/xing_ningshuang1': '当年明月凝霜刃，此日送尔渡黄泉！',
+        '#ext:永夜之境/audio/xing_ningshuang2': '已识万里乾坤大，何虑千山草木青！',
+        '#ext:永夜之境/audio/xing_zhupo1': '凝傲雪之梅为魄，英魂长存，独耀山河万古明！',
+        '#ext:永夜之境/audio/xing_zhupo2': '铸凌霜之寒成剑，青锋出鞘，斩尽天下不臣贼！',
+        '#ext:永夜之境/audio/xing_hanming1': '龙凤在侧，五虎在前，天命在汉，既寿永昌！',
+        '#ext:永夜之境/audio/xing_hanming2': '人言为信，日月为明，言日月为证，佑大汉长明！',
+        '#ext:永夜之境/audio/xxxhuanren1': '由此突破！',
+        '#ext:永夜之境/audio/xxxhuanren2': '下役，当活捉孙仲谋。',
+        '#ext:永夜之境/audio/xxxzhenxi1': '找到你了！',
+        '#ext:永夜之境/audio/xxxzhenxi2': '以霹雳之势，扫平江东！',
+        '#ext:永夜之境/audio/xxxzhenxi3': '你躲不掉的。',
+        '#ext:永夜之境/audio/xxxzhenxi4': '我会让你哭不出来。',
+        '#ext:永夜之境/audio/xinxsongqu1': '洛灵感焉，徙倚彷徨。',
+        '#ext:永夜之境/audio/xinxsongqu2': '浮长川而忘返，思绵绵而增慕。',
+        '#ext:永夜之境/audio/xinxsongqu3': '忽焉纵体，以遨以嬉。',
+        '#ext:永夜之境/audio/xinxsongqu4': '瑰姿艳逸，仪静体闲。',
+        '#ext:永夜之境/audio/xinxfushen1': '有美一人，婉如清扬。',
+        '#ext:永夜之境/audio/xinxfushen2': '巧笑倩兮，美目盼兮。',
+        '#ext:永夜之境/audio/xinxguizi1': '靓糚刻饰，便嬛绰约。',
+        '#ext:永夜之境/audio/xinxguizi2': '绝殊离俗，妖冶嫺都。',
+        '#ext:永夜之境/audio/xinxchiyu1': '能进能退，方显英雄本色！',
+        '#ext:永夜之境/audio/xinxchiyu2': '曹阿瞒的青釭剑，很好用。',
+        '#ext:永夜之境/audio/xinxchiyu3': '该胆寒的是他们。',
+        '#ext:永夜之境/audio/xinxchiyu4': '云为汉室，无所畏惧！',
+        '#ext:永夜之境/audio/xinxshuangmang1': '常山赵子龙，在此！',
+        '#ext:永夜之境/audio/xinxshuangmang2': '长枪之下，不留宵小！',
+        '#ext:永夜之境/audio/xinxshiren1': '识人读心，评荐推达。',
+        '#ext:永夜之境/audio/xinxshiren2': '月旦雅评，试论天下。',
+        '#ext:永夜之境/audio/xinxshiren3': '议于草野间，评荐俊才多。',
+        '#ext:永夜之境/audio/xinxshiren4': '君清平之奸贼，乱世之英雄。',
+        '#ext:永夜之境/audio/xinxshiren5': '千帆过尽，评枭雄之谋，论天下分合！',
+        '#ext:永夜之境/audio/xinxshiren6': '三尺毛峰，引九天之水，濯一世功名！',
+        '#ext:永夜之境/audio/xinxqianqiu1': '我乘轻舟访人间，人如江鲫逐功名。',
+        '#ext:永夜之境/audio/xinxqianqiu2': '一言难道千秋业，一纸雅评半世人。',
+        '#ext:永夜之境/audio/xinxzhuoshao1': '这把火，便是我送给尔等的礼物。',
+        '#ext:永夜之境/audio/xinxzhuoshao2': '火凭风势！',
+        '#ext:永夜之境/audio/xinxcangyan1': '不消一曲，汝必败。',
+        '#ext:永夜之境/audio/xinxcangyan2': '妙哉，妙哉。',
+        '#ext:永夜之境/audio/xinxcangyan3': '一曲尽兴，余心快哉。',
+        '#ext:永夜之境/audio/xinxcangyan4': '请诸君，听我一曲。',
+        '#ext:永夜之境/audio/xinxcangyan5': '攻心不定，请回。',
+        '#ext:永夜之境/audio/xinxcangyan6': '听琴时，不必说话。',
+        '#ext:永夜之境/audio/xing_sizhu1': '此心相印，非山河可阻，兵戈可断。',
+        '#ext:永夜之境/audio/xing_sizhu2': '角中有白纹，灵如线，君心我心系两端。',
+        '#ext:永夜之境/audio/xing_sizhu_xinx_caoxian_shadow1': '灵犀越千山，君在彼，欲寄青鸟相思十万。',
+        '#ext:永夜之境/audio/xing_sizhu_xinx_caoxian_shadow2': '日暮苍山远，雪女怨寒，此心可栖君畔。',
+        '#ext:永夜之境/audio/xing_mengran1': '君知春风带暖意，可知丝丝皆妾语？',
+        '#ext:永夜之境/audio/xing_mengran2': '愿将满腹相思语，化为春风拂君面。',
+        '#ext:永夜之境/audio/xing_mengran_xinx_caoxian_shadow1': '恨名曹，幸为妾，心怀焦炭难两全。',
+        '#ext:永夜之境/audio/xing_mengran_xinx_caoxian_shadow2': '君知否，君知否，墙外浓雪杀翠柳。',
+        '#ext:永夜之境/audio/xinxpanzhi1': '愿以此身为烛，齐七星之数。',
+        '#ext:永夜之境/audio/xinxpanzhi2': '逐阳而战，血染天幕之彤云！',
+        '#ext:永夜之境/audio/xinxlinyou1': '我辈慕光而行，不为浮云障目。',
+        '#ext:永夜之境/audio/xinxlinyou2': '怀麒麟之志，负柱国之托，奔天涯海角！',
+        '#ext:永夜之境/audio/xinxlinyou3': '师恩如山，维所报者，唯此身尔。',
+        '#ext:永夜之境/audio/xinxlinyou4': '天下齐喑，我辈秉身为烛，当照四海九州！',
+        '#ext:永夜之境/audio/xinxlinyou5': '效逐日之夸父，怀忠志而长存。',
+        '#ext:永夜之境/audio/xinxlinyou6': '知天命而不顺，履穷途而强为。',
+        '#ext:永夜之境/audio/xinxlinyou7': '炎阳将坠，可为者，唯舍生擎天！',
+        '#ext:永夜之境/audio/xinxlinyou8': '维既抱逐日之远志，不在念当归之遐思。',
+        '#ext:永夜之境/audio/xinxlinyou9': '孤鸿鸣于野，其以身为奉，引春风入汉关。',
+        '#ext:永夜之境/audio/xinxlinyou10': '炎阳在悬，岂因乌云障日而弃金光于野。',
+        '#ext:永夜之境/audio/xinxlinyou11': '家国存亡之际，不可弃一线生机。',
+        '#ext:永夜之境/audio/xinxlinyou12': '棘路万里，雄关亘原，今乃迈步之始。',
+        '#ext:永夜之境/audio/xinxfuhan1': '此生未止，志随先烈之遗风！',
+        '#ext:永夜之境/audio/xinxfuhan2': '九州齐喑，我辈燃己长明，君欲同否？',
+        '#ext:永夜之境/audio/xinxyice1': '汝等若心存隐忍，顷刻便尸骨无存！',
+        '#ext:永夜之境/audio/xinxyice2': '在下所谋之法，唯恐天下不乱！',
+        '#ext:永夜之境/audio/xinxwansha1': '吾之所好，杀人诛心。',
+        '#ext:永夜之境/audio/xinxwansha2': '汝可遣使相问，四下可有援军？',
+        '#ext:永夜之境/audio/xinxshixi1': '将军一副好骨，不如留于此山！',
+        '#ext:永夜之境/audio/xinxshixi2': '气势凌人，以智制敌。',
+        '#ext:永夜之境/audio/xinxyingfu1': '隐伏暗藏，待敌入阵。',
+        '#ext:永夜之境/audio/xinxyingfu2': '设伏布兵，擒贼易如反掌。',
+        '#ext:永夜之境/audio/xinxyingfu3': '埋伏在此，就等将军你来了。',
+        '#ext:永夜之境/audio/xinxyingfu4': '神藏鬼伏，将军岂能察觉？',
+        '#ext:永夜之境/audio/xinxyingfu5': '栖身隐伏，暗查敌情。',
+        '#ext:永夜之境/audio/xinxyingfu6': '兼善皆驭，方能稳固。',
+        '#ext:永夜之境/audio/xinxqianlong1': '成大事者，当务实权而远虚名。',
+        '#ext:永夜之境/audio/xinxqianlong2': '潜龙隐于千丈海，胸有韬晦十万兵。',
+        '#ext:永夜之境/audio/xinxqianlong3': '大隐于朝，韬略八方。',
+        '#ext:永夜之境/audio/xinxqianlong4': '隐居幕后，挥斥八方。',
+        '#ext:永夜之境/audio/xinxyini1': '夷此僚三族，以儆效尤！',
+        '#ext:永夜之境/audio/xinxyini2': '逆我司马氏者，罪无可恕！',
 
     },
     //动态翻译
@@ -13580,7 +13708,7 @@ export let info = {
             str += '阳，观看一名角色的手牌并获得其区域一张牌，将其随机一张非“星落”手牌标记为“星落”；';
             if (!storage) str += '</span>';
             if (storage) str += '<span class="bluetext">';
-            str += '阴，令额外摸牌数+1且获得〖铸魄〗直到再次发动此技能。';
+            str += "阴，令<a style='color:#03f7fe' href=\"javascript:get.xinx_skillTips('当你不因此效果获得牌时，你摸等同额外摸牌数张牌。','0');\">额外摸牌数</a>+1且获得〖铸魄〗直到再次发动此技能。";
             if (storage) str += '</span>';
             return str;
         },
@@ -13600,8 +13728,8 @@ export let info = {
             return "锁定技。准备阶段，你观看牌堆顶X张牌（X为你的体力值且至多为5），使用其中任意张牌，然后你获得剩余的牌并失去1点体力。";
         },
         xinxxishuo(player) {
-            if (player.storage.xinxhaopo) return "准备阶段，你可以将所有非伤害手牌置于武将牌上，称为“青州”，并摸三张牌，令所有角色选择是否将手牌中的一张【杀】置于牌堆顶，然后你视为使用一张【千军共进】（不可被【无懈可击】响应）。";
-            return "准备阶段，你可以重铸所有非伤害手牌，令所有角色选择是否将手牌中的一张【杀】置于牌堆顶，然后你视为使用一张【千军共进】（不可被【无懈可击】响应）。";
+            if (player.storage.xinxhaopo) return "准备阶段，你可以将所有非伤害手牌置于武将牌上，称为“青州”，并摸三张牌，令所有角色选择是否将手牌中的一张【杀】置于牌堆顶，然后你视为使用一张【<a style='color:#03f7fe' href=\"javascript:get.xinx_skillTips('出牌阶段，对一名其他角色使用。你亮出牌堆顶的五张牌，依次对其使用其中的牌，然后将剩余的牌置于武将牌上，称为“军”。此牌结算后，你本回合无法使用伤害牌。','0');\">千军共进</a>】（不可被【无懈可击】响应）。";
+            return "准备阶段，你可以重铸所有非伤害手牌，令所有角色选择是否将手牌中的一张【杀】置于牌堆顶，然后你视为使用一张【<a style='color:#03f7fe' href=\"javascript:get.xinx_skillTips('出牌阶段，对一名其他角色使用。你亮出牌堆顶的五张牌，依次对其使用其中的牌，然后将剩余的牌置于武将牌上，称为“军”。此牌结算后，你本回合无法使用伤害牌。','0');\">千军共进</a>】（不可被【无懈可击】响应）。";
         },
         xinxyunjue(player) {
             if (player.storage.xinxyunjue_count >= 3) return "锁定技。其他角色A对你使用牌时，你可以选择一名角色的一张牌，若此牌为装备牌，则你获得之，否则令A获得之。然后你摸一张牌，并可以将一张牌当作一张本轮未使用过的基本牌或普通锦囊牌使用。";
@@ -13672,7 +13800,7 @@ export let info = {
         },
         xinxchushi: function (player) {
             let str = [
-                "出牌阶段限一次。你可以选择一名角色。你从如下效果中选择一项，其获得此效果，然后移除此选项:",
+                "出牌阶段限一次。你可以选择一名角色。你减1点体力上限，从如下效果中选择一项，其获得此效果，然后移除此选项:",
                 "1.「北定」：当你每回合首次造成伤害时，此伤害+1。当你受到大于1的伤害时，此伤害改为1。",
                 "2.「整驽」：准备阶段或结束阶段，你摸两张牌，然后重铸一张牌。",
                 "3.「攘奸」：每轮开始时，你失去1点体力。若为偶数次发动此技能，则减少1点体力上限。",
